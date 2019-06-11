@@ -1,6 +1,20 @@
-/** Import Bootstrap functions */
-@import "~bootstrap/scss/functions";
+/** Colors */
+$red: #ff617d;
+$yellow: #ffb82c;
+$blue: #3373f5;
+$green: #23c385;
+$pink: #ffb0b3;
 
-$theme-colors: (
-  primary: #27ae60
-);
+/** Font Colors */
+$black: #111;
+$text: #333;
+$border: #666;
+$gray: #f7f7f7;
+$gold: #efdcb1;
+
+$shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.16);
+
+/** Spaces */
+$spacer: 0.8rem;
+
+$theme-colors: (primary: #27ae60);
