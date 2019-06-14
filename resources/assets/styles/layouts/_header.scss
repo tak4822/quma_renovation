@@ -1,1 +1,59 @@
+.global-nav {
+  .container {
+    height: 8rem;
+    margin-left: $con-left;
+    margin-right: $spacer * 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        width: 12rem;
+        height: 5rem;
+
+        @include bg-img("quma_logo.svg", "contain");
+      }
+
+      .nav-primary {
+        margin-left: $spacer * 5;
+      }
+    }
+
+    .nav-action {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 1.2rem;
+      font-family: font("midashi");
+
+      .line,
+      .tel {
+        &.btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 0.2rem solid black;
+          border-radius: 20rem;
+          padding: $spacer $spacer * 2;
+        }
+
+        .ico {
+          width: 2.5rem;
+          height: 2rem;
+          object-fit: contain;
+          margin-right: $spacer / 2;
+          margin-top: 0.1rem;
+        }
+      }
+
+      .line {
+        margin-right: $spacer * 3;
+      }
+    }
+  }
+}

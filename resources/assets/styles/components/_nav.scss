@@ -1,0 +1,19 @@
+.nav-primary {
+  font-family: font('madawaska');
+
+  .menu-global_nav-container {
+    .nav {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 1.8rem;
+
+      .menu-item {
+        list-style-type: none;
+        padding: $spacer*2;
+      }
+    }
+  }
+}
