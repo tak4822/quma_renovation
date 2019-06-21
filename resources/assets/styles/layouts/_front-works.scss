@@ -1,0 +1,118 @@
+.front-works {
+  margin-left: $con-left;
+  margin-top: $spacer * 10;
+
+  .picks {
+    .pick-container {
+      width: $con-width;
+      height: 30rem;
+      position: relative;
+      display: flex;
+
+      .circle {
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background: $gray-bg;
+        z-index: z("below");
+      }
+
+      .thumb {
+        width: 50%;
+        height: 100%;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      .contents {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+          font-size: 2.4rem;
+          width: 75%;
+        }
+
+        .outline {
+          display: flex;
+          align-items: center;
+          margin-top: $spacer;
+
+          p {
+            margin: 0;
+            font-size: 1.2rem;
+          }
+
+          .divider {
+            width: 1px;
+            height: 90%;
+            transform: rotate(20deg);
+            background: $black;
+            margin: 0 $spacer;
+          }
+
+          .in {
+            font-family: font("midashi");
+            margin: 0 $spacer;
+          }
+        }
+      }
+
+      &.first {
+        .thumb {
+          order: 1;
+        }
+
+        .contents {
+          order: 2;
+          align-items: flex-start;
+          padding-left: $spacer * 4;
+        }
+      }
+
+      &.second {
+        .thumb {
+          order: 2;
+        }
+
+        .contents {
+          order: 1;
+          align-items: flex-end;
+          padding-right: $spacer * 4;
+
+          .title {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .slider {
+    width: 100%;
+    height: 25rem;
+    margin-top: $spacer * 6;
+    overflow-x: scroll;
+
+    .slider-wrapper {
+      width: 200rem;
+      height: 100%;
+      display: flex;
+    }
+  }
+
+  .action-container {
+    width: $con-width;
+    margin-top: $spacer * 4;
+    text-align: right;
+  }
+}

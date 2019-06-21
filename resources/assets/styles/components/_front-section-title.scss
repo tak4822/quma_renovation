@@ -1,0 +1,49 @@
+.front-section-title {
+  margin-bottom: $spacer * 6;
+
+  .title {
+    font-family: font("midashi");
+    font-size: 5rem;
+    margin-left: -1rem;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+  }
+
+  .bottom-wrapper {
+    display: flex;
+    margin-top: $spacer * 2;
+
+    .bottom-left {
+      display: flex;
+      align-self: flex-start;
+      width: 24rem;
+
+      .subtitle-wrapper {
+        display: flex;
+
+        .border {
+          width: 0.3rem;
+          background: $black;
+          align-items: stretch;
+        }
+
+        .subtitle {
+          font-size: 1.4rem;
+          margin-left: $spacer * 2;
+          font-weight: 600;
+          font-family: font("midashi");
+          padding: $spacer 0;
+        }
+      }
+    }
+
+    .bottom-right {
+      margin-left: $spacer * 4;
+      width: 38rem;
+
+      .exp {
+        margin: $spacer 0;
+      }
+    }
+  }
+}

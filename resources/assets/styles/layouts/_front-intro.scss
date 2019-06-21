@@ -1,0 +1,22 @@
+.front-intro {
+  width: $con-width;
+  margin: $spacer * 10 auto 0;
+
+  .content-container {
+    display: flex;
+    align-items: flex-start;
+
+    .text {
+      width: 52rem;
+
+      p {
+        margin-bottom: $spacer * 3;
+      }
+    }
+
+    .illust {
+      width: 40%;
+      transform: translate(10rem, -10rem);
+    }
+  }
+}

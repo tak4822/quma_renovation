@@ -8,8 +8,8 @@ $pink: #ffb0b3;
 /** Font Colors */
 $black: #111;
 $text: #333;
-$border: #666;
-$gray: #f7f7f7;
+$gray: #999;
+$gray-bg: #f7f7f7;
 $gold: #efdcb1;
 
 $shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.16);
@@ -24,3 +24,10 @@ $font-families: ("madawaska": #{"madawaska", serif},
   "midashi": #{"a-otf-midashi-go-mb31-pr6n", sans-serif},
   "text": #{"dnp-shuei-gothic-kin-std", sans-serif},
 );
+
+$z-layers: ("modal": 1000,
+  "overlay": 900,
+  "header": 100,
+  "above": 5,
+  "below": -1,
+  "hidden": -100);

@@ -1,0 +1,38 @@
+.front-about {
+  .section-title-wrapper {
+    margin-left: $con-left;
+  }
+
+  .contents {
+    .vision {
+      width: $con-width;
+      margin: 0 auto $spacer * 4;
+      display: flex;
+      align-items: center;
+
+      .illust {
+        width: 40%;
+        margin: 0 5%;
+      }
+
+      .text-container {
+        width: 50rem;
+      }
+    }
+
+    .pic {
+      width: 100%;
+      height: 100rem;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  .action-container {
+    width: $con-width;
+    margin: $spacer * 4 auto 0;
+    text-align: right;
+  }
+}

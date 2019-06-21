@@ -1,0 +1,112 @@
+.front-interviews {
+  margin-left: $con-left;
+  position: relative;
+
+  .bg-gray {
+    width: 90vw;
+    height: 48rem;
+    background: $gray-bg;
+    position: absolute;
+    top: -$spacer * 6;
+    left: -$spacer * 6;
+    z-index: z("below");
+  }
+
+  .interviews-wrapper {
+    .action-container {
+      width: $con-width;
+      text-align: right;
+    }
+
+    .slider-container {
+      width: 100%;
+      height: 60rem;
+      display: flex;
+
+      .controller {
+        width: 34rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: $spacer * 4;
+
+        .exp {
+          width: 100%;
+          height: 16rem;
+          display: flex;
+          flex-direction: row;
+          padding: $spacer * 4 0 0 $spacer * 4;
+
+          .number {
+            font-family: font('madawaska');
+            font-size: 2.2rem;
+            font-style: italic;
+            margin: $spacer * 2 0 0 0;
+          }
+
+          .border {
+            height: 120%;
+            align-self: center;
+            transform: rotate(45deg);
+
+            @include dotted-border;
+          }
+
+          .subtitle {
+            margin: 0;
+            align-self: flex-end;
+            margin-left: $spacer * 2;
+          }
+        }
+
+        .paging {
+          width: 12rem;
+          height: 12rem;
+          border-radius: 50%;
+          border: 1px solid $black;
+          align-self: flex-end;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+
+          .arrows {
+            width: 100%;
+            height: 50%;
+
+            @include flex-center;
+
+            img {
+              width: 3rem;
+            }
+          }
+
+          .border {
+            width: 70%;
+            height: 1px;
+            background: $black;
+          }
+        }
+
+        .mic-wrapper {
+          width: 15rem;
+          align-self: flex-start;
+        }
+      }
+    }
+
+    .slider {
+      flex: 1;
+      height: 53rem;
+      overflow-x: scroll;
+
+      .slider-warpper {
+        width: 200rem;
+        padding-top: $spacer;
+        padding-left: $spacer;
+        display: flex;
+      }
+    }
+  }
+}

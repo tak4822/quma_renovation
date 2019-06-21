@@ -1,4 +1,8 @@
 .global-nav {
+  position: fixed;
+  width: 100vw;
+  z-index: z("header");
+
   .container {
     height: 8rem;
     margin-left: $con-left;
@@ -48,6 +52,10 @@
           object-fit: contain;
           margin-right: $spacer / 2;
           margin-top: 0.1rem;
+        }
+
+        p {
+          margin: 0;
         }
       }
 

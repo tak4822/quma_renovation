@@ -1,0 +1,41 @@
+.card-container {
+  width: 52rem;
+  height: 52rem;
+  position: relative;
+  margin-right: $spacer * 4;
+
+  .card-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $gold;
+  }
+
+  .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 1px solid black;
+    padding: $spacer *3 $spacer *2;
+
+    .thumb {
+      width: 100%;
+      height: 30rem;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .title {
+      font-size: 2.4rem;
+      font-weight: 600;
+      padding: $spacer*2 0 $spacer;
+    }
+  }
+}

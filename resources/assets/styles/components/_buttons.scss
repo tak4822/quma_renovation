@@ -1,0 +1,21 @@
+.btn {
+  border: 2px solid $black;
+  position: relative;
+  display: inline-block;
+
+  .border {
+    width: 3rem;
+    height: 2px;
+    background: $red;
+    position: absolute;
+    left: -1.5rem;
+    top: calc(50% - 1px);
+  }
+
+  .text {
+    font-family: font("midashi");
+    font-size: 1.4rem;
+    padding: $spacer * 2 $spacer * 3 $spacer * 2 $spacer * 4;
+    margin: 0;
+  }
+}

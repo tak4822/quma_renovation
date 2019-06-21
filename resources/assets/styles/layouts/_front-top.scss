@@ -1,0 +1,154 @@
+.front-top {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  .vision {
+    flex: 1;
+    height: 100%;
+    position: relative;
+
+    .illustration {
+      width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+
+      @include flex-center;
+    }
+
+    .logo-container {
+      width: 100%;
+      height: 8rem;
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 12rem;
+        height: 5rem;
+      }
+
+      .intro {
+        font-family: font("midashi");
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .slider {
+    flex: 3;
+    height: 100%;
+    position: relative;
+
+    @include bg-img("top_fake.jpg", "cover");
+
+    .exp-shadow {
+      position: absolute;
+      right: $spacer * 7;
+      bottom: $spacer * 7;
+      width: 60rem;
+      height: 23rem;
+      background: $gold;
+    }
+
+    .exp {
+      position: absolute;
+      right: $spacer * 8;
+      bottom: $spacer * 8;
+      background: white;
+      width: 60rem;
+      height: 23rem;
+      display: flex;
+      padding: $spacer * 4 $spacer * 2;
+
+      .exp-left {
+        width: 40%;
+        padding-right: 2rem;
+
+        .section-title {
+          font-family: font("midashi");
+          font-size: 2rem;
+          line-height: 1.2em;
+        }
+
+        .section {
+          font-family: font("madawaska");
+          font-size: 1.6rem;
+          margin-top: $spacer * 2;
+        }
+
+        .paging {
+          margin-top: 6rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 12rem;
+          height: 3rem;
+
+          .arrows {
+            width: 1.5rem;
+          }
+
+          .numbers {
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+
+            .now {
+              font-family: font("madawaska");
+              font-size: 3rem;
+              margin-bottom: 0.5rem;
+            }
+
+            .divider {
+              width: 0.1rem;
+              height: 2rem;
+              background: $gray;
+              margin: 0 $spacer 0 $spacer * 2;
+              transform: rotate(30deg);
+            }
+
+            .total {
+              font-family: font("madawaska");
+              font-size: 2rem;
+              color: $gray;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .border {
+        height: 100%;
+
+        @include dotted-border;
+      }
+
+      .exp-right {
+        width: 60%;
+        font-family: font("text");
+        padding-left: 2rem;
+
+        .sub-title {
+          font-size: 1.4rem;
+        }
+
+        .title {
+          font-size: 2.2rem;
+          line-height: 3.2rem;
+          font-weight: 600;
+          margin-top: $spacer * 2;
+        }
+      }
+    }
+  }
+}

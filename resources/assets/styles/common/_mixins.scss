@@ -17,6 +17,14 @@
   margin: auto;
 }
 
+@mixin dotted-border {
+  width: 1px;
+  background-image: linear-gradient(to bottom, #000, #000 1px, transparent 1px, transparent 3px);
+  background-size: 1px 4px;
+  background-position: top;
+  background-repeat: repeat-y;
+}
+
 @mixin bg-img($img-name, $size) {
   background-image: url("../../images/"+ $img-name);
   background-repeat: no-repeat;
