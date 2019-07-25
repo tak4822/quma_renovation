@@ -6,7 +6,7 @@
     @slot('exp')QUMAのリノベーションを身近に感じて頂けるよう、様々な機会を設けております。肩肘張らないメンバーばかりなので、お気軽に遊びに来てください！@endslot
     @endcomponent
   </div>
-  <div class="contents">
+  <div class="contents regular-container">
     <div class="bg-gray"></div>
     <a class="event-card showroom">
       <div class="shadow"></div>

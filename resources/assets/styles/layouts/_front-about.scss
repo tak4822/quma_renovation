@@ -1,12 +1,15 @@
 .front-about {
   .section-title-wrapper {
-    margin-left: $con-left;
+    margin-left: $con-big-side;
+
+    @include mq-down("sns") {
+      margin-left: $con-mid-side;
+    }
   }
 
   .contents {
     .vision {
-      width: $con-width;
-      margin: 0 auto $spacer * 4;
+      margin-bottom: $spacer * 4;
       display: flex;
       align-items: center;
 
@@ -22,17 +25,11 @@
 
     .pic {
       width: 100%;
-      height: 100rem;
-
-      img {
-        object-fit: cover;
-      }
     }
   }
 
   .action-container {
-    width: $con-width;
-    margin: $spacer * 4 auto 0;
+    margin-top: $spacer * 4;
     text-align: right;
   }
 }

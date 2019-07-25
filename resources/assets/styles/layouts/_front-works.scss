@@ -1,13 +1,20 @@
 .front-works {
-  margin-left: $con-left;
   margin-top: $spacer * 10;
+
+  @include mq-down("sns") {
+    margin-left: $con-mid-side;
+  }
 
   .picks {
     .pick-container {
-      width: $con-width;
+      width: $con-big;
       height: 30rem;
       position: relative;
       display: flex;
+
+      @include mq-down("sns") {
+        width: $con-mid;
+      }
 
       .circle {
         width: 30rem;
@@ -111,8 +118,12 @@
   }
 
   .action-container {
-    width: $con-width;
+    margin-right: $con-big-side;
     margin-top: $spacer * 4;
     text-align: right;
+
+    @include mq-down("sns") {
+      margin-right: $con-mid-side;
+    }
   }
 }

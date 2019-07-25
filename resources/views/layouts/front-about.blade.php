@@ -7,7 +7,7 @@
     @endcomponent
   </div>
   <div class="contents">
-    <div class="vision">
+    <div class="vision regular-container">
       <div class="illust">
         <img src="@asset('images/vision.jpg')" alt="">
       </div>
@@ -23,7 +23,7 @@
       <img src="@asset('images/all_members.jpg')" alt="">
     </div>
   </div>
-  <div class="action-container">
+  <div class="action-container regular-container">
     @component('components.button')
     @slot('text')QUMAをもっと知る@endslot
     @endcomponent

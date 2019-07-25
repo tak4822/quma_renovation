@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class="content">
+  <div class="content regular-container">
     <p class="greeting">Say Hello</p>
 
     <div class="contact-container">

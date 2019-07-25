@@ -49,3 +49,12 @@ p {
   line-height: 2.4rem;
   margin-bottom: $spacer * 2;
 }
+
+.regular-container {
+  width: $con-big;
+  margin: 0 auto;
+
+  @include mq-down("sns") {
+    width: $con-mid;
+  }
+}

@@ -1,4 +1,4 @@
-<section class="front-intro">
+<section class="front-intro regular-container">
   @component('components.front-section-title')
   @slot('title')リノベーションって？@endslot
   @slot('sub')ここがすごい！<br />リノベーションという選択肢@endslot

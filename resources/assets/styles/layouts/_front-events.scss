@@ -14,12 +14,15 @@
   }
 
   .section-title-wrapper {
-    margin-left: $con-left;
+    margin-left: $con-big-side;
+
+    @include mq-down("sns") {
+      margin-left: $con-mid-side;
+    }
   }
 
   .contents {
-    width: $con-width;
-    margin: $spacer * 8 auto;
+    margin-top: $spacer * 8;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -27,6 +30,10 @@
     .event-card {
       position: relative;
       width: 28rem;
+
+      @include mq-down("sns") {
+        width: 24rem;
+      }
 
       .shadow {
         width: 100%;
@@ -48,6 +55,11 @@
         background: $gold;
 
         @include flex-center;
+
+        @include mq-down("sns") {
+          width: 9rem;
+          height: 9rem;
+        }
 
         .text {
           font-family: font("midashi");

@@ -1,6 +1,10 @@
 .front-interviews {
-  margin-left: $con-left;
+  margin-left: $con-big-side;
   position: relative;
+
+  @include mq-down("sns") {
+    margin-left: $con-mid-side;
+  }
 
   .bg-gray {
     width: calc(50vw + 560px);
@@ -14,8 +18,12 @@
 
   .interviews-wrapper {
     .action-container {
-      width: $con-width;
       text-align: right;
+      margin-right: $con-big-side;
+
+      @include mq-down("sns") {
+        margin-right: $con-mid-side;
+      }
     }
 
     .slider-container {
