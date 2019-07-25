@@ -20,14 +20,36 @@ $con-width: 1024px;
 $con-left: calc((100vw - 1024px) / 2);
 
 /** font-family  */
-$font-families: ("madawaska": #{"madawaska", serif},
-  "midashi": #{"a-otf-midashi-go-mb31-pr6n", sans-serif},
-  "text": #{"dnp-shuei-gothic-kin-std", sans-serif},
+$font-families: (
+  "madawaska": #{"madawaska",
+  serif},
+  "midashi": #{"a-otf-midashi-go-mb31-pr6n",
+  sans-serif},
+  "text": #{"dnp-shuei-gothic-kin-std",
+  sans-serif}
 );
 
-$z-layers: ("modal": 1000,
+$z-layers: (
+  "modal": 1000,
   "overlay": 900,
   "header": 100,
   "above": 5,
   "below": -1,
-  "hidden": -100);
+  "hidden": -100
+);
+
+/** breakpoint  */
+$breakpoint-up: (
+  "sm": "screen and (min-width: 430px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1000px)",
+  "sns": "screen and (min-width: 1200px)",
+  "xl": "screen and (min-width: 1200px)"
+);
+$breakpoint-down: (
+  "sm": "screen and (max-width: 429px)",
+  "md": "screen and (max-width: 767px)",
+  "lg": "screen and (max-width: 1023px)",
+  "sns": "screen and (max-width: 1023px)",
+  "xl": "screen and (max-width: 1199px)"
+);

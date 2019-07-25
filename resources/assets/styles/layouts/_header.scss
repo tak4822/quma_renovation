@@ -2,30 +2,36 @@
   position: fixed;
   width: 100vw;
   z-index: z("header");
+  background: white;
 
   .container {
     height: 8rem;
-    margin-left: $con-left;
-    margin-right: $spacer * 5;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    .nav-primary {
+      position: absolute;
+      left: 25%;
+
+      #menu-item-41 {
+        padding-left: 0;
+      }
+    }
 
     .nav-wrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
 
-      .logo {
-        width: 12rem;
-        height: 5rem;
+    .logo {
+      margin-left: $con-left;
+      width: 8rem;
+      height: 5rem;
 
-        @include bg-img("quma_logo.svg", "contain");
-      }
-
-      .nav-primary {
-        margin-left: $spacer * 5;
-      }
+      @include bg-img("quma_logo.svg", "contain");
     }
 
     .nav-action {
@@ -34,6 +40,7 @@
       align-items: center;
       font-size: 1.2rem;
       font-family: font("midashi");
+      margin-right: $spacer*2;
 
       .line,
       .tel {
