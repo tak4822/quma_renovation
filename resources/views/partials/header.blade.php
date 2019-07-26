@@ -17,6 +17,13 @@
         <img src="@asset('images/ico_tel.svg')" alt="" class="ico">
         <p>03-6805-0696</p>
       </div>
+      <div class="mail btn">
+        <img src="@asset('images/ico_mail.svg')" alt="" class="ico">
+      </div>
+    </div>
+
+    <div class="humberger">
+      <div></div>
     </div>
   </div>
 </header>

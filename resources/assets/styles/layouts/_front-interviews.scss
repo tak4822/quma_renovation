@@ -7,13 +7,27 @@
   }
 
   .bg-gray {
-    width: calc(50vw + 560px);
+    width: calc(50vw + 548px);
+    // ( 100vw - 1000px ) / 2 + 1000 / 2 + 1000 / 2 + 48
+    // = 50 vw + 500 + 48 = 50vw + 548px
     height: 48rem;
     background: $gray-bg;
     position: absolute;
-    top: -$spacer * 6;
+    top: -$spacer * 5;
     left: -$spacer * 6;
     z-index: z("below");
+
+    @include mq-down("xl") {
+      width: calc(50vw + 524px);
+      height: 44rem;
+      top: -$spacer * 2;
+      left: -$spacer * 3;
+    }
+
+    @include mq-down("sns") {
+      width: calc(50vw + 474px);
+      height: 42rem;
+    }
   }
 
   .interviews-wrapper {
@@ -30,6 +44,10 @@
       width: 100%;
       height: 60rem;
       display: flex;
+
+      @include mq-down("sns") {
+        height: 52rem;
+      }
 
       .controller {
         width: 34rem;
@@ -78,6 +96,10 @@
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
+
+          @include mq-down("sns") {
+            margin-top: 4rem;
+          }
 
           .arrows {
             width: 100%;

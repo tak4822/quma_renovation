@@ -11,9 +11,18 @@
     align-items: center;
     position: relative;
 
+    @include mq-down("lg") {
+      height: 6rem;
+      padding: 0 $spacer * 2;
+    }
+
     .nav-primary {
       position: absolute;
       left: 25%;
+
+      @include mq-down("lg") {
+        display: none; // TODO
+      }
 
       #menu-item-41 {
         padding-left: 0;
@@ -32,6 +41,14 @@
       height: 5rem;
 
       @include bg-img("quma_logo.svg", "contain");
+
+      @include mq-down("lg") {
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        margin-left: 0;
+        transform: translateX(-50%);
+      }
     }
 
     .nav-action {
@@ -43,7 +60,8 @@
       margin-right: $spacer*2;
 
       .line,
-      .tel {
+      .tel,
+      .mail {
         &.btn {
           display: flex;
           align-items: center;
@@ -51,6 +69,13 @@
           border: 0.2rem solid black;
           border-radius: 20rem;
           padding: $spacer $spacer * 2;
+
+          @include mq-down("lg") {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 50%;
+            border: 0.1rem solid black;
+          }
         }
 
         .ico {
@@ -59,15 +84,40 @@
           object-fit: contain;
           margin-right: $spacer / 2;
           margin-top: 0.1rem;
+
+          @include mq-down("lg") {
+            width: 1.4rem;
+            height: auto;
+            margin-right: 0;
+          }
         }
 
         p {
           margin: 0;
+
+          @include mq-down("lg") {
+            display: none;
+          }
         }
       }
 
-      .line {
-        margin-right: $spacer * 3;
+      .mail {
+        display: none;
+
+        @include mq-down("lg") {
+          margin-left: $spacer * 2;
+        }
+      }
+    }
+
+    .humberger {
+      display: none;
+
+      @include mq-down("lg") {
+        display: block;
+        background: pink;
+        width: 3rem;
+        height: 3rem;
       }
     }
   }

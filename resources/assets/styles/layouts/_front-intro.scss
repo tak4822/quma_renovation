@@ -8,14 +8,26 @@
     .text {
       width: 52rem;
 
+      @include mq-down("sns") {
+        width: 44rem;
+      }
+
       p {
         margin-bottom: $spacer * 3;
       }
     }
 
     .illust {
-      width: 40%;
+      width: 50%;
       transform: translate(10rem, -10rem);
+
+      @include mq-down("xl") {
+        width: 40%;
+      }
+
+      @include mq-down("sns") {
+        width: 45%;
+      }
     }
   }
 }

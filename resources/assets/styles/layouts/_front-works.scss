@@ -1,5 +1,6 @@
 .front-works {
   margin-top: $spacer * 10;
+  margin-left: $con-big-side;
 
   @include mq-down("sns") {
     margin-left: $con-mid-side;
