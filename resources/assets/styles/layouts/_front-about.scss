@@ -1,9 +1,15 @@
 .front-about {
+  margin-bottom: $spacer * 10;
+
   .section-title-wrapper {
     margin-left: $con-big-side;
 
     @include mq-down("sns") {
       margin-left: $con-mid-side;
+    }
+
+    @include mq-down("lg") {
+      margin-left: 0;
     }
   }
 
@@ -13,13 +19,45 @@
       display: flex;
       align-items: center;
 
+      @include mq-down("lg") {
+        padding: 0 $spacer * 4;
+      }
+
+      @include mq-down("md") {
+        flex-direction: column;
+      }
+
+      @include mq-down("mobile") {
+        padding: 0 $spacer * 2;
+      }
+
       .illust {
         width: 40%;
         margin: 0 5%;
+
+        @include mq-down("lg") {
+          margin: 0;
+        }
+
+        @include mq-down("md") {
+          width: 60%;
+        }
+
+        @include mq-down("mobile") {
+          width: 70%;
+        }
       }
 
       .text-container {
         width: 50rem;
+
+        @include mq-down("md") {
+          width: 80%;
+        }
+
+        @include mq-down("mobile") {
+          width: 100%;
+        }
       }
     }
 
@@ -31,5 +69,15 @@
   .action-container {
     margin-top: $spacer * 4;
     text-align: right;
+
+    @include mq-down("lg") {
+      margin-right: $spacer * 4;
+    }
+
+    @include mq-down("md") {
+      padding-right: 0;
+
+      @include flex-center;
+    }
   }
 }

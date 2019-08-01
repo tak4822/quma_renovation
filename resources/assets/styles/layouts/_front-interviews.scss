@@ -6,6 +6,16 @@
     margin-left: $con-mid-side;
   }
 
+  @include mq-down("lg") {
+    margin-left: 0;
+  }
+
+  .front-section-title {
+    @include mq-down("md") {
+      margin-bottom: 0;
+    }
+  }
+
   .bg-gray {
     width: calc(50vw + 548px);
     // ( 100vw - 1000px ) / 2 + 1000 / 2 + 1000 / 2 + 48
@@ -28,15 +38,57 @@
       width: calc(50vw + 474px);
       height: 42rem;
     }
+
+    @include mq-down("lg") {
+      width: 90vw;
+      height: 86rem;
+      top: -$spacer * 4;
+      left: -$spacer * 2;
+    }
+
+    @include mq-down("md") {
+      height: 106rem;
+    }
+
+    @include mq-down("mobile") {
+      height: 78rem;
+    }
+
+    @include mq-down("sm") {
+      width: 95vw;
+      height: 72rem;
+    }
   }
 
   .interviews-wrapper {
+    @include mq-down("md") {
+      margin-left: $spacer * 4;
+    }
+
+    @include mq-down("mobile") {
+      margin-left: $spacer * 2;
+    }
+
     .action-container {
       text-align: right;
       margin-right: $con-big-side;
 
       @include mq-down("sns") {
         margin-right: $con-mid-side;
+      }
+
+      @include mq-down("lg") {
+        margin-right: $spacer * 4;
+      }
+
+      @include mq-down("md") {
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      @include mq-down("mobile") {
+        margin-top: $spacer * 4;
       }
     }
 
@@ -49,6 +101,15 @@
         height: 52rem;
       }
 
+      @include mq-down("md") {
+        flex-direction: column;
+        height: 74rem;
+      }
+
+      @include mq-down("mobile") {
+        height: auto;
+      }
+
       .controller {
         width: 34rem;
         height: 100%;
@@ -57,6 +118,31 @@
         justify-content: space-between;
         margin-right: $spacer * 4;
 
+        @media screen and (max-width: 870px) {
+          width: 30rem;
+        }
+
+        @media screen and (max-width: 800px) {
+          width: 26rem;
+        }
+
+        @include mq-down("md") {
+          height: 20rem;
+          width: 100%;
+          margin-right: 0;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        @include mq-down("mobile") {
+          height: auto;
+          margin-bottom: $spacer * 2;
+        }
+
+        @include mq-down("sm") {
+          margin-bottom: $spacer;
+        }
+
         .exp {
           width: 100%;
           height: 16rem;
@@ -64,11 +150,25 @@
           flex-direction: row;
           padding: $spacer * 4 0 0 $spacer * 4;
 
+          @include mq-down("md") {
+            width: 70%;
+            padding: $spacer * 2 0 0 0;
+            height: 12rem;
+          }
+
+          @include mq-down("mobile") {
+            padding: 0 $spacer * 2 0 0;
+          }
+
           .number {
             font-family: font('madawaska');
             font-size: 2.2rem;
             font-style: italic;
             margin: $spacer * 2 0 0 0;
+
+            @include mq-down("sm") {
+              font-size: 2rem;
+            }
           }
 
           .border {
@@ -83,6 +183,16 @@
             margin: 0;
             align-self: flex-end;
             margin-left: $spacer * 2;
+
+            @include mq-down("md") {
+              transform: translateY(-2rem);
+            }
+
+            @include mq-down("sm") {
+              font-size: 1.2rem;
+              line-height: 2rem;
+              margin-left: $spacer;
+            }
           }
         }
 
@@ -96,9 +206,29 @@
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
+          background: white;
 
           @include mq-down("sns") {
             margin-top: 4rem;
+            align-items: center;
+          }
+
+          @include mq-down("md") {
+            align-self: center;
+            margin-right: $spacer * 4;
+          }
+
+          @include mq-down("mobile") {
+            margin-top: 0;
+            margin-right: $spacer * 2;
+            width: 10rem;
+            height: 10rem;
+          }
+
+          @include mq-down("sm") {
+            margin-right: $spacer;
+            width: 9rem;
+            height: 9rem;
           }
 
           .arrows {
@@ -122,6 +252,15 @@
         .mic-wrapper {
           width: 15rem;
           align-self: flex-start;
+
+          @include mq-down("lg") {
+            margin-left: $spacer * 4;
+            width: 12rem;
+          }
+
+          @include mq-down("md") {
+            display: none;
+          }
         }
       }
     }
@@ -131,11 +270,19 @@
       height: 53rem;
       overflow-x: scroll;
 
+      @include mq-down("md") {
+        height: 20rem;
+      }
+
       .slider-warpper {
         width: 200rem;
         padding-top: $spacer;
         padding-left: $spacer;
         display: flex;
+
+        @include mq-down("md") {
+          padding-left: 0;
+        }
       }
     }
   }

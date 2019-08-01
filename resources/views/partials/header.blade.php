@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <div class="humberger">
+    <div class="hamburger">
       <div></div>
     </div>
   </div>

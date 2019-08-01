@@ -1,11 +1,13 @@
 <section class="front-top">
   <div class="vision">
-    <div class="illustration">
-      <img src="@asset('images/vision.jpg')" alt="">
-    </div>
-    <div class="logo-container">
-      <img src="@asset('images/quma_logo.svg')" alt="">
-      <h1 class="intro">東京で暮らしをつくるリノベーション</h1>
+    <div class="vision-wraper">
+      <div class="illustration">
+        <img src="@asset('images/vision.jpg')" alt="">
+      </div>
+      <div class="logo-container">
+        <img src="@asset('images/quma_logo.svg')" alt="">
+        <h1 class="intro">東京で暮らしをつくるリノベーション</h1>
+      </div>
     </div>
   </div>
   <div class="slider">

@@ -33,12 +33,14 @@ $z-layers: ("modal": 1000,
 
 /** breakpoint  */
 $breakpoint-up: ("sm": "screen and (min-width: 430px)",
+  "mobile": "screen and (max-width: 600px)",
   "md": "screen and (min-width: 768px)",
   "lg": "screen and (min-width: 1023px)",
   "sns": "screen and (min-width: 1100px)",
   "xl": "screen and (min-width: 1200px)"
 );
 $breakpoint-down: ("sm": "screen and (max-width: 429px)",
+  "mobile": "screen and (max-width: 599px)",
   "md": "screen and (max-width: 767px)",
   "lg": "screen and (max-width: 1023px)",
   "sns": "screen and (max-width: 1099px)",

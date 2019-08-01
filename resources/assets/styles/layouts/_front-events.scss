@@ -1,16 +1,20 @@
 .front-events {
   position: relative;
   margin: $spacer * 20 auto 0;
-  padding-bottom: $spacer * 20;
+  padding-bottom: $spacer * 10;
 
   .bg-gray {
     background: $gray-bg;
     width: 100%;
-    height: 40rem;
+    height: 24rem;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: z("below");
+
+    @include mq-down("md") {
+      display: none;
+    }
   }
 
   .section-title-wrapper {
@@ -18,6 +22,10 @@
 
     @include mq-down("sns") {
       margin-left: $con-mid-side;
+    }
+
+    @include mq-down("lg") {
+      margin-left: 0;
     }
   }
 
@@ -27,12 +35,35 @@
     align-items: center;
     justify-content: space-around;
 
+    @include mq-down("md") {
+      flex-direction: column;
+    }
+
     .event-card {
       position: relative;
       width: 28rem;
 
       @include mq-down("sns") {
         width: 24rem;
+      }
+
+      @media screen and (max-width: 900px) {
+        width: 20rem;
+      }
+
+      @include mq-down("md") {
+        width: 30rem;
+        margin-bottom: $spacer * 8;
+      }
+
+      @include mq-down("mobile") {
+        width: 70%;
+        margin-bottom: $spacer * 12;
+      }
+
+      @include mq-down("sm") {
+        width: 80%;
+        margin-bottom: $spacer * 8;
       }
 
       .shadow {
@@ -61,10 +92,26 @@
           height: 9rem;
         }
 
+        @include mq-down("md") {
+          width: 12rem;
+          height: 12rem;
+        }
+
+        @include mq-down("mobile") {
+          top: -7vw;
+          left: -7vw;
+          width: 25vw;
+          height: 25vw;
+        }
+
         .text {
           font-family: font("midashi");
           font-size: 1.6rem;
           margin: 0;
+
+          @include mq-down("mobile") {
+            font-size: 1.8rem;
+          }
         }
       }
     }

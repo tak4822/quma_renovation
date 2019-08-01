@@ -6,7 +6,25 @@
     margin-left: $con-mid-side;
   }
 
+  @include mq-down("lg") {
+    margin-top: $spacer * 15;
+    margin-left: 0;
+    margin-bottom: $spacer * 15;
+  }
+
   .picks {
+    @include mq-down("lg") {
+      padding-left: $spacer * 4;
+    }
+
+    @include mq-down("md") {
+      padding-left: 0;
+    }
+
+    @include mq-down("mobile") {
+      margin-top: $spacer * 2;
+    }
+
     .pick-container {
       width: $con-big;
       height: 30rem;
@@ -15,6 +33,17 @@
 
       @include mq-down("sns") {
         width: $con-mid;
+      }
+
+      @include mq-down("lg") {
+        width: 100%;
+        padding-right: $spacer * 4;
+      }
+
+      @include mq-down("md") {
+        flex-direction: column;
+        height: auto;
+        padding-right: 0;
       }
 
       .circle {
@@ -27,11 +56,24 @@
         transform: translate(-50%, 0);
         background: $gray-bg;
         z-index: z("below");
+
+        @include mq-down("md") {
+          display: none;
+        }
       }
 
       .thumb {
         width: 50%;
         height: 100%;
+
+        @include mq-down("md") {
+          width: 100%;
+          height: 30rem;
+        }
+
+        @include mq-down("sm") {
+          height: 20rem;
+        }
 
         img {
           object-fit: cover;
@@ -45,9 +87,28 @@
         flex-direction: column;
         justify-content: center;
 
+        @include mq-down("md") {
+          width: 100%;
+          height: auto;
+          display: block;
+          padding: 0 $spacer * 2;
+        }
+
+        @include mq-down("sm") {
+          padding: 0 $spacer * 2;
+        }
+
         .title {
           font-size: 2.4rem;
           width: 75%;
+
+          @include mq-down("md") {
+            width: 100%;
+          }
+
+          @include mq-down("sm") {
+            font-size: 1.6rem;
+          }
         }
 
         .outline {
@@ -62,10 +123,14 @@
 
           .divider {
             width: 1px;
-            height: 90%;
+            height: 60%;
             transform: rotate(20deg);
             background: $black;
             margin: 0 $spacer;
+
+            @include mq-down("md") {
+              height: 1.4rem;
+            }
           }
 
           .in {
@@ -76,6 +141,10 @@
       }
 
       &.first {
+        @include mq-down("md") {
+          margin-bottom: $spacer *4;
+        }
+
         .thumb {
           order: 1;
         }
@@ -84,12 +153,21 @@
           order: 2;
           align-items: flex-start;
           padding-left: $spacer * 4;
+
+          @include mq-down("md") {
+            padding-top: $spacer;
+            padding-left: $spacer * 2;
+          }
         }
       }
 
       &.second {
         .thumb {
           order: 2;
+
+          @include mq-down("md") {
+            order: 1;
+          }
         }
 
         .contents {
@@ -97,8 +175,18 @@
           align-items: flex-end;
           padding-right: $spacer * 4;
 
+          @include mq-down("md") {
+            padding-top: $spacer;
+            order: 2;
+            padding-right: 0;
+          }
+
           .title {
             text-align: right;
+
+            @include mq-down("md") {
+              text-align: left;
+            }
           }
         }
       }
@@ -110,6 +198,10 @@
     height: 25rem;
     margin-top: $spacer * 6;
     overflow-x: scroll;
+
+    @include mq-down("mobile") {
+      padding-left: $spacer * 2;
+    }
 
     .slider-wrapper {
       width: 200rem;
@@ -125,6 +217,16 @@
 
     @include mq-down("sns") {
       margin-right: $con-mid-side;
+    }
+
+    @include mq-down("lg") {
+      margin-right: $spacer * 4;
+    }
+
+    @include mq-down("md") {
+      margin-right: 0;
+
+      @include flex-center;
     }
   }
 }

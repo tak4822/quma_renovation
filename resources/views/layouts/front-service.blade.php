@@ -30,6 +30,9 @@
     </div>
     <div class="answer">
       <div class="house">
+        <div class="answer-circle-mobile">
+          <p class="text">YES</p>
+        </div>
         <div class="title">街探し・物件探しからの<br />リノベーション</div>
         <div class="illust">
           <img src="@asset('images/vision.jpg')" alt="">
@@ -40,6 +43,9 @@
         @endcomponent
       </div>
       <div class="plan">
+        <div class="answer-circle-mobile">
+          <p class="text">NO</p>
+        </div>
         <div class="title">プラン計画からの<br />リノベーション</div>
         <div class="illust">
           <img src="@asset('images/vision.jpg')" alt="">

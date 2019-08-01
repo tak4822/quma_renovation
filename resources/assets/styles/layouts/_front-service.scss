@@ -1,10 +1,20 @@
 .front-service {
-  margin-top: $spacer * 10;
+  margin-bottom: $spacer * 10;
 
   .contents {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include mq-down("lg") {
+      padding-left: $spacer * 4;
+      padding-right: $spacer * 4;
+    }
+
+    @include mq-down("sm") {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     .desktop-if-then {
       margin: $spacer 0;
@@ -12,6 +22,10 @@
       flex-direction: column;
       align-items: center;
       width: 50rem;
+
+      @include mq-down("md") {
+        display: none;
+      }
 
       .border {
         width: 1px;
@@ -109,6 +123,17 @@
         border-radius: 25rem;
 
         @include flex-center;
+
+        @include mq-down("md") {
+          background: transparent;
+          border: 0.3rem dashed $yellow;
+        }
+
+        @include mq-down("sm") {
+          font-size: 1.8rem;
+          width: 20rem;
+          height: 5rem;
+        }
       }
     }
 
@@ -119,6 +144,11 @@
       justify-content: center;
       margin-top: $spacer;
 
+      @include mq-down("md") {
+        flex-direction: column;
+        margin-top: $spacer * 8;
+      }
+
       .house {
         width: 35rem;
         height: 50rem;
@@ -127,6 +157,22 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @include mq-down("md") {
+          margin-right: 0;
+          margin-bottom: $spacer * 8;
+          height: auto;
+          width: 40rem;
+        }
+
+        @include mq-down("mobile") {
+          width: 90%;
+        }
+
+        @include mq-down("sm") {
+          width: 100%;
+          padding: 0 $spacer;
+        }
       }
 
       .plan {
@@ -136,6 +182,36 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @include mq-down("md") {
+          height: auto;
+          width: 40rem;
+        }
+
+        @include mq-down("mobile") {
+          width: 90%;
+        }
+      }
+
+      .answer-circle-mobile {
+        display: none;
+
+        @include mq-down("md") {
+          display: block;
+          width: 8rem;
+          height: 8rem;
+          border-radius: 50%;
+          margin-bottom: $spacer * 2;
+          border: 0.3rem dashed $yellow;
+
+          @include flex-center;
+        }
+
+        .text {
+          font-family: font("midashi");
+          margin: 0.2rem 0 0;
+          font-size: 1.6rem;
+        }
       }
 
       .title {
@@ -144,6 +220,16 @@
         text-align: center;
         line-height: 2.8rem;
         margin-bottom: $spacer;
+
+        @include mq-down("mobile") {
+          font-size: 2.4rem;
+          line-height: 3.2rem;
+        }
+
+        @include mq-down("sm") {
+          font-size: 1.8rem;
+          line-height: 2.8rem;
+        }
       }
 
       .illust {
@@ -153,6 +239,16 @@
       .exp {
         font-size: 1.4rem;
         margin-bottom: $spacer * 2;
+
+        @include mq-down("mobile") {
+          font-size: 1.6rem;
+          line-height: 2.8rem;
+        }
+
+        @include mq-down("sm") {
+          font-size: 1.4rem;
+          line-height: 2.6rem;
+        }
       }
     }
   }

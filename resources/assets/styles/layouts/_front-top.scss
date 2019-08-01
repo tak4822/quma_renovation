@@ -3,41 +3,77 @@
   height: 100vh;
   display: flex;
 
+  @include mq-down("lg") {
+    height: auto;
+    padding-top: 6rem;
+  }
+
+  @include mq-down("lg") {
+    height: auto;
+    padding-top: 6rem;
+  }
+
+  @include mq-down("lg") {
+    height: auto;
+    padding-top: 5rem;
+  }
+
   .vision {
     flex: 1;
-    height: 100%;
-    position: relative;
+    height: 100vh;
 
-    .illustration {
-      width: 90%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -60%);
-
-      @include flex-center;
+    @include mq-down("lg") {
+      width: 100vw;
+      position: fixed;
+      background: white;
+      z-index: z("modal");
+      left: -100%; // todo
     }
 
-    .logo-container {
+    .vision-wraper {
+      position: relative;
       width: 100%;
-      height: 8rem;
-      position: absolute;
-      bottom: 20%;
-      left: 50%;
-      transform: translate(-50%, 0);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      height: 100%;
 
-      img {
-        width: 12rem;
-        height: 5rem;
+      .illustration {
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+
+        @include flex-center;
+
+        @include mq-down("lg") {
+          width: 40rem;
+        }
+
+        @include mq-down("sm") {
+          width: 80%;
+        }
       }
 
-      .intro {
-        font-family: font("midashi");
-        font-size: 1.1rem;
+      .logo-container {
+        width: 100%;
+        height: 8rem;
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 12rem;
+          height: 5rem;
+        }
+
+        .intro {
+          font-family: font("midashi");
+          font-size: 1.1rem;
+        }
       }
     }
   }
@@ -49,6 +85,20 @@
 
     @include bg-img("top_fake.jpg", "cover");
 
+    @include mq-down("lg") {
+      height: 60vh;
+      margin-bottom: $spacer * 17;
+    }
+
+    @include mq-down("mobile") {
+      margin-bottom: $spacer * 20;
+    }
+
+    @include mq-down("sm") {
+      height: 40vh;
+      margin-bottom: $spacer * 24;
+    }
+
     .exp-shadow {
       position: absolute;
       right: $spacer * 7;
@@ -56,6 +106,23 @@
       width: 60rem;
       height: 23rem;
       background: $gold;
+
+      @include mq-down("lg") {
+        width: 90%;
+        right: calc(50% - 8px);
+        bottom: -$spacer * 17;
+        transform: translateX(50%);
+      }
+
+      @include mq-down("mobile") {
+        height: 28rem;
+        bottom: -$spacer * 21;
+      }
+
+      @include mq-down("sm") {
+        bottom: -$spacer * 25;
+        height: 25rem;
+      }
     }
 
     .exp {
@@ -68,20 +135,61 @@
       display: flex;
       padding: $spacer * 4 $spacer * 2;
 
+      @include mq-down("lg") {
+        width: 90%;
+        right: 50%;
+        bottom: -$spacer * 16;
+        transform: translateX(50%);
+      }
+
+      @include mq-down("mobile") {
+        flex-direction: column;
+        padding: $spacer * 2 $spacer * 2;
+        height: 28rem;
+        bottom: -$spacer * 20;
+      }
+
+      @include mq-down("sm") {
+        bottom: -$spacer * 24;
+        height: 25rem;
+      }
+
       .exp-left {
         width: 40%;
         padding-right: 2rem;
+
+        @include mq-down("mobile") {
+          width: 100%;
+          position: relative;
+        }
 
         .section-title {
           font-family: font("midashi");
           font-size: 2rem;
           line-height: 1.2em;
+
+          @include mq-down("mobile") {
+            width: calc(100% - 13rem);
+          }
+
+          @include mq-down("sm") {
+            width: calc(100% - 10rem);
+            font-size: 1.6rem;
+          }
+
+          @media screen and (max-width: 350px) {
+            font-size: 1.4rem;
+          }
         }
 
         .section {
           font-family: font("madawaska");
           font-size: 1.6rem;
           margin-top: $spacer * 2;
+
+          @media screen and (max-width: 350px) {
+            margin-bottom: $spacer;
+          }
         }
 
         .paging {
@@ -92,8 +200,25 @@
           width: 12rem;
           height: 3rem;
 
+          @include mq-down("mobile") {
+            position: absolute;
+            top: 0;
+            right: $spacer;
+            margin-top: 0;
+          }
+
+          @include mq-down("sm") {
+            width: 10rem;
+            height: 2.5rem;
+            right: 0;
+          }
+
           .arrows {
             width: 1.5rem;
+
+            @include mq-down("sm") {
+              width: 1.2rem;
+            }
           }
 
           .numbers {
@@ -103,10 +228,18 @@
             justify-content: center;
             flex: 1;
 
+            @include mq-down("sm") {
+              font-size: 1.4rem;
+            }
+
             .now {
               font-family: font("madawaska");
               font-size: 3rem;
               margin-bottom: 0.5rem;
+
+              @include mq-down("sm") {
+                font-size: 2.4rem;
+              }
             }
 
             .divider {
@@ -115,6 +248,10 @@
               background: $gray;
               margin: 0 $spacer 0 $spacer * 2;
               transform: rotate(30deg);
+
+              @include mq-down("sm") {
+                margin: 0 $spacer/2 0 $spacer;
+              }
             }
 
             .total {
@@ -131,6 +268,13 @@
         height: 100%;
 
         @include dotted-border;
+
+        @include mq-down("mobile") {
+          height: 1px;
+          width: 100%;
+          background: transparent;
+          border: 0.5px dashed $black;
+        }
       }
 
       .exp-right {
@@ -138,8 +282,23 @@
         font-family: font("text");
         padding-left: 2rem;
 
+        @include mq-down("mobile") {
+          width: 100%;
+          padding-left: 0;
+          padding-top: $spacer * 2;
+        }
+
         .sub-title {
           font-size: 1.4rem;
+
+          @include mq-down("sm") {
+            margin-bottom: 0;
+            line-height: 2rem;
+          }
+
+          @media screen and (max-width: 350px) {
+            font-size: 1.2rem;
+          }
         }
 
         .title {
@@ -147,6 +306,16 @@
           line-height: 3.2rem;
           font-weight: 600;
           margin-top: $spacer * 2;
+
+          @include mq-down("sm") {
+            font-size: 2rem;
+            line-height: 3.2rem;
+            margin-top: $spacer;
+          }
+
+          @media screen and (max-width: 350px) {
+            font-size: 1.8rem;
+          }
         }
       }
     }

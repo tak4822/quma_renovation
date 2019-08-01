@@ -48,6 +48,21 @@ p {
   font-size: 1.4rem;
   line-height: 2.4rem;
   margin-bottom: $spacer * 2;
+
+  @include mq-down("mobile") {
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+  }
+
+  @include mq-down("sm") {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+  }
 }
 
 .regular-container {
@@ -56,5 +71,9 @@ p {
 
   @include mq-down("sns") {
     width: $con-mid;
+  }
+
+  @include mq-down("lg") {
+    width: auto;
   }
 }
