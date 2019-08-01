@@ -1,0 +1,103 @@
+.page-section-header {
+  width: 100%;
+  height: 21rem;
+  position: relative;
+  margin-bottom: $spacer * 4;
+
+  @include mq-down("sm") {
+    height: 14rem;
+  }
+
+  .square {
+    width: calc((100vw - 1000px) / 2);
+    height: 100%;
+    background: $gray-bg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: z("below");
+
+    @include mq-down("lg") {
+      width: 10rem;
+    }
+
+    @include mq-down("sm") {
+      width: 4rem;
+    }
+  }
+
+  .circle {
+    width: 21rem;
+    height: 21rem;
+    background: $gray-bg;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: calc((100vw - 1000px) / 2 - 10.5rem);
+    z-index: z("below");
+
+    @include mq-down("lg") {
+      left: calc(10rem - 10.5rem);
+    }
+
+    @include mq-down("sm") {
+      width: 14rem;
+      height: 14rem;
+      left: calc(4rem - 7rem);
+    }
+  }
+
+  .content {
+    margin-left: $con-big-side;
+    padding-top: $spacer * 2;
+
+    @include mq-down("lg") {
+      margin-left: $spacer * 4;
+    }
+
+    @include mq-down("mobile") {
+      margin-left: $spacer * 2;
+    }
+
+    @include mq-down("sm") {
+      margin-left: $spacer;
+      padding-top: $spacer;
+    }
+
+    .title {
+      font-family: font("midashi");
+      font-size: 5rem;
+      line-height: 8rem;
+      letter-spacing: -0.05em;
+
+      @include mq-down("sns") {
+        font-size: 4.5rem;
+      }
+
+      @include mq-down("mobile") {
+        font-size: 3.6rem;
+      }
+
+      @include mq-down("sm") {
+        font-size: 2.8rem;
+        line-height: 6rem;
+      }
+    }
+
+    .subtitle {
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-family: font("midashi");
+      margin-top: $spacer * 2;
+
+      @include mq-down("mobile") {
+        margin-top: $spacer;
+      }
+
+      @include mq-down("sm") {
+        font-size: 1.2rem;
+        margin-top: 0;
+      }
+    }
+  }
+}

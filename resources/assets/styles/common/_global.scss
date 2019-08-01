@@ -77,3 +77,15 @@ p {
     width: auto;
   }
 }
+
+.pages-container {
+  padding-top: 8rem;
+
+  @include mq-down("lg") {
+    padding-top: 6rem;
+  }
+
+  @include mq-down("sm") {
+    padding-top: 5rem;
+  }
+}

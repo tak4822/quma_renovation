@@ -1,0 +1,40 @@
+.breadcrums-container {
+  margin: $spacer * 6 0 $spacer * 12;
+  display: flex;
+  align-items: center;
+  margin-left: $con-big-side;
+
+  @include mq-down("lg") {
+    margin-left: $spacer * 4;
+  }
+
+  @include mq-down("mobile") {
+    margin: $spacer * 3 0 $spacer * 6;
+    margin-left: $spacer * 2;
+  }
+
+  @include mq-down("sm") {
+    margin: $spacer* 2 0 $spacer * 4;
+    margin-left: $spacer;
+  }
+
+  .page-name {
+    font-family: font("madawaska");
+    font-size: 2.4rem;
+
+    @include mq-down("mobile") {
+      font-size: 2rem;
+    }
+  }
+
+  .border {
+    width: 2rem;
+    height: 0.1rem;
+    background: $black;
+    margin: 0 $spacer * 2;
+  }
+
+  .page-exp {
+    margin: 0;
+  }
+}

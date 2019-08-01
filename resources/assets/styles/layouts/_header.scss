@@ -25,6 +25,10 @@
       position: absolute;
       left: 25%;
 
+      @media screen and (min-width: 1700px) {
+        left: calc((100vw - 1000px) / 2 + 150px);
+      }
+
       @include mq-down("lg") {
         display: none; // TODO
       }
