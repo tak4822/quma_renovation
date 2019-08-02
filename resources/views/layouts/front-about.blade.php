@@ -26,6 +26,7 @@
   <div class="action-container regular-container">
     @component('components.button')
     @slot('text')QUMAをもっと知る@endslot
+    @slot('url')about @endslot
     @endcomponent
   </div>
 </section>

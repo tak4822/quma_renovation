@@ -90,15 +90,18 @@
       font-weight: 600;
       font-family: font("midashi");
       margin-top: $spacer * 2;
+      width: 45rem;
 
       @include mq-down("mobile") {
         margin-top: $spacer;
+        width: calc(100% - 3.2rem);
       }
 
       @include mq-down("sm") {
         font-size: 1.2rem;
         margin-top: 0;
         line-height: 2rem;
+        width: calc(100% - 1.6rem);
       }
     }
   }

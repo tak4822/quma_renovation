@@ -1,7 +1,7 @@
 .breadcrums-container {
   margin: $spacer * 6 0 $spacer * 12;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-left: $con-big-side;
 
   @include mq-down("lg") {
@@ -31,10 +31,24 @@
     width: 2rem;
     height: 0.1rem;
     background: $black;
-    margin: 0 $spacer * 2;
+    margin: 1.8rem $spacer * 2;
+
+    @include mq-down("mobile") {
+      margin: 1.3rem $spacer * 2;
+    }
   }
 
   .page-exp {
-    margin: 0;
+    font-family: font("midashi");
+    font-size: 1.6rem;
+    margin: 0.7rem 0;
+
+    @include mq-down("mobile") {
+      font-size: 1.4rem;
+    }
+
+    @include mq-down("mobile") {
+      margin: 0.1rem 0;
+    }
   }
 }

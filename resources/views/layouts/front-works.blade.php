@@ -108,6 +108,7 @@
     <div class="action-container">
       @component('components.button')
       @slot('text')施工事例ー記事一覧を見る@endslot
+      @slot('url')works @endslot
       @endcomponent
     </div>
   </div>

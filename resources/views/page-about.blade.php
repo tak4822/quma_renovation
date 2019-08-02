@@ -3,11 +3,10 @@
 @section('content')
 <div class="about-page pages-container">
 
-  <div class="breadcrums-container">
-    <div class="page-name">About</div>
-    <div class="border"></div>
-    <p class="page-exp">わたしたちについて</p>
-  </div>
+  @component('components.breadcrums')
+  @slot('page')About @endslot
+  @slot('text')わたしたちについて@endslot
+  @endcomponent
 
   <section class="vision">
     @component('components.page-section-header')

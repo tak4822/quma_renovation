@@ -45,6 +45,7 @@
     <div class="action-container">
       @component('components.button')
       @slot('text')インタビュー記事一覧を見る@endslot
+      @slot('url')interviews @endslot
       @endcomponent
     </div>
   </div>

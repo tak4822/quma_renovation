@@ -20,7 +20,7 @@
 }
 
 @mixin bg-img($img-name, $size) {
-  background-image: url("../../images/"+ $img-name);
+  background-image: url("../images/"+ $img-name);
   background-repeat: no-repeat;
   background-size: $size;
   background-position: center center;
