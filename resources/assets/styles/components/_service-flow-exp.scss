@@ -1,0 +1,25 @@
+.flow-exp-wrapper {
+  .title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacer;
+
+    img {
+      width: 6rem;
+    }
+
+    .title {
+      background: linear-gradient(transparent 60%, $gold 60%);
+      font-family: font("midashi");
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin: 0;
+      margin-left: $spacer * 2;
+      display: inline-block;
+
+      @include mq-down("sm") {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

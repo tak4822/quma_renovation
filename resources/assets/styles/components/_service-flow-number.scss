@@ -1,0 +1,49 @@
+.step-number {
+  @include bg-img("dotted-circle.svg", contain);
+  @include flex-center;
+
+  width: 19rem;
+  height: 19rem;
+  margin-bottom: 10rem;
+
+  @include mq-down("lg") {
+    margin-bottom: 3rem;
+  }
+
+  @include mq-down("sm") {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .number {
+    font-family: font("madawaska");
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 4rem;
+    margin: 0;
+    color: $gold;
+
+    @include mq-down("sm") {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+  }
+
+  .border {
+    width: 5rem;
+    height: 1px;
+    background: $black;
+    margin: $spacer 0;
+  }
+
+  .title {
+    font-family: font("midashi");
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 0;
+
+    @include mq-down("sm") {
+      font-size: 1.6rem;
+    }
+  }
+}

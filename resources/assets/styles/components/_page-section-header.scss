@@ -8,6 +8,34 @@
     height: 14rem;
   }
 
+  img {
+    z-index: z("below");
+    position: absolute;
+    width: 30rem;
+    right: 50%;
+    transform: translateX(45rem);
+    top: 0;
+
+    @include mq-down("lg") {
+      transform: none;
+      right: 3rem;
+      top: 8rem;
+    }
+
+    @include mq-down("mobile") {
+      width: 24rem;
+      right: 1rem;
+      top: 10rem;
+    }
+
+    @include mq-down("sm") {
+      width: 20rem;
+      top: 11rem;
+      right: 30%;
+      transform: translateX(50%);
+    }
+  }
+
   .square {
     width: calc((100vw - 1000px) / 2);
     height: 100%;
