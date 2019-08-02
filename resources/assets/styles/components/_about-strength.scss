@@ -1,0 +1,161 @@
+.strength-wrapper {
+  position: relative;
+  height: 45rem;
+
+  @include mq-down("lg") {
+    height: 40rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    height: 45rem;
+  }
+
+  @include mq-down("mobile") {
+    height: 65rem;
+  }
+
+  @include mq-down("sm") {
+    height: 70rem;
+  }
+
+  .number {
+    width: 16rem;
+    height: 16rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $gold;
+    border-radius: 50%;
+    z-index: z("below");
+
+    @include flex-center;
+
+    @include mq-down("lg") {
+      width: 12rem;
+      height: 12rem;
+      left: $spacer * 4;
+    }
+
+    @include mq-down("mobile") {
+      width: 10rem;
+      height: 10rem;
+      left: $spacer * 2;
+    }
+
+    @include mq-down("sm") {
+      left: $spacer;
+    }
+
+    .number-text {
+      font-size: 8rem;
+      font-family: font("midashi");
+      font-weight: 600;
+      color: white;
+      margin: 0;
+
+      @include mq-down("lg") {
+        font-size: 6rem;
+      }
+
+      @media screen and (max-width: 800px) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .head {
+    font-size: 2.4rem;
+    font-family: font("midashi");
+    line-height: 3.2rem;
+    padding-left: $spacer * 15;
+    padding-top: $spacer * 9;
+
+    @include mq-down("lg") {
+      font-size: 2rem;
+      padding-left: $spacer * 15;
+      padding-top: $spacer * 6;
+    }
+
+    @media screen and (max-width: 800px) {
+      padding-left: $spacer * 24;
+      padding-top: $spacer * 4;
+    }
+
+    @include mq-down("mobile") {
+      padding-left: $spacer * 17;
+      padding-top: $spacer * 3;
+      font-size: 2rem;
+    }
+
+    @include mq-down("sm") {
+      padding-left: $spacer * 10;
+      padding-top: $spacer * 5;
+      font-size: 1.6rem;
+    }
+  }
+
+  .contents {
+    padding-left: $spacer * 8;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 16rem;
+    left: $spacer * 7;
+    padding-right: 10rem;
+
+    @include mq-down("lg") {
+      top: 14rem;
+      width: calc(100vw - 5.6rem);
+    }
+
+    @media screen and (max-width: 800px) {
+      padding-right: $spacer;
+      padding-left: $spacer;
+      justify-content: space-around;
+    }
+
+    @include mq-down("mobile") {
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .text {
+      width: 55%;
+
+      @media screen and (max-width: 800px) {
+        width: 45%;
+      }
+
+      @include mq-down("mobile") {
+        order: 2;
+        width: 90%;
+      }
+
+      @include mq-down("sm") {
+        width: 100%;
+      }
+    }
+
+    .illust-container {
+      width: 40%;
+      margin-top: -5rem;
+      z-index: z("below");
+
+      @media screen and (max-width: 800px) {
+        margin-top: -2rem;
+      }
+
+      @include mq-down("mobile") {
+        order: 1;
+        margin-bottom: 2rem;
+      }
+
+      @include mq-down("sm") {
+        width: 70%;
+      }
+    }
+  }
+}

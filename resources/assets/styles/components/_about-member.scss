@@ -1,0 +1,235 @@
+.member {
+  width: 100%;
+  height: 62rem;
+  position: relative;
+  margin-top: $spacer * 6;
+
+  @include mq-down("lg") {
+    height: 58rem;
+  }
+
+  @include mq-down("mobile") {
+    margin-top: $spacer * 12;
+    height: 80rem;
+  }
+
+  .bg {
+    width: 100%;
+    height: 42rem;
+    background: $gray-bg;
+    position: absolute;
+    bottom: 0;
+    z-index: z("below");
+
+    @include mq-down("lg") {
+      height: 38rem;
+    }
+
+    @include mq-down("mobile") {
+      height: 56rem;
+    }
+  }
+
+  .member-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .top {
+      display: flex;
+      margin-bottom: $spacer * 4;
+
+      @include mq-down("mobile") {
+        height: 37rem;
+        position: relative;
+      }
+
+      .left {
+        width: 56rem;
+        display: flex;
+        align-self: flex-end;
+
+        @include mq-down("lg") {
+          width: 60%;
+        }
+
+        @media screen and (max-width: 800px) {
+          width: 50%;
+        }
+
+        @include mq-down("mobile") {
+          height: 30rem;
+          width: auto;
+          align-self: flex-end;
+        }
+
+        .picture {
+          @media screen and (max-width: 800px) {
+            object-position: bottom left;
+          }
+
+          @include mq-down("sm") {
+            object-position: top left;
+          }
+        }
+      }
+
+      .right {
+        flex: 1;
+        padding-left: $spacer * 4;
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+
+        @media screen and (max-width: 800px) {
+          padding-top: 9rem;
+        }
+
+        @include mq-down("mobile") {
+          position: absolute;
+          padding-top: 0;
+          top: -4rem;
+          padding-left: $spacer * 2;
+          height: 46rem;
+          justify-content: space-between;
+        }
+
+        @include mq-down("sm") {
+          height: 108vw;
+        }
+
+        @media screen and (max-width: 400px) {
+          height: 112vw;
+        }
+
+        @media screen and (max-width: 370px) {
+          height: 118vw;
+        }
+
+        @media screen and (max-width: 340px) {
+          height: 122vw;
+        }
+
+        .name-wrapper {
+          display: flex;
+          flex-direction: column;
+
+          .name-img {
+            height: 8rem;
+            object-position: left;
+            margin-bottom: $spacer * 2;
+
+            @media screen and (max-width: 800px) {
+              height: 6rem;
+              margin-bottom: $spacer;
+            }
+          }
+
+          .name-text {
+            font-family: font("madawaska");
+            font-size: 1.8rem;
+
+            @media screen and (max-width: 800px) {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+
+      .favorite-wrapper {
+        padding-top: 6rem;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 800px) {
+          padding-top: 2rem;
+        }
+
+        @include mq-down("mobile") {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        @include mq-down("sm") {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .head {
+          font-family: font("midashi");
+          font-weight: 600;
+          margin-bottom: $spacer * 1.5;
+
+          @media screen and (max-width: 800px) {
+            margin-bottom: $spacer;
+          }
+
+          @include mq-down("mobile") {
+            margin-bottom: 0;
+          }
+        }
+
+        .border {
+          width: 2rem;
+          height: 0.2rem;
+          background: $black;
+
+          @include mq-down("mobile") {
+            height: 0.1rem;
+            margin: 0 $spacer * 2;
+          }
+
+          @include mq-down("sm") {
+            margin: $spacer/2 0 $spacer;
+          }
+        }
+
+        .text {
+          font-weight: 600;
+          font-size: 1.8rem;
+          margin-top: 2rem;
+
+          @media screen and (max-width: 800px) {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+          }
+
+          @include mq-down("mobile") {
+            font-size: 1.6rem;
+            margin-top: 1.5rem;
+          }
+
+          @include mq-down("mobile") {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      width: 75%;
+
+      @include mq-down("lg") {
+        padding: 0 $spacer * 4;
+        width: 100%;
+      }
+
+      @include mq-down("mobile") {
+        padding: $spacer * 7 $spacer * 2 0;
+      }
+
+      @media screen and (max-width: 400px) {
+        padding: $spacer * 5 $spacer * 2 0;
+      }
+
+      @media screen and (max-width: 370px) {
+        padding: $spacer * 4 $spacer * 2 0;
+      }
+
+      @media screen and (max-width: 340px) {
+        padding: 0 $spacer * 2 0;
+        margin-top: -$spacer * 2;
+      }
+    }
+  }
+}

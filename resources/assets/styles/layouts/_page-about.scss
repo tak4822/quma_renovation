@@ -1,0 +1,118 @@
+.about-page {
+  .vision {
+    margin-bottom: $spacer * 10;
+
+    .contents {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      @include mq-down("mobile") {
+        flex-direction: column;
+      }
+
+      .illust {
+        width: 40%;
+
+        @include mq-down("lg") {
+          width: 50%;
+        }
+
+        @include mq-down("mobile") {
+          width: 80%;
+        }
+      }
+
+      .text {
+        width: 50%;
+
+        @include mq-down("lg") {
+          padding-right: $spacer * 2;
+        }
+
+        @include mq-down("mobile") {
+          width: 100%;
+          padding: 0 $spacer * 2;
+        }
+
+        @include mq-down("sm") {
+          width: 100%;
+          padding: 0 $spacer;
+        }
+      }
+    }
+  }
+
+  .strength {
+    margin-bottom: $spacer * 10;
+  }
+
+  .members {
+    margin-bottom: $spacer * 10;
+  }
+
+  .company-info {
+    .info-list {
+      display: flex;
+      width: 90rem;
+      margin: $spacer * 6 auto;
+      justify-content: space-between;
+
+      @include mq-down("lg") {
+        width: auto;
+        flex-direction: column;
+        margin: $spacer * 4;
+      }
+
+      @include mq-down("mobile") {
+        margin: $spacer * 2;
+      }
+
+      @include mq-down("sm") {
+        margin: $spacer;
+      }
+
+      .info {
+        display: flex;
+        margin-bottom: $spacer * 4;
+
+        .header {
+          width: 10rem;
+          font-size: 1.6rem;
+          font-family: font("midashi");
+          line-height: 2.4rem;
+
+          @include mq-down("sm") {
+            width: 8rem;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+          }
+        }
+
+        .text {
+          font-size: 1.4rem;
+
+          @include mq-down("sm") {
+            font-size: 1.2rem;
+            line-height: 2rem;
+          }
+
+          .map-link {
+            text-decoration: underline;
+            color: #4787a8;
+          }
+        }
+      }
+
+      .border {
+        height: 23rem;
+
+        @include dotted-border;
+
+        @include mq-down("lg") {
+          display: none;
+        }
+      }
+    }
+  }
+}
