@@ -51,6 +51,10 @@
 
       @include bg-img("quma_logo.svg", "contain");
 
+      @include mq-down("sns") {
+        margin-left: $con-mid-side;
+      }
+
       @include mq-down("lg") {
         position: absolute;
         top: 1rem;

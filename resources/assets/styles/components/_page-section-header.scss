@@ -45,6 +45,10 @@
     left: 0;
     z-index: z("below");
 
+    @include mq-down("sns") {
+      width: calc((100vw - 900px) / 2);
+    }
+
     @include mq-down("lg") {
       width: 10rem;
     }
@@ -64,6 +68,10 @@
     left: calc((100vw - 1000px) / 2 - 10.5rem);
     z-index: z("below");
 
+    @include mq-down("sns") {
+      left: calc((100vw - 900px) / 2 - 10.5rem);
+    }
+
     @include mq-down("lg") {
       left: calc(10rem - 10.5rem);
     }
@@ -78,6 +86,10 @@
   .content {
     margin-left: $con-big-side;
     padding-top: $spacer * 2;
+
+    @include mq-down("sns") {
+      margin-left: $con-mid-side;
+    }
 
     @include mq-down("lg") {
       margin-left: $spacer * 4;

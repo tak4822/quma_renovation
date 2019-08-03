@@ -1,0 +1,11 @@
+.interviews-page {
+  .interviews-container {
+    .interviews-list {
+      padding-top: $spacer * 8;
+
+      @include mq-down("lg") {
+        padding-top: $spacer * 15;
+      }
+    }
+  }
+}

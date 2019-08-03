@@ -4,6 +4,10 @@
   align-items: flex-start;
   margin-left: $con-big-side;
 
+  @include mq-down("sns") {
+    margin-left: $con-mid-side;
+  }
+
   @include mq-down("lg") {
     margin-left: $spacer * 4;
   }
