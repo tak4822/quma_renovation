@@ -1,0 +1,284 @@
+.interviews-single {
+  .interview-head {
+    margin-left: $con-big-side;
+    height: calc(100vh - 182px);
+    display: flex;
+
+    @include mq-down("sns") {
+      margin-left: $con-mid-side;
+    }
+
+    @include mq-down("lg") {
+      flex-direction: column;
+      margin-left: 0;
+      height: auto;
+    }
+
+    .head-texts {
+      margin-right: $spacer * 2;
+      width: 30%;
+
+      @include mq-down("lg") {
+        order: 2;
+        width: 100%;
+        padding: $spacer * 2 $spacer * 4;
+      }
+
+      @include mq-down("mobile") {
+        padding: $spacer * 2;
+      }
+
+      @include mq-down("sm") {
+        padding: $spacer;
+      }
+
+      .head {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        @include mq-down("lg") {
+          flex-direction: row;
+          margin-bottom: $spacer * 6;
+        }
+
+        @include mq-down("lg") {
+          margin-bottom: $spacer * 2;
+        }
+
+        .number {
+          font-family: ("madawaska");
+          font-style: italic;
+          font-size: 8.6rem;
+          line-height: 8.6rem;
+          margin-bottom: $spacer * 4;
+
+          @include mq-down("lg") {
+            margin-bottom: 0;
+          }
+
+          @include mq-down("mobile") {
+            font-size: 3.2rem;
+            line-height: 3.2rem;
+          }
+
+          @include mq-down("sm") {
+            font-size: 2.8rem;
+            line-height: 2.8rem;
+          }
+        }
+
+        .text-wrapper {
+          display: flex;
+          flex-direction: column;
+
+          @include mq-down("lg") {
+            margin-left: $spacer * 4;
+            margin-top: $spacer * 1.5;
+          }
+
+          @include mq-down("lg") {
+            margin-top: 0;
+          }
+
+          @include mq-down("sm") {
+            margin-left: $spacer * 3;
+          }
+
+          .title {
+            font-weight: 600;
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+            margin-bottom: $spacer * 2;
+
+            @include mq-down("sm") {
+              font-size: 2rem;
+              line-height: 2.8rem;
+            }
+          }
+
+          .outline {
+            display: flex;
+            align-items: center;
+            margin-bottom: $spacer * 6;
+
+            @include mq-down("lg") {
+              margin-bottom: 0;
+            }
+
+            .slash {
+              width: 1px;
+              height: 1.6rem;
+              background: $black;
+              transform: rotate(20deg);
+              margin: 0 $spacer;
+            }
+
+            p {
+              font-size: 1.2rem;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .lead-container {
+        @include mq-down("lg") {
+          padding-left: 17rem;
+        }
+
+        @include mq-down("mobile") {
+          padding-left: 0;
+        }
+
+        p {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .pic {
+      width: 70%;
+
+      @include mq-down("sns") {
+        width: 76%;
+      }
+
+      @include mq-down("lg") {
+        order: 1;
+        width: 100%;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .interview-contents {
+    margin-top: $spacer * 4;
+    margin-left: $con-big-side;
+
+    @include mq-down("sns") {
+      margin-left: $con-mid-side;
+    }
+
+    @include mq-down("lg") {
+      margin: $spacer * 4;
+    }
+
+    @include mq-down("mobile") {
+      margin: $spacer * 2;
+    }
+
+    .article {
+      height: 300rem;
+      display: flex;
+
+      @include mq-down("mobile") {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .illust-area {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-right: $spacer * 2;
+
+        @include mq-down("lg") {
+          width: 17rem;
+          margin-right: 0;
+        }
+
+        @include mq-down("mobile") {
+          width: 80%;
+        }
+      }
+
+      .contents {
+        width: 70%;
+        padding-right: $con-big-side;
+
+        @include mq-down("sns") {
+          width: 76%;
+        }
+
+        @include mq-down("lg") {
+          flex: 1;
+          width: auto;
+          padding-right: 0;
+        }
+
+        .title-container {
+          display: flex;
+          align-items: center;
+          margin-bottom: $spacer * 2;
+
+          .number {
+            width: 9.6rem;
+            height: 9.6rem;
+            font-size: 3.8rem;
+            font-family: font("madawaska");
+            padding-left: 1rem;
+
+            @include bg-img("dotted-circle-sm.svg", contain);
+            @include flex-center;
+
+            @include mq-down("sm") {
+              width: 7.6rem;
+              height: 7.6rem;
+              font-size: 3rem;
+            }
+          }
+
+          .title-wrapper {
+            flex: 1;
+            margin-left: $spacer * 2;
+
+            .title {
+              font-size: 2.4rem;
+              line-height: 3.2rem;
+              font-weight: 600;
+              margin-bottom: 0;
+              background: linear-gradient(transparent 60%, $gold 0%);
+              display: inline;
+              padding-bottom: 1px;
+
+              @include mq-down("mobile") {
+                font-size: 2rem;
+                line-height: 3rem;
+              }
+
+              @include mq-down("sm") {
+                font-size: 1.8rem;
+                line-height: 2.6rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .next {
+    margin-bottom: $spacer * 10;
+
+    .button-wrapper {
+      margin-left: 32rem;
+
+      @include mq-down("lg") {
+        margin-left: calc((100vw - 3.2rem) * 0.34 + 3.2rem);
+      }
+
+      @media screen and (max-width: 800px) {
+        margin-left: 0;
+        width: 100%;
+
+        @include flex-center;
+      }
+    }
+  }
+}

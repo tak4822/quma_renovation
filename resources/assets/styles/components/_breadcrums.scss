@@ -1,5 +1,5 @@
 .breadcrums-container {
-  margin: $spacer * 6 0 $spacer * 12;
+  margin: $spacer * 2 0 $spacer * 6;
   display: flex;
   align-items: flex-start;
   margin-left: $con-big-side;
@@ -24,7 +24,7 @@
 
   .page-name {
     font-family: font("madawaska");
-    font-size: 2.4rem;
+    font-size: 2rem;
 
     @include mq-down("mobile") {
       font-size: 1.8rem;
@@ -44,11 +44,11 @@
 
   .page-exp {
     font-family: font("midashi");
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin: 0.7rem 0;
 
     @include mq-down("mobile") {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
 
     @include mq-down("mobile") {
