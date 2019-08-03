@@ -13,6 +13,7 @@
   }
 
   @include mq-down("mobile") {
+    margin-left: 0;
     justify-content: center;
   }
 

@@ -17,8 +17,6 @@
     @endslot
     @endcomponent
 
-
-
     <div class="interviews-list regular-container">
 
       @component('components.interview-list')
