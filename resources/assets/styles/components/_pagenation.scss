@@ -1,0 +1,46 @@
+.pagenation-container {
+  display: flex;
+  align-items: center;
+  margin-top: $spacer * 6;
+  margin-left: $con-big-side;
+
+  @include mq-down("sns") {
+    margin-left: $con-mid-side;
+  }
+
+  @include mq-down("lg") {
+    margin-left: $spacer * 4;
+  }
+
+  @include mq-down("mobile") {
+    justify-content: center;
+  }
+
+  .page {
+    width: 5.2rem;
+    height: 5.2rem;
+    border-radius: 50%;
+    border: 1px solid $black;
+    margin-right: $spacer * 3;
+    font-size: 1.6rem;
+
+    @include flex-center;
+
+    @include mq-down("lg") {
+      width: 4.2rem;
+      height: 4.2rem;
+      margin-right: $spacer * 2;
+    }
+
+    @include mq-down("mobile") {
+      margin-right: $spacer;
+      margin-left: $spacer;
+    }
+
+    &.active {
+      border: none;
+      background: $black;
+      color: white;
+    }
+  }
+}

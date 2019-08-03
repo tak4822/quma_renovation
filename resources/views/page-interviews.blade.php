@@ -45,6 +45,8 @@
       @endslot
       @endcomponent
     </div>
+
+    @component('components.pagenation')@endcomponent
   </section>
 
 </div>
