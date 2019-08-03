@@ -7,9 +7,10 @@
       <div class="divider"></div>
       <p class="budget">{{ $budget }}万円</p>
       <div class="divider"></div>
-      <p class="type">{{ $type }}</p>
-      <p class="in">in</p>
-      <p class="place">{{ $place }}</p>
+      <div class="place-container">
+        <p class="type">{{ $type }}</p>
+        <p class="place"><span class="in">in</span> {{ $place }}</p>
+      </div>
     </div>
   </div>
 </div>

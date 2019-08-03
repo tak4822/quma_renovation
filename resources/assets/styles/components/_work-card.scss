@@ -22,7 +22,6 @@
 
     .outline {
       display: flex;
-      align-items: center;
       margin-top: 0.2rem;
 
       p {
@@ -35,12 +34,16 @@
         height: 1.2rem;
         transform: rotate(20deg);
         background: $black;
-        margin: 0 $spacer;
+        margin: 0.6rem $spacer;
       }
 
-      .in {
-        font-family: font("midashi");
-        margin: 0 $spacer;
+      .place-container {
+        display: flex;
+
+        .in {
+          font-family: font("midashi");
+          margin: 0 $spacer;
+        }
       }
     }
   }

@@ -1,0 +1,133 @@
+.works-page {
+  .works-container {
+    margin-bottom: $spacer * 10;
+
+    .works-list-container {
+      @include mq-down("lg") {
+        margin: 0 $spacer * 4;
+      }
+
+      @include mq-down("mobile") {
+        margin: 0;
+      }
+
+      .work-card {
+        margin: 0;
+
+        .outline {
+          p {
+            @media screen and (max-width: 800px) {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .picked-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $spacer * 5;
+
+        @include mq-down("mobile") {
+          flex-direction: column;
+        }
+
+        .work-card {
+          width: 48%;
+
+          @include mq-down("mobile") {
+            width: 100%;
+            margin-bottom: $spacer * 4;
+          }
+
+          .thumb {
+            height: 28rem;
+
+            @media screen and (max-width: 800px) {
+              height: 20rem;
+            }
+
+            @include mq-down("mobile") {
+              height: 28rem;
+            }
+
+            @include mq-down("sm") {
+              height: 20rem;
+            }
+          }
+
+          .contents {
+            @include mq-down("mobile") {
+              padding: $spacer;
+            }
+
+            .title {
+              font-size: 2rem;
+              margin-bottom: $spacer;
+
+              @include mq-down("lg") {
+                font-size: 1.8rem;
+              }
+
+              @media screen and (max-width: 800px) {
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+      }
+
+      .new-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include mq-down("mobile") {
+          margin: 0 $spacer;
+        }
+
+        .work-card {
+          width: 32%;
+          margin-bottom: $spacer * 2;
+
+          @include mq-down("mobile") {
+            width: 100%;
+            margin-bottom: $spacer * 4;
+          }
+
+          .thumb {
+            height: 16rem;
+
+            @include mq-down("mobile") {
+              height: 20rem;
+            }
+
+            @include mq-down("sm") {
+              height: 12rem;
+            }
+          }
+
+          .contents {
+            .title {
+              @media screen and (max-width: 800px) {
+                font-size: 1.4rem;
+              }
+            }
+
+            .outline {
+              .place {
+                @media screen and (max-width: 800px) {
+                  display: none;
+                }
+
+                @include mq-down("mobile") {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

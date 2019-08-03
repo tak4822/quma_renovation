@@ -130,7 +130,7 @@
       font-weight: 600;
       font-family: font("midashi");
       margin-top: $spacer * 2;
-      width: 45rem;
+      width: 40rem;
 
       @include mq-down("mobile") {
         margin-top: $spacer;
