@@ -1,0 +1,151 @@
+.events-inner-page {
+  .events-inner-contents {
+    display: flex;
+    margin-bottom: $spacer * 10;
+
+    @include mq-down("lg") {
+      margin: 0 $spacer * 4 $spacer * 10;
+    }
+
+    @include mq-down("md") {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mq-down("mobile") {
+      margin: 0 $spacer * 2 $spacer * 10;
+    }
+
+    @include mq-down("sm") {
+      margin: 0 $spacer $spacer * 10;
+    }
+
+    .left {
+      width: 50%;
+
+      @include mq-down("lg") {
+        width: auto;
+        flex: 1;
+      }
+
+      @include mq-down("md") {
+        width: 40rem;
+      }
+
+      @include mq-down("sm") {
+        width: 70%;
+      }
+    }
+
+    .right {
+      width: 50%;
+      margin-top: $spacer * 4;
+
+      @include mq-down("lg") {
+        width: 41rem;
+      }
+
+      @include mq-down("md") {
+        width: auto;
+        max-width: 50rem;
+      }
+
+      .title {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        font-family: font("midashi");
+        margin-bottom: $spacer * 4;
+
+        @include mq-down("sm") {
+          font-size: 2.4rem;
+          line-height: 2.8rem;
+          margin-bottom: $spacer * 2;
+        }
+      }
+
+      .text-container {
+        margin-bottom: $spacer * 4;
+      }
+
+      .outline-container {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: $spacer * 4;
+
+        @include mq-down("mobile") {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .deco {
+          width: 12.5rem;
+          height: 12.5rem;
+          border-radius: 50%;
+          background: $gray-bg;
+
+          @include flex-center;
+
+          @include mq-down("mobile") {
+            margin-bottom: $spacer * 2;
+          }
+
+          p {
+            margin: 0;
+            font-family: font("madawaska");
+            font-weight: 600;
+            font-size: 2rem;
+          }
+        }
+
+        .contents {
+          display: flex;
+          flex-direction: column;
+
+          .text-wrapper {
+            display: flex;
+
+            .item-head {
+              font-weight: 600;
+              font-family: font("midashi");
+              width: 6rem;
+            }
+          }
+        }
+      }
+
+      .action-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .btn {
+          padding: 0 $spacer * 8;
+          margin-bottom: $spacer * 2;
+
+          @include mq-down("md") {
+            align-self: center;
+          }
+        }
+
+        .comments {
+          p {
+            font-size: 1.2rem;
+            line-height: 2rem;
+          }
+
+          .red-text {
+            color: $red;
+          }
+
+          .text {
+            margin-bottom: $spacer;
+          }
+
+          a {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

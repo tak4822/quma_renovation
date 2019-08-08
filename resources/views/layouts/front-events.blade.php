@@ -8,26 +8,6 @@
   </div>
   <div class="contents regular-container">
     <div class="bg-gray"></div>
-    <a class="event-card showroom">
-      <div class="shadow"></div>
-      <img src="@asset('images/showroom.jpg')" alt="">
-      <div class="point">
-        <p class="text">見る</p>
-      </div>
-    </a>
-    <a class="event-card seminar">
-      <div class="shadow"></div>
-      <img src="@asset('images/seminar.jpg')" alt="">
-      <div class="point">
-        <p class="text">話す</p>
-      </div>
-    </a>
-    <a class="event-card offkai">
-      <div class="shadow"></div>
-      <img src="@asset('images/offkai.jpg')" alt="">
-      <div class="point">
-        <p class="text">楽しむ</p>
-      </div>
-    </a>
+    @component('layouts.event-cards')@endcomponent
   </div>
 </section>
