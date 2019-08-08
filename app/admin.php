@@ -36,6 +36,13 @@ add_action( 'init', function() {
         'has_archive'   => false, // アーカイブ機能ON/OFF
         'menu_position' => 5,     // 管理画面上での配置場所
         'show_in_rest'  => true,  // 5系から出てきた新エディタ「Gutenberg」を有効にする
+        'supports'            => array(
+            'title',        // 編集ページのタイトル
+            'editor',       // 編集ページの本文エディタ
+            'thumbnail',    // 編集ページのアイキャッチ画像
+            'custom-fields',    // 編集ページのカスタムフィルド
+        ),
+
     ]);
 });
 
@@ -49,5 +56,11 @@ add_action( 'init', function() {
         'has_archive'   => false, // アーカイブ機能ON/OFF
         'menu_position' => 5,     // 管理画面上での配置場所
         'show_in_rest'  => true,  // 5系から出てきた新エディタ「Gutenberg」を有効にする
+        'supports'            => array(
+            'title',        // 編集ページのタイトル
+            'editor',       // 編集ページの本文エディタ
+            'thumbnail',    // 編集ページのアイキャッチ画像
+            'custom-fields',    // 編集ページのカスタムフィルド
+        ),
     ]);
 });

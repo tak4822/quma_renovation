@@ -4,12 +4,12 @@
 <div class="works-single pages-container">
   @component('components.breadcrums')
   @slot('page')Works @endslot
-  @slot('text')住む人も来た人も楽しくなる家@endslot
+  @slot('text'){{ the_title() }}@endslot
   @endcomponent
 
   <section class="work-container">
     <div class="top">
-      <img src="@asset('images/interview_fake.jpg')" alt="">
+      <img src="{{ the_post_thumbnail_url( 'full' ) }}" alt="">
     </div>
     <article class="outline">
       <div class="title-container">
@@ -24,33 +24,33 @@
           <div class="left">
             <div class="list-wrapper">
               <p class="title">タイプ</p>
-              <p class="text">中古マンション</p>
+              <p class="text">{{ the_field('type') }}</p>
             </div>
             <div class="list-wrapper">
               <p class="title">広さ</p>
-              <p class="text">69㎡</p>
+              <p class="text">{{ the_field('area') }}㎡</p>
             </div>
             <div class="list-wrapper">
               <p class="title">場所</p>
-              <p class="text">港区元麻布</p>
+              <p class="text">{{ the_field('place') }}</p>
             </div>
             <div class="list-wrapper">
               <p class="title">家族構成</p>
-              <p class="text">３人家族</p>
+              <p class="text">{{ the_field('family') }}</p>
             </div>
           </div>
           <div class="right">
             <div class="list-wrapper">
               <p class="title">築年数</p>
-              <p class="text">39年</p>
+              <p class="text">{{ the_field('years') }}年</p>
             </div>
             <div class="list-wrapper">
               <p class="title">工事費用</p>
-              <p class="text">940万</p>
+              <p class="text">{{ the_field('budget') }}万</p>
             </div>
             <div class="list-wrapper">
               <p class="title">間取り</p>
-              <p class="text">2LDK</p>
+              <p class="text">{{ the_field('structure') }}</p>
             </div>
           </div>
         </div>
@@ -66,23 +66,19 @@
         </div>
       </div>
       <div class="regular-container work-contents">
-        <h3 class="title">扉を開けたときの驚き</h3>
+        <h3 class="title">{{ the_field('highlight_1_title') }}</h3>
         <div class="exp-container">
           <div class="left">
-            <p>自分たちでも何度もショールームに足を運んだり、インターネットで情報を集めたり、細かいところまで検討して納得しながら進めたいという思いがあったアクティブなT様。<br />
-              ご友人も多く、ご自宅に招いて一緒に食事することが好きという話から、来客の方にも玄関からリビングまでの道を楽しんでもらえる空間を目指すことに。既存の長い玄関をどうすれば印象的できるか、そして廊下とリビングをどうつなげれば綺麗な空間ができるかをじっくり話し合いました。
-            </p>
+            <p>{{ the_field('highlight_1_text_left') }}</p>
           </div>
           <div class="right">
-            <p>玄関ドアを開けた正面の壁にはタイルを貼った縦長のスリットを作り、テープライトを仕込むことで明るく訪れた人を迎えてくれます。<br />
-              物を入れるには中途半端だった下足入れの下のスペースには、白い玉砂利を敷くことで、単調になりがちな玄関が表情のある空間になっています。また、玄関とリビングの間の建具をガラス扉にし、壁をリビング側に向かって末広がりにすることで、一番大きなリビングをさらに開放的に演出しました。
-            </p>
+            <p>{{ the_field('highlight_1_text_right') }}</p>
           </div>
         </div>
       </div>
       <div class="pics regular-container">
-        <img src="@asset('images/interview_fake.jpg')" alt="">
-        <img src="@asset('images/interview_fake.jpg')" alt="">
+        <img src="{{ the_field('highlight_1_img_1') }}" alt="">
+        <img src="{{ the_field('highlight_1_img_2') }}" alt="">
       </div>
     </article>
 
@@ -95,23 +91,19 @@
         </div>
       </div>
       <div class="regular-container work-contents">
-        <h3 class="title">扉を開けたときの驚き</h3>
+        <h3 class="title">{{ the_field('highlight_2_title') }}</h3>
         <div class="exp-container">
           <div class="left">
-            <p>自分たちでも何度もショールームに足を運んだり、インターネットで情報を集めたり、細かいところまで検討して納得しながら進めたいという思いがあったアクティブなT様。<br />
-              ご友人も多く、ご自宅に招いて一緒に食事することが好きという話から、来客の方にも玄関からリビングまでの道を楽しんでもらえる空間を目指すことに。既存の長い玄関をどうすれば印象的できるか、そして廊下とリビングをどうつなげれば綺麗な空間ができるかをじっくり話し合いました。
-            </p>
+            <p>{{ the_field('highlight_2_text_left') }}</p>
           </div>
           <div class="right">
-            <p>玄関ドアを開けた正面の壁にはタイルを貼った縦長のスリットを作り、テープライトを仕込むことで明るく訪れた人を迎えてくれます。<br />
-              物を入れるには中途半端だった下足入れの下のスペースには、白い玉砂利を敷くことで、単調になりがちな玄関が表情のある空間になっています。また、玄関とリビングの間の建具をガラス扉にし、壁をリビング側に向かって末広がりにすることで、一番大きなリビングをさらに開放的に演出しました。
-            </p>
+            <p>{{ the_field('highlight_2_text_right') }}</p>
           </div>
         </div>
       </div>
       <div class="pics regular-container">
-        <img src="@asset('images/interview_fake.jpg')" alt="">
-        <img src="@asset('images/interview_fake.jpg')" alt="">
+        <img src="{{ the_field('highlight_2_img_1') }}" alt="">
+        <img src="{{ the_field('highlight_2_img_2') }}" alt="">
       </div>
     </article>
 
@@ -124,10 +116,12 @@
         </div>
       </div>
       <div class="regular-container pictures-wrapper">
-        <img src="@asset('images/interview_fake.jpg')" alt="">
-        <img src="@asset('images/interview_fake.jpg')" alt="">
-        <img src="@asset('images/interview_fake.jpg')" alt="">
-        <img src="@asset('images/interview_fake.jpg')" alt="">
+        <img src="{{ the_field('other_img_1') }}" alt="">
+        <img src="{{ the_field('other_img_2') }}" alt="">
+        <img src="{{ the_field('other_img_3') }}" alt="">
+        <img src="{{ the_field('other_img_4') }}" alt="">
+        <img src="{{ the_field('other_img_5') }}" alt="">
+        <img src="{{ the_field('other_img_6') }}" alt="">
       </div>
     </article>
 

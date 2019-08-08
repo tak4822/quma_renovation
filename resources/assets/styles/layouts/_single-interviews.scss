@@ -159,21 +159,21 @@
   .interview-contents {
     margin-top: $spacer * 4;
     margin-left: $con-big-side;
+    margin-bottom: $spacer * 10;
 
     @include mq-down("sns") {
       margin-left: $con-mid-side;
     }
 
     @include mq-down("lg") {
-      margin: $spacer * 4;
+      margin: 0 $spacer * 4 $spacer * 10;
     }
 
     @include mq-down("mobile") {
-      margin: $spacer * 2;
+      margin: 0 $spacer * 2 $spacer * 10;
     }
 
     .article {
-      height: 300rem;
       display: flex;
 
       @include mq-down("mobile") {
@@ -210,6 +210,15 @@
           flex: 1;
           width: auto;
           padding-right: 0;
+        }
+
+        img {
+          height: auto;
+        }
+
+        figure {
+          width: 100%;
+          margin-bottom: $spacer * 2;
         }
 
         .title-container {
