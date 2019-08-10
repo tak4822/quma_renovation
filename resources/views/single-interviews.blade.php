@@ -34,7 +34,7 @@
   <section class="interview-contents">
     <article class="article section-1">
       <div class="illust-area">
-        <img src="@asset('images/interview_section_2.png')" alt="">
+        <img src="@asset('images/interview_article_1.jpg')" alt="">
       </div>
       <div class="contents">
         <div class="title-container">
@@ -48,7 +48,7 @@
     </article>
     <article class="article section-2">
       <div class="illust-area">
-        <img src="@asset('images/interview_section_2.png')" alt="">
+        <img src="@asset('images/interview_article_2.jpg')" alt="">
       </div>
       <div class="contents">
         <div class="title-container">
@@ -62,7 +62,7 @@
     </article>
     <article class="article section-3">
       <div class="illust-area">
-        <img src="@asset('images/interview_section_2.png')" alt="">
+        <img src="@asset('images/interview_article_3.jpg')" alt="">
       </div>
       <div class="contents">
         <div class="title-container">
@@ -76,7 +76,7 @@
     </article>
     <article class="article section-4">
       <div class="illust-area">
-        <img src="@asset('images/interview_section_2.png')" alt="">
+        <img src="@asset('images/interview_article_4.jpg')" alt="">
       </div>
       <div class="contents">
         <div class="title-container">

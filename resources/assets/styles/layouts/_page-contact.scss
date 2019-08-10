@@ -1,0 +1,59 @@
+.contact-page {
+  margin-bottom: $spacer * 8;
+
+  .contents {
+    margin-top: $spacer * 8;
+    display: flex;
+
+    .form-container {
+      border: 1px dotted $gray;
+      width: 65%;
+      margin-right: $spacer * 4;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+
+      .info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: $spacer * 4;
+
+        .deco {
+          width: 10rem;
+          height: 10rem;
+          background: $gray-bg;
+          border-radius: 50%;
+          margin-bottom: $spacer;
+
+          @include flex-center;
+
+          img {
+            width: 3rem;
+          }
+        }
+
+        .text-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          p {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 0;
+          }
+
+          .text {
+            margin-bottom: $spacer;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

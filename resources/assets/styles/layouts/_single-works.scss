@@ -232,6 +232,11 @@
             padding: 0 $spacer;
           }
 
+          .left,
+          .right {
+            width: 50%;
+          }
+
           .left {
             margin-right: $spacer * 4;
 
@@ -280,8 +285,12 @@
           padding-top: 14rem;
         }
 
-        img {
+        .img-wrapper {
           margin-bottom: $spacer * 4;
+
+          .caption {
+            font-size: 1.2rem;
+          }
         }
       }
     }

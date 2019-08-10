@@ -1,1 +1,128 @@
-/** Search form */
+.form-container {
+  padding: $spacer * 4;
+
+  p {
+    margin-bottom: $spacer * 4;
+  }
+
+  .red {
+    color: $red;
+  }
+
+  label.input-wrapper {
+    display: block;
+    width: 100%;
+    height: 4rem;
+    position: relative;
+    border-bottom: 1px solid $gray;
+    padding: $spacer * 2 $spacer;
+
+    .input-head {
+      position: absolute;
+      z-index: z("above");
+      top: 0.8rem;
+      font-family: ("midashi");
+      font-weight: 600;
+    }
+
+    .wpcf7-form-control-wrap {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    input {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      padding-left: $spacer * 2;
+      font-size: 1.4rem;
+    }
+  }
+
+  .button-wrapper {
+    display: flex;
+
+    .button-head {
+      width: 18rem;
+      font-family: ("midashi");
+      font-weight: 600;
+    }
+
+    .wpcf7-checkbox {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wpcf7-list-item {
+      margin-left: 0;
+    }
+
+    .way-to-contact {
+      .wpcf7-list-item.last {
+        margin-left: $spacer * 2;
+      }
+    }
+
+    .wpcf7-form-control-wrap.textarea {
+      flex: 1;
+
+      textarea {
+        width: 100%;
+      }
+    }
+
+    .time-to-contact {
+      flex: 1;
+      position: relative;
+
+      &::before {
+        z-index: 1;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        content: "";
+        line-height: 43px;
+        color: $black;
+        pointer-events: none;
+        font-family: font("madawaska");
+
+        @include bg-img("option_button.svg", contain);
+      }
+
+      select {
+        outline: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+        background: none transparent;
+        vertical-align: middle;
+        font-size: inherit;
+        color: inherit;
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        width: 100%;
+        height: 4rem;
+        padding: 0 $spacer * 2;
+        border-radius: 0;
+
+        select option {
+          background-color: #fff;
+          color: #333;
+        }
+
+        select::-ms-expand {
+          display: none;
+        }
+
+        select:-moz-focusring {
+          color: transparent;
+          text-shadow: 0 0 0 #828c9a;
+        }
+      }
+    }
+  }
+}

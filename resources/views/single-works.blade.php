@@ -116,12 +116,30 @@
         </div>
       </div>
       <div class="regular-container pictures-wrapper">
-        <img src="{{ the_field('other_img_1') }}" alt="">
-        <img src="{{ the_field('other_img_2') }}" alt="">
-        <img src="{{ the_field('other_img_3') }}" alt="">
-        <img src="{{ the_field('other_img_4') }}" alt="">
-        <img src="{{ the_field('other_img_5') }}" alt="">
-        <img src="{{ the_field('other_img_6') }}" alt="">
+        <div class="img-wrapper">
+          <img src="{{ get_field('other_img_1')['url'] }}" alt="">
+          <p class="caption">{{ get_field('other_img_1')['caption'] }}</p>
+        </div>
+        <div class="img-wrapper">
+          <img src="{{ get_field('other_img_2')['url'] }}" alt="">
+          <p class="caption">{{ get_field('other_img_2')['caption'] }}</p>
+        </div>
+        <div class="img-wrapper">
+          <img src="{{ get_field('other_img_3')['url'] }}" alt="">
+          <p class="caption">{{ get_field('other_img_3')['caption'] }}</p>
+        </div>
+        <div class="img-wrapper">
+          <img src="{{ get_field('other_img_4')['url'] }}" alt="">
+          <p class="caption">{{ get_field('other_img_4')['caption'] }}</p>
+        </div>
+        <div class="img-wrapper">
+          <img src="{{ get_field('other_img_5')['url'] }}" alt="">
+          <p class="caption">{{ get_field('other_img_5')['caption'] }}</p>
+        </div>
+        <div class="img-wrapper">
+          <img src="{{ get_field('other_img_6')['url'] }}" alt="">
+          <p class="caption">{{ get_field('other_img_6')['caption'] }}</p>
+        </div>
       </div>
     </article>
 
