@@ -1,6 +1,24 @@
 .form-container {
   padding: $spacer * 4;
 
+  @include mq-down("mobile") {
+    padding: $spacer * 2;
+  }
+
+  &.popup {
+    .button-wrapper {
+      @include mq-down("md") {
+        flex-direction: column;
+      }
+
+      .button-head {
+        @include mq-down("md") {
+          margin-bottom: $spacer / 2;
+        }
+      }
+    }
+  }
+
   p {
     margin-bottom: $spacer * 4;
   }
@@ -46,10 +64,18 @@
   .button-wrapper {
     display: flex;
 
+    @include mq-down("mobile") {
+      flex-direction: column;
+    }
+
     .button-head {
       width: 18rem;
       font-family: ("midashi");
       font-weight: 600;
+
+      @include mq-down("mobile") {
+        margin-bottom: $spacer / 2;
+      }
     }
 
     .wpcf7-checkbox {
@@ -61,17 +87,48 @@
       margin-left: 0;
     }
 
-    .way-to-contact {
+    .wpcf7-radio {
       .wpcf7-list-item.last {
         margin-left: $spacer * 2;
       }
     }
 
-    .wpcf7-form-control-wrap.textarea {
+    .wpcf7-form-control-wrap.opinion {
       flex: 1;
 
       textarea {
         width: 100%;
+        border: 1px solid $gray;
+      }
+    }
+
+    .select {
+      outline: none;
+      text-indent: 0.01px;
+      text-overflow: '';
+      background: none transparent;
+      vertical-align: middle;
+      font-size: inherit;
+      color: inherit;
+      -webkit-appearance: button;
+      -moz-appearance: button;
+      appearance: button;
+      height: 4rem;
+      padding: 0 $spacer * 2;
+      border-radius: 0;
+
+      .select option {
+        background-color: #fff;
+        color: #333;
+      }
+
+      .select::-ms-expand {
+        display: none;
+      }
+
+      .select:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #828c9a;
       }
     }
 
@@ -80,49 +137,157 @@
       position: relative;
 
       &::before {
+        width: 1.2rem;
+        height: 1.2rem;
         z-index: 1;
         position: absolute;
-        right: 15px;
-        top: 0;
+        right: 2rem;
+        top: 1.4rem;
         content: "";
-        line-height: 43px;
-        color: $black;
         pointer-events: none;
-        font-family: font("madawaska");
 
         @include bg-img("option_button.svg", contain);
       }
 
-      select {
-        outline: none;
-        text-indent: 0.01px;
-        text-overflow: '';
-        background: none transparent;
-        vertical-align: middle;
-        font-size: inherit;
-        color: inherit;
-        -webkit-appearance: button;
-        -moz-appearance: button;
-        appearance: button;
+      .select {
         width: 100%;
-        height: 4rem;
-        padding: 0 $spacer * 2;
-        border-radius: 0;
+      }
+    }
 
-        select option {
-          background-color: #fff;
-          color: #333;
-        }
+    .schedule-wrapper {
+      display: flex;
+      flex-direction: column;
 
-        select::-ms-expand {
-          display: none;
-        }
+      .first-schedule {
+        margin-bottom: $spacer * 2;
+      }
 
-        select:-moz-focusring {
-          color: transparent;
-          text-shadow: 0 0 0 #828c9a;
+      .first-schedule,
+      .second-schedule {
+        @include mq-down("mobile") {
+          display: flex;
+          flex-direction: column;
         }
       }
+
+      .schedule {
+        margin-left: $spacer * 2;
+
+        @include mq-down("mobile") {
+          margin-left: 0;
+        }
+
+        @media screen and (max-width: 390px) {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .wpcf7-form-control-wrap {
+          &::before {
+            width: 1rem;
+            height: 1rem;
+            z-index: 1;
+            position: absolute;
+            right: 1rem;
+            top: 0.3rem;
+            content: "";
+            pointer-events: none;
+
+            @include bg-img("option_button.svg", contain);
+          }
+        }
+
+        .date {
+          margin-right: $spacer * 2;
+
+          @media screen and (max-width: 390px) {
+            margin-bottom: $spacer;
+          }
+
+          .month {
+            margin-right: $spacer;
+          }
+
+          .select {
+            width: 6rem;
+          }
+        }
+
+        .time {
+          .select {
+            width: 10rem;
+          }
+        }
+      }
+    }
+
+    .participants-wrapper {
+      display: flex;
+
+      @media screen and (max-width: 390px) {
+        flex-direction: column;
+      }
+
+      .adult-wrapper {
+        margin-right: $spacer * 5;
+
+        @media screen and (max-width: 390px) {
+          margin-right: 0;
+          margin-bottom: $spacer;
+        }
+      }
+
+      .participants {
+        margin-left: $spacer * 2;
+
+        .select {
+          width: 6rem;
+        }
+
+        .wpcf7-form-control-wrap {
+          &::before {
+            width: 1rem;
+            height: 1rem;
+            z-index: 1;
+            position: absolute;
+            right: 1rem;
+            top: 0.3rem;
+            content: "";
+            pointer-events: none;
+
+            @include bg-img("option_button.svg", contain);
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    width: 100%;
+    height: 5.6rem;
+
+    p {
+      margin: 0;
+    }
+
+    .submit-btn {
+      border-style: none;
+      background: transparent;
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-weight: 600;
+      font-size: 1.4rem;
+      font-family: font("midashi");
+    }
+
+    .ajax-loader {
+      position: absolute;
+      top: 1.7rem;
+      left: calc(50% + 2rem);
     }
   }
 }

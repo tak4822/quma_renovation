@@ -5,10 +5,23 @@
     margin-top: $spacer * 8;
     display: flex;
 
+    @include mq-down("lg") {
+      flex-direction: column;
+    }
+
     .form-container {
       border: 1px dotted $gray;
       width: 65%;
       margin-right: $spacer * 4;
+
+      @include mq-down("lg") {
+        width: auto;
+        margin: 0 $spacer * 4;
+      }
+
+      @include mq-down("mobile") {
+        margin: 0 $spacer * 2;
+      }
     }
 
     .contact-info {
@@ -17,11 +30,29 @@
       align-items: center;
       flex: 1;
 
+      @include mq-down("lg") {
+        margin-top: $spacer * 4;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      @include mq-down("mobile") {
+        flex-direction: column;
+      }
+
       .info-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: $spacer * 4;
+
+        @include mq-down("lg") {
+          margin: 0 $spacer * 4;
+        }
+
+        @include mq-down("mobile") {
+          margin-bottom: $spacer * 4;
+        }
 
         .deco {
           width: 10rem;

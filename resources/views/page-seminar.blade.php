@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="overlay"></div>
+<div class="modal">
+  <div class="form-container popup">
+    @while(have_posts()) @php(the_post())
+    @php(the_content())
+    @endwhile
+  </div>
+</div>
 <div class="events-inner-page pages-container">
 
   @component('components.breadcrums')
