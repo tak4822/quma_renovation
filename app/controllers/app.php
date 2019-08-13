@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
@@ -29,5 +29,15 @@ class App extends Controller
             return __('Not Found', 'sage');
         }
         return get_the_title();
+    }
+
+    public function current_template() {
+        if (is_front_page()) return 'frontpage';
+        if (is_category()) return 'category';
+        if (is_tag() || is_page( 'new') || is_page( 'popular')) return 'tags';
+        if (is_single()) return 'posts';
+        if (is_404()) return '404';
+
+        return 'else';
     }
 }

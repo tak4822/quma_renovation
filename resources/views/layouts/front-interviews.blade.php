@@ -1,3 +1,5 @@
+@php($interviews_arr = App\Controllers\FrontPage::get_interviews_data())
+
 <section class="front-interviews">
   <div class="bg-gray"></div>
   @component('components.front-section-title')
@@ -10,9 +12,9 @@
     <div class="slider-container">
       <div class="controller">
         <div class="exp">
-          <p class="number">#002</p>
+          <p class="number">#{{ $interviews_arr[0]['number'] }}</p>
           <div class="border"></div>
-          <p class="subtitle">アウトドア好きでアクティブな人の部屋って？</p>
+          <p class="subtitle">{{ $interviews_arr[0]['subtitle'] }}</p>
         </div>
         <div class="paging">
           <div class="arrows">
@@ -29,16 +31,14 @@
       </div>
       <div class="slider">
         <div class="slider-warpper">
+          @foreach( $interviews_arr as $key => $interview)
           @component('components.interview-card')
-          @slot('thumb')<img src="@asset('images/interview_fake.jpg')" alt="">@endslot
-          @slot('title')ひろびろ収納と無垢フローリングの落ち着く部屋づくり@endslot
-          @slot('lead')ローカルとシティの要素がほどよく混ざり合い、都心へのアクセスも抜群な三軒茶屋駅からほど近いエリアに佇むマンションの一角です。白を基調とした日当たりの良い部屋に、アウトドア好きならではのこだわり…@endslot
+          @slot('link'){{ $interview['link'] }}@endslot
+          @slot('thumb')<img src="{{ $interview['image'] }}" alt="{{ $interview['title'] }}">@endslot
+          @slot('title'){{ $interview['title'] }}@endslot
+          @slot('lead'){{ $interview['lead'] }}@endslot
           @endcomponent
-          @component('components.interview-card')
-          @slot('thumb')<img src="@asset('images/interview_fake.jpg')" alt="">@endslot
-          @slot('title')ひろびろ収納と無垢フローリングの落ち着く部屋づくり@endslot
-          @slot('lead')ローカルとシティの要素がほどよく混ざり合い、都心へのアクセスも抜群な三軒茶屋駅からほど近いエリアに佇むマンションの一角です。白を基調とした日当たりの良い部屋に、アウトドア好きならではのこだわり…@endslot
-          @endcomponent
+          @endforeach
         </div>
       </div>
     </div>

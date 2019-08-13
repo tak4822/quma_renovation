@@ -1,3 +1,4 @@
+import interviewSlider from '../modules/interviewSlider';
 export default {
   namespace: 'frontpage',
   onEnter: function () {
@@ -11,6 +12,8 @@ export default {
     // }
 
     // frontMember();
+
+    interviewSlider();
   },
   onEnterCompleted: function () {
 

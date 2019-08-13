@@ -31,12 +31,12 @@ jQuery(document).ready(() => {
 
 // import local dependencies
 import barbaInit from './transitions/barbaInit';
-import frontPage from './routes/frontPage';
+import frontpage from './routes/frontpage';
 // import articles from './views/articles';
 // import posts from './views/posts';
 // import others from './views/others';
 
-const routes = [frontPage];
+const routes = [frontpage];
 
 
 // 最初のページローディングのスピードはこっちで調節

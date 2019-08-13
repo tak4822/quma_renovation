@@ -6,7 +6,7 @@
     @php(do_action('get_header'))
     @include('partials.header')
     <div id="barba-wrapper" class="wrap container" role="document">
-      <div data-namespace="demo" class="content barba-container">
+      <div data-namespace="{{ $current_template }}" class="content barba-container">
         <main class="main">
           @yield('content')
         </main>
