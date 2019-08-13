@@ -280,8 +280,25 @@
         padding-left: $spacer;
         display: flex;
 
+        @include mq-down("xl") {
+          width: 270rem;
+        }
+
+        @include mq-down("lg") {
+          width: 248rem;
+        }
+
         @include mq-down("md") {
           padding-left: 0;
+          width: 270rem;
+        }
+
+        @include mq-down("mobile") {
+          width: 191rem;
+        }
+
+        @include mq-down("sm") {
+          width: 160rem;
         }
       }
     }
