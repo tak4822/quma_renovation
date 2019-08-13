@@ -14,7 +14,6 @@
 
     @include mq-down("lg") {
       height: 6rem;
-      padding: 0 $spacer * 2;
       display: block;
     }
 

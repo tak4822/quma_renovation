@@ -12,24 +12,28 @@
     <div class="slider-container">
       <div class="controller">
         <div class="exp">
-          <p class="number">#{{ $interviews_arr[0]['number'] }}</p>
+          <p id="interviewsSlider-number" class="number">#{{ $interviews_arr[0]['number'] }}</p>
           <div class="border"></div>
-          <p class="subtitle">{{ $interviews_arr[0]['subtitle'] }}</p>
+          <p id="interviewsSlider-subtitle" class="subtitle">{{ $interviews_arr[0]['subtitle'] }}</p>
         </div>
         <div class="paging">
-          <div class="arrows">
-            <img src="@asset('images/arrow-right.png')" alt="">
+          <div id="interviewsSliderNextButton" class="arrows right">
+            <div class="arrows-inner">
+              <img src="@asset('images/arrow-right.png')" alt="">
+            </div>
           </div>
           <div class="border"></div>
-          <div class="arrows">
-            <img src="@asset('images/arrow-left.png')" alt="">
+          <div id="interviewsSliderPrevButton" class="arrows left">
+            <div class="arrows-inner">
+              <img src="@asset('images/arrow-left.png')" alt="">
+            </div>
           </div>
         </div>
         <div class="mic-wrapper">
           <img src="@asset('images/mic.jpg')" alt="">
         </div>
       </div>
-      <div class="slider">
+      <div id="interviewsSliderTouch" class="slider">
         <div class="slider-warpper">
           @foreach( $interviews_arr as $key => $interview)
           @component('components.interview-card')

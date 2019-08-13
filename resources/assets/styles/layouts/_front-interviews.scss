@@ -94,10 +94,10 @@
 
     .slider-container {
       width: 100%;
-      height: 60rem;
+      height: 58rem;
       display: flex;
 
-      @include mq-down("sns") {
+      @include mq-down("xl") {
         height: 52rem;
       }
 
@@ -146,9 +146,11 @@
         .exp {
           width: 100%;
           height: 16rem;
-          display: flex;
-          flex-direction: row;
-          padding: $spacer * 4 0 0 $spacer * 4;
+          position: relative;
+
+          @include mq-down("lg") {
+            margin-left: $spacer * 4;
+          }
 
           @include mq-down("md") {
             width: 70%;
@@ -158,13 +160,20 @@
 
           @include mq-down("mobile") {
             padding: 0 $spacer * 2 0 0;
+            margin-left: $spacer * 2;
+          }
+
+          @include mq-down("sm") {
+            margin-left: $spacer;
           }
 
           .number {
             font-family: font('madawaska');
             font-size: 2.2rem;
             font-style: italic;
-            margin: $spacer * 2 0 0 0;
+            position: absolute;
+            top: 2rem;
+            left: 0;
 
             @include mq-down("sm") {
               font-size: 2rem;
@@ -173,20 +182,20 @@
 
           .border {
             height: 120%;
-            align-self: center;
             transform: rotate(45deg);
+            position: absolute;
+            top: 0;
+            left: 5rem;
 
             @include dotted-border;
           }
 
           .subtitle {
             margin: 0;
-            align-self: flex-end;
-            margin-left: $spacer * 2;
-
-            @include mq-down("md") {
-              transform: translateY(-2rem);
-            }
+            height: 5rem;
+            position: absolute;
+            top: 8rem;
+            left: 7rem;
 
             @include mq-down("sm") {
               font-size: 1.2rem;
@@ -207,6 +216,7 @@
           justify-content: space-around;
           align-items: center;
           background: white;
+          margin-top: 5rem;
 
           @include mq-down("sns") {
             margin-top: 4rem;
@@ -234,11 +244,35 @@
           .arrows {
             width: 100%;
             height: 50%;
+            cursor: pointer;
 
             @include flex-center;
 
-            img {
-              width: 3rem;
+            &.right {
+              &:hover {
+                img {
+                  animation: slider-arrow-to-right 0.6s ease-in-out;
+                }
+              }
+            }
+
+            &.left {
+              &:hover {
+                img {
+                  animation: slider-arrow-to-left 0.6s ease-in-out;
+                }
+              }
+            }
+
+            .arrows-inner {
+              width: 4rem;
+              overflow: hidden;
+
+              @include flex-center;
+
+              img {
+                width: 3rem;
+              }
             }
           }
 
@@ -266,12 +300,11 @@
     }
 
     .slider {
-      flex: 1;
-      height: 53rem;
-      overflow-x: scroll;
+      height: 55rem;
+      overflow-x: hidden;
 
       @include mq-down("md") {
-        height: 20rem;
+        height: 30rem;
       }
 
       .slider-warpper {
@@ -302,5 +335,75 @@
         }
       }
     }
+  }
+}
+
+.slider-contents-animation {
+  animation: slider-contents 0.6s linear;
+}
+
+@keyframes slider-contents {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  20% {
+    opacity: 0;
+    transform: translate(-50px, 0);
+  }
+
+  80% {
+    opacity: 0;
+    transform: translate(50px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.slider-arrows-animation-to-right {
+  animation: slider-arrow-to-right 0.6s ease-in-out;
+}
+
+@keyframes slider-arrow-to-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(35px);
+  }
+
+  51% {
+    transform: translateX(-35px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slider-arrows-animation-to-left {
+  animation: slider-arrow-to-left 0.6s ease-in-out;
+}
+
+@keyframes slider-arrow-to-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-35px);
+  }
+
+  51% {
+    transform: translateX(35px);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }

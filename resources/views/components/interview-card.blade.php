@@ -1,4 +1,4 @@
-<a href="{{ $link }}" class="card-container">
+<a href="{{ $link }}" class="card-container interview-cards">
   <div class="card-shadow"></div>
   <div class="card">
     <div class="thumb">{{ $thumb }}</div>
