@@ -1,5 +1,33 @@
 .nav-primary {
+  position: absolute;
+  left: 25%;
   font-family: font('madawaska');
+
+  @media screen and (min-width: 1700px) {
+    left: calc((100vw - 1000px) / 2 + 150px);
+  }
+
+  @include mq-down("lg") {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: white;
+    z-index: z("below");
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    padding: 10% 0;
+
+    &.active {
+      opacity: 1;
+      z-index: z("header");
+    }
+  }
+
+  #menu-item-46 {
+    padding-left: 0;
+  }
 
   .nav {
     margin: 0;
@@ -9,9 +37,78 @@
     align-items: center;
     font-size: 1.8rem;
 
+    @include mq-down("lg") {
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
     .menu-item {
       list-style-type: none;
       padding: $spacer*2;
+
+      @include mq-down("lg") {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        &.active {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+.hamburger {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  span {
+    display: block;
+    position: absolute;
+    left: 6px;
+    width: 30px;
+    border-bottom: solid 3px $black;
+    -webkit-transition: 0.35s ease-in-out;
+
+    /* 変化の速度を指定 */
+    -moz-transition: 0.35s ease-in-out;
+
+    /* 変化の速度を指定 */
+    transition: 0.35s ease-in-out;
+
+    &:nth-child(1) {
+      top: 9px;
+    }
+
+    &:nth-child(2) {
+      top: 18px;
+    }
+
+    &:nth-child(3) {
+      top: 27px;
+    }
+  }
+
+  &.is-active {
+    span:nth-child(1) {
+      top: 18px;
+      left: 6px;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    span:nth-child(2),
+    span:nth-child(3) {
+      top: 18px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg);
     }
   }
 }

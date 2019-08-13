@@ -22,8 +22,12 @@
       </div>
     </div>
 
-    <div class="hamburger">
-      <div></div>
+    <div class="hamburger-wrapper">
+      <div class="hamburger">
+        　　<span></span>
+        　　<span></span>
+        　　<span></span>
+      </div>
     </div>
   </div>
 </header>

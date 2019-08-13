@@ -10,10 +10,12 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    transition: all 0.6s ease-out;
 
     @include mq-down("lg") {
       height: 6rem;
       padding: 0 $spacer * 2;
+      display: block;
     }
 
     @include mq-down("sm") {
@@ -21,20 +23,12 @@
       padding: 0 $spacer;
     }
 
-    .nav-primary {
-      position: absolute;
-      left: 25%;
+    &.is-active {
+      height: 100vh;
 
-      @media screen and (min-width: 1700px) {
-        left: calc((100vw - 1000px) / 2 + 150px);
-      }
-
-      @include mq-down("lg") {
-        display: none; // TODO
-      }
-
-      #menu-item-46 {
-        padding-left: 0;
+      .logo {
+        top: 45rem;
+        transition: all 0.8s ease-out;
       }
     }
 
@@ -48,6 +42,7 @@
       margin-left: $con-big-side;
       width: 8rem;
       height: 5rem;
+      transition: all 0.6s ease-in-out;
 
       @include bg-img("quma_logo.svg", "contain");
 
@@ -57,15 +52,14 @@
 
       @include mq-down("lg") {
         position: absolute;
-        top: 1rem;
+        top: 0.8rem;
         left: 50%;
         margin-left: 0;
         transform: translateX(-50%);
       }
 
       @include mq-down("sm") {
-        top: 50%;
-        transform: translate(-50%, -50%);
+        top: 0.2rem;
       }
     }
 
@@ -76,6 +70,22 @@
       font-size: 1.2rem;
       font-family: font("midashi");
       margin-right: $spacer*2;
+
+      @include mq-down("lg") {
+        position: absolute;
+        top: 1.4rem;
+        left: $spacer * 4;
+      }
+
+      @include mq-down("mobile") {
+        left: $spacer * 2;
+        top: 1.4rem;
+      }
+
+      @include mq-down("sm") {
+        left: $spacer;
+        top: 1rem;
+      }
 
       .line,
       .tel,
@@ -144,14 +154,27 @@
       }
     }
 
-    .hamburger {
+    .hamburger-wrapper {
       display: none;
 
       @include mq-down("lg") {
         display: block;
-        background: pink;
-        width: 3rem;
-        height: 3rem;
+        z-index: z("hamburger");
+        width: 4.2rem;
+        height: 4.2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: $spacer * 4;
+      }
+
+      @include mq-down("mobile") {
+        right: $spacer * 2;
+      }
+
+      @include mq-down("sm") {
+        top: 0.4rem;
+        right: $spacer;
       }
     }
   }

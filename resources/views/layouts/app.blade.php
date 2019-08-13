@@ -5,8 +5,8 @@
   <body @php(body_class())>
     @php(do_action('get_header'))
     @include('partials.header')
-    <div class="wrap container" role="document">
-      <div class="content">
+    <div id="barba-wrapper" class="wrap container" role="document">
+      <div data-namespace="demo" class="content barba-container">
         <main class="main">
           @yield('content')
         </main>
