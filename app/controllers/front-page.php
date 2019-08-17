@@ -50,4 +50,48 @@ class FrontPage extends Controller
     }
     return $interviews_arr;
   }
+
+  static function get_front_top() {
+    $args = array(
+      'post_type' => 'front-top'
+    );
+    $the_query = new WP_Query( $args );
+
+    if ( $the_query->have_posts() ) {
+      $data_arr = array();
+      $count = 1;
+
+      while ( $the_query->have_posts() && $count <= 4) {
+        $the_query->the_post();
+
+        $link = get_site_url('', get_post_meta($the_query->post->ID, 'link', true));
+        $page_title = get_post_meta($the_query->post->ID, 'page-name', true);
+        $page_subtitle = get_post_meta($the_query->post->ID, 'page-subtitle', true);
+        $title = get_the_title();
+        $subtitle = get_post_meta($the_query->post->ID, 'subtitle', true);
+        $image = get_the_post_thumbnail_url($the_query->post->ID, 'full');
+
+        $output = array(
+          'number' => $count,
+          'link' =>  $link,
+          'page-title' => $page_title,
+          'page-subtitle' => $page_subtitle,
+          'title' => $title,
+          'subtitle' => $subtitle,
+          'image' =>  $image,
+        );
+
+        array_push($data_arr, $output);
+        $count ++;
+      }
+
+      wp_reset_postdata();
+    }
+
+    // echo '<pre>';
+    // print_r($data_arr);
+    // echo '</pre>';
+
+    return $data_arr;
+  }
 }

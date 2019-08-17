@@ -1,3 +1,4 @@
+@php($data_arr = App\Controllers\FrontPage::get_front_top())
 <section class="front-top">
   <div class="vision">
     <div class="vision-wraper">
@@ -10,31 +11,42 @@
       </div>
     </div>
   </div>
-  <div class="slider">
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      <a id="fronttopSlider-link" href="{{ $data_arr[0]['link'] }}" class="fronttop-slider">
+        @foreach ($data_arr as $key => $slide)
+        <div class="slide slide-{{ $key }} {{ $key === 0 ? "active" : "" }}">
+          <div class="slide__bg" style="background-image: url('{{ $slide['image'] }}')"></div>
+        </div>
+        @endforeach
+      </a>
+    </div>
+
     <div class="exp-shadow"></div>
     <div class="exp">
       <div class="exp-left">
-        <p class="section-title">リノベーションしてみてどうだった？</p>
-        <p class="section">Interviews</p>
+        <p id="fronttopSlider-page-subtitle" class="section-title">{{ $data_arr[0]['page-subtitle'] }}</p>
+        <p id="fronttopSlider-page-title" class="section">{{ $data_arr[0]['page-title'] }}</p>
         <div class="paging">
-          <div class="arrows left">
+          <div id="fronttopSliderPrevButton" class="arrows left">
             <img src="@asset('images/triangle-left.svg')" alt="">
           </div>
           <div class="numbers">
-            <p class="now">1</p>
+            <p id="fronttopSlider-number" class="now">{{ $data_arr[0]['number'] }}</p>
             <div class="divider"></div>
-            <p class="total">4</p>
+            <p class="total">{{ count($data_arr) }}</p>
           </div>
-          <div class="arrows right">
+          <div id="fronttopSliderNextButton" class="arrows right">
             <img src="@asset('images/triangle-right.svg')" alt="">
           </div>
         </div>
       </div>
       <div class="border"></div>
       <div class="exp-right">
-        <p class="sub-title">アウトドア好きでアクティブな人の部屋って？</p>
-        <p class="title">ひろびろ収納と無垢フローリングの落ち着く部屋づくり</p>
+        <p id="fronttopSlider-subtitle" class="sub-title">{{ $data_arr[0]['subtitle'] }}</p>
+        <p id="fronttopSlider-title" class="title">{{ $data_arr[0]['title'] }}</p>
       </div>
     </div>
+
   </div>
 </section>

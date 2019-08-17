@@ -22,6 +22,11 @@
     flex: 1;
     height: 100vh;
 
+    @media screen and (min-width: 1700px) {
+      width: $con-big-side;
+      flex: initial;
+    }
+
     @include mq-down("lg") {
       width: 100vw;
       position: fixed;
@@ -78,12 +83,14 @@
     }
   }
 
-  .slider {
+  .slider-container {
     flex: 3;
     height: 100%;
     position: relative;
 
-    @include bg-img("top_fake.jpg", "cover");
+    @media screen and (min-width: 1700px) {
+      flex: 1;
+    }
 
     @include mq-down("lg") {
       height: 60vh;
@@ -99,12 +106,101 @@
       margin-bottom: $spacer * 24;
     }
 
+    .slider-wrapper {
+      height: 100%;
+      padding-top: 8rem;
+      user-select: none;
+      cursor: all-scroll;
+      position: relative;
+      overflow: hidden;
+
+      @include mq-down("lg") {
+        padding-top: 0;
+      }
+
+      .fronttop-slider {
+        height: 100%;
+        display: block;
+        z-index: 1;
+
+        &.animating {
+          transition: transform 0.5s;
+          will-change: transform;
+
+          .slide__bg {
+            transition: transform 0.5s;
+            will-change: transform;
+          }
+        }
+
+        .slide {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          &__bg {
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            will-change: transform;
+          }
+
+          &:nth-child(1) {
+            left: 0;
+
+            .slide__bg {
+              left: 0;
+            }
+          }
+
+          &:nth-child(2) {
+            left: 100%;
+
+            .slide__bg {
+              left: -50%;
+            }
+          }
+
+          &:nth-child(3) {
+            left: 200%;
+
+            .slide__bg {
+              left: -100%;
+            }
+          }
+
+          &:nth-child(4) {
+            left: 300%;
+
+            .slide__bg {
+              left: -150%;
+            }
+          }
+
+          &:nth-child(5) {
+            left: 400%;
+
+            .slide__bg {
+              left: -200%;
+            }
+          }
+        }
+      }
+    }
+
     .exp-shadow {
       position: absolute;
       right: $spacer * 7;
       bottom: $spacer * 7;
       width: 60rem;
-      height: 23rem;
+      height: 20rem;
       background: $gold;
 
       @include mq-down("lg") {
@@ -131,9 +227,9 @@
       bottom: $spacer * 8;
       background: white;
       width: 60rem;
-      height: 23rem;
+      height: 20rem;
       display: flex;
-      padding: $spacer * 4 $spacer * 2;
+      padding: $spacer * 3 $spacer * 2;
 
       @include mq-down("lg") {
         width: 90%;
@@ -154,13 +250,17 @@
         height: 25rem;
       }
 
+      p {
+        will-change: transform;
+      }
+
       .exp-left {
-        width: 40%;
-        padding-right: 2rem;
+        width: 45%;
+        padding-right: 1rem;
+        position: relative;
 
         @include mq-down("mobile") {
           width: 100%;
-          position: relative;
         }
 
         .section-title {
@@ -193,15 +293,17 @@
         }
 
         .paging {
-          margin-top: 6rem;
           display: flex;
           align-items: center;
           justify-content: space-between;
           width: 12rem;
           height: 3rem;
+          position: absolute;
+          bottom: 0;
+          left: 0;
 
           @include mq-down("mobile") {
-            position: absolute;
+            left: auto;
             top: 0;
             right: $spacer;
             margin-top: 0;
@@ -215,9 +317,16 @@
 
           .arrows {
             width: 1.5rem;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
 
             @include mq-down("sm") {
               width: 1.2rem;
+            }
+
+            &.disabled {
+              opacity: 0;
+              pointer-events: none;
             }
           }
 
@@ -289,7 +398,7 @@
         }
 
         .sub-title {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
 
           @include mq-down("sm") {
             margin-bottom: 0;
@@ -319,5 +428,31 @@
         }
       }
     }
+  }
+}
+
+.fronttop-slider-contents-animation {
+  animation: fronttop-slider-contents 0.6s linear;
+}
+
+@keyframes fronttop-slider-contents {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  20% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+
+  80% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }

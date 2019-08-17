@@ -14,6 +14,10 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
+    // pass front-top data to JS
+    $front_top = Controllers\FrontPage::get_front_top();
+    wp_localize_script('sage/main.js', 'front_top_data', $front_top);
+
     // pass interviews data to JS
     $interviews_arr = Controllers\FrontPage::get_interviews_data();
     wp_localize_script('sage/main.js', 'interviews_data', $interviews_arr);

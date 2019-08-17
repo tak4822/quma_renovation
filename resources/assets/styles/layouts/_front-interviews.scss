@@ -300,6 +300,7 @@
     }
 
     .slider {
+      flex: 1;
       height: 55rem;
       overflow-x: hidden;
 
@@ -350,12 +351,12 @@
 
   20% {
     opacity: 0;
-    transform: translate(-50px, 0);
+    transform: translate(-30px, 0);
   }
 
   80% {
     opacity: 0;
-    transform: translate(50px, 0);
+    transform: translate(30px, 0);
   }
 
   100% {

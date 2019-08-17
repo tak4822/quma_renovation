@@ -65,7 +65,7 @@ export default function () {
       .addClass('slider-contents-animation')
       .delay(400)
       .queue(function (next) {
-        // $(this).text(data[index]['subtitle']);
+        $(this).text(data[index]['subtitle']);
         next();
       })
       .delay(400)

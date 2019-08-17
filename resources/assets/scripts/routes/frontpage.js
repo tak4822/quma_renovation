@@ -1,4 +1,6 @@
 import interviewSlider from '../modules/interviewSlider';
+import fronttopSlider from '../modules/fronttopSlider';
+
 export default {
   namespace: 'frontpage',
   onEnter: function () {
@@ -14,6 +16,7 @@ export default {
     // frontMember();
 
     interviewSlider();
+    fronttopSlider();
   },
   onEnterCompleted: function () {
 
@@ -22,6 +25,7 @@ export default {
     // // 次のページへのトランジションが始まった時。
     // header.fix();
     // header.clearScroll();
+
   },
   onLeaveCompleted: function () {
     // このページのcontainerが完全に削除された時。
