@@ -19,7 +19,7 @@
   <section class="events-inner">
     <div class="events-inner-contents regular-container">
       <div class="left">
-        <img src="@asset('images/vision.jpg')" alt="">
+        <img src="@asset('images/events_seminar.jpg')" alt="">
       </div>
       <div class="right">
         <p class="title">あなたはリノベーションをするべき？</p>

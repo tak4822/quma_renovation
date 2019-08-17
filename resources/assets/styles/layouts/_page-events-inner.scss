@@ -49,13 +49,17 @@
 
     .left {
       width: 50%;
+      padding-right: $spacer * 6;
 
       @include mq-down("lg") {
+        padding-right: $spacer * 4;
+        padding-bottom: $spacer * 6;
         width: auto;
         flex: 1;
       }
 
       @include mq-down("md") {
+        padding-right: 0;
         width: 40rem;
       }
 
@@ -66,7 +70,6 @@
 
     .right {
       width: 50%;
-      margin-top: $spacer * 4;
 
       @include mq-down("lg") {
         width: 41rem;
