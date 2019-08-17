@@ -13,7 +13,7 @@
       <p>リノベーションっていう選択肢が、もっと広がっていくといいな。</p>
     </div>
     <div class="illust">
-      <img src="@asset('images/vision.jpg')" alt="">
+      <img src="@asset('images/intro.jpg')" alt="">
     </div>
   </div>
 </section>

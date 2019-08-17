@@ -18,6 +18,20 @@
     height: 70rem;
   }
 
+  &:nth-child(4) {
+    .contents {
+      .illust-container {
+        width: 43%;
+        margin-top: -2rem;
+
+        @include mq-down("sm") {
+          width: 70%;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
   .number {
     width: 16rem;
     height: 16rem;

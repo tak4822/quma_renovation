@@ -13,7 +13,7 @@
     @slot('title')プラン計画からのプロセス@endslot
     @slot('sub')物件が決まっている方のリノベーションプロセスをご紹介。<br />一緒にたくさん悩んでお気に入りの空間をつくりましょう！@endslot
     @slot('img')
-    <img src="@asset('images/vision.jpg')" alt="">
+    <img src="@asset('images/service_plan.jpg')" alt="">
     @endslot
     @endcomponent
 
@@ -26,7 +26,7 @@
         @endcomponent
         <div class="left flow-exp">
           @component('components.service-flow-exp')
-          @slot('img')<img src="@asset('images/vision.jpg')" alt=""> @endslot
+          @slot('img')<img src="@asset('images/service_hearing.jpg')" alt=""> @endslot
           @slot('title')
           <p class="title">ヒアリング</p>
           @endslot
@@ -47,7 +47,7 @@
         @endcomponent
         <div class="right flow-exp">
           @component('components.service-flow-exp')
-          @slot('img')<img src="@asset('images/vision.jpg')" alt=""> @endslot
+          @slot('img')<img src="@asset('images/service_plan_1.jpg')" alt=""> @endslot
           @slot('title')
           <p class="title">初期プランニング</p>
           <p class="title">リノベーション契約</p>
@@ -58,7 +58,7 @@
           @endslot
           @endcomponent
           @component('components.service-flow-exp')
-          @slot('img')<img src="@asset('images/vision.jpg')" alt=""> @endslot
+          @slot('img')<img src="@asset('images/service_plan_2.jpg')" alt=""> @endslot
           @slot('title')
           <p class="title">プラン詳細打ち合わせ</p>
           @endslot
@@ -78,7 +78,7 @@
         @endcomponent
         <div class="left flow-exp">
           @component('components.service-flow-exp')
-          @slot('img')<img src="@asset('images/vision.jpg')" alt=""> @endslot
+          @slot('img')<img src="@asset('images/service_const.jpg')" alt=""> @endslot
           @slot('title')
           <p class="title">リノベーション工事</p>
           @endslot
@@ -96,7 +96,7 @@
         @endcomponent
         <div class="right flow-exp">
           @component('components.service-flow-exp')
-          @slot('img')<img src="@asset('images/vision.jpg')" alt=""> @endslot
+          @slot('img')<img src="@asset('images/service_key.jpg')" alt=""> @endslot
           @slot('title')
           <p class="title">お引き渡し</p>
           @endslot
@@ -114,7 +114,7 @@
         @endcomponent
         <div class="left flow-exp">
           @component('components.service-flow-exp')
-          @slot('img')<img src="@asset('images/vision.jpg')" alt=""> @endslot
+          @slot('img')<img src="@asset('images/service_after.jpg')" alt=""> @endslot
           @slot('title')
           <p class="title">リノベーション後のお付き合い</p>
           @endslot

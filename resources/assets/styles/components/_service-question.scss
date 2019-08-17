@@ -231,6 +231,11 @@
 
     .illust {
       width: 90%;
+      padding: $spacer * 2;
+
+      @include mq-down("lg") {
+        width: 80%;
+      }
     }
 
     .exp {

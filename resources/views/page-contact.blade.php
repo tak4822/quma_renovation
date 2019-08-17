@@ -12,7 +12,7 @@
     @component('components.page-section-header')
     @slot('title')お問い合わせフォーム@endslot
     @slot('sub')いくらぐらいかかるの？あの写真みたいにリノベできるの？<br />どんな質問でもお答えします。@endslot
-    @slot('img')@endslot
+    @slot('img')<img class="horizontal contact" src="@asset('images/contact.jpg')" alt="">@endslot
     @endcomponent
 
     <div class="contents regular-container">

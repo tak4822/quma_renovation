@@ -6,7 +6,16 @@
     display: flex;
 
     @include mq-down("lg") {
+      margin-top: $spacer * 10;
       flex-direction: column;
+    }
+
+    @include mq-down("mobile") {
+      margin-top: $spacer * 12;
+    }
+
+    @include mq-down("sm") {
+      margin-top: $spacer * 15;
     }
 
     .form-container {

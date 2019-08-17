@@ -27,7 +27,7 @@
       </div>
       <div class="title">街探し・物件探しからの<br />リノベーション</div>
       <div class="illust">
-        <img src="@asset('images/vision.jpg')" alt="">
+        <img src="@asset('images/service_houses.jpg')" alt="">
       </div>
       <div class="exp">ご予算の中で、どんな街でどんな暮らしがしたいのかを考えて、「自分と暮らす」ためのベースとなる街と物件を一緒に探しましょう！</div>
       @component('components.button')
@@ -41,7 +41,7 @@
       </div>
       <div class="title">プラン計画からの<br />リノベーション</div>
       <div class="illust">
-        <img src="@asset('images/vision.jpg')" alt="">
+        <img src="@asset('images/service_plan.jpg')" alt="">
       </div>
       <div class="exp">物件がすでに決まっている方。もうあとはつくるだけ！あなたがどんな人なのかをたっぷりとお教えていただいて、“あなた”を空間に落とし込んでいきましょう！</div>
       @component('components.button')

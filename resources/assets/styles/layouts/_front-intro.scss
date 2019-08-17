@@ -58,6 +58,7 @@
     .illust {
       width: 50%;
       transform: translate(10rem, -10rem);
+      padding: $spacer;
 
       @include mq-down("xl") {
         width: 40%;
@@ -70,6 +71,7 @@
       @include mq-down("lg") {
         width: 40%;
         transform: translate(3rem, -8rem);
+        padding-bottom: $spacer * 3;
       }
 
       @include mq-down("md") {
@@ -79,7 +81,7 @@
       }
 
       @include mq-down("mobile") {
-        width: 80%;
+        width: 70%;
       }
     }
   }

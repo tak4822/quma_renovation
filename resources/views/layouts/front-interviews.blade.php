@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="mic-wrapper">
-          <img src="@asset('images/mic.jpg')" alt="">
+          <img src="@asset('images/mic.png')" alt="">
         </div>
       </div>
       <div id="interviewsSliderTouch" class="slider">

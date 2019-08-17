@@ -13,13 +13,11 @@
 
       .illust {
         width: 40%;
-
-        @include mq-down("lg") {
-          width: 50%;
-        }
+        padding: $spacer;
 
         @include mq-down("mobile") {
-          width: 80%;
+          width: 60%;
+          margin-bottom: $spacer * 2;
         }
       }
 

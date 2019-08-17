@@ -6,8 +6,8 @@
   transition: left 0.45s cubic-bezier(0.43, 0, 0.53, 1.01);
 
   @include mq-down("xl") {
-    width: 46rem;
-    height: 46rem;
+    width: 50rem;
+    height: 50rem;
   }
 
   @include mq-down("mobile") {
