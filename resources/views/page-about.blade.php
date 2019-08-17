@@ -1,3 +1,5 @@
+@php($members = App\Controllers\AboutPage::get_members_data())
+
 @extends('layouts.app')
 
 @section('content')
@@ -90,17 +92,15 @@
     @endcomponent
     <img src="@asset('images/quma.jpg')" alt="">
     <div class="member-container">
+      @foreach($members as $member)
       @component('components.about-member')
-      @slot('picture')<img class="picture" src="@asset('images/pic_yu.jpg')" alt="">@endslot
-      @slot('nameimage')<img class="name-img" src="@asset('images/name_yu.jpg')" alt="">@endslot
-      @slot('name')Yu Takenaka @endslot
-      @slot('favorite')素の自分でいられる時間@endslot
-      @slot('text')
-      <p>旅と音楽と映画と本と自然が好きなぺスクタリアンです。</p>
-      <p>大きめの企業で６年くらい働いたのち、嫁と一緒に３年くらい世界を放浪、QUMAを通して資本主義の向こう側を探すために日本に帰国しました。</p>
-      <p>前職の時からリノベーション業界に携わっていてその潜在的な魅力に取り憑かれており、住まいづくりを通して、好きな暮らし方を自分で作っていける楽しさを一緒に味わいたいなと思って日々過ごしています。</p>
-      @endslot
+      @slot('picture')<img class="picture" src="{{ $member['image'] }}" alt="">@endslot
+      @slot('nameimage')<img class="name-img" src="{{ $member['name_img'] }}" alt="">@endslot
+      @slot('name'){{ $member['name'] }}@endslot
+      @slot('favorite'){{ $member['favorite_time'] }}@endslot
+      @slot('text'){!! $member['text'] !!}@endslot
       @endcomponent
+      @endforeach
     </div>
   </section>
 

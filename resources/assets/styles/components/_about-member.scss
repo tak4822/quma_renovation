@@ -89,16 +89,16 @@
           padding-top: 0;
           top: -4rem;
           padding-left: $spacer * 2;
-          height: 46rem;
+          height: 48rem;
           justify-content: space-between;
         }
 
         @include mq-down("sm") {
-          height: 108vw;
+          height: 110vw;
         }
 
         @media screen and (max-width: 400px) {
-          height: 112vw;
+          height: 118vw;
         }
 
         @media screen and (max-width: 370px) {
@@ -115,12 +115,14 @@
 
           .name-img {
             height: 8rem;
+            max-width: 30rem;
             object-position: left;
             margin-bottom: $spacer * 2;
 
             @media screen and (max-width: 800px) {
               height: 6rem;
               margin-bottom: $spacer;
+              max-width: 80%;
             }
           }
 
@@ -137,14 +139,13 @@
 
       .favorite-wrapper {
         padding-top: 6rem;
-        display: flex;
-        flex-direction: column;
 
         @media screen and (max-width: 800px) {
           padding-top: 2rem;
         }
 
         @include mq-down("mobile") {
+          padding-top: 4rem;
           flex-direction: row;
           align-items: center;
         }
@@ -157,29 +158,16 @@
         .head {
           font-family: font("midashi");
           font-weight: 600;
-          margin-bottom: $spacer * 1.5;
+          margin-bottom: $spacer;
+          background: linear-gradient(transparent 60%, $gold 0%);
+          display: inline;
 
           @media screen and (max-width: 800px) {
-            margin-bottom: $spacer;
+            margin-bottom: $spacer * 2;
           }
 
           @include mq-down("mobile") {
-            margin-bottom: 0;
-          }
-        }
-
-        .border {
-          width: 2rem;
-          height: 0.2rem;
-          background: $black;
-
-          @include mq-down("mobile") {
-            height: 0.1rem;
-            margin: 0 $spacer * 2;
-          }
-
-          @include mq-down("sm") {
-            margin: $spacer/2 0 $spacer;
+            margin-right: $spacer;
           }
         }
 
@@ -195,10 +183,6 @@
 
           @include mq-down("mobile") {
             font-size: 1.6rem;
-            margin-top: 1.5rem;
-          }
-
-          @include mq-down("mobile") {
             margin-top: 0;
             margin-bottom: 0;
           }
@@ -215,20 +199,24 @@
       }
 
       @include mq-down("mobile") {
-        padding: $spacer * 7 $spacer * 2 0;
+        padding: $spacer * 9 $spacer * 2 0;
       }
 
-      @media screen and (max-width: 400px) {
+      @include mq-down("sm") {
         padding: $spacer * 5 $spacer * 2 0;
       }
 
+      @media screen and (max-width: 400px) {
+        padding: $spacer * 3 $spacer * 2 0;
+      }
+
       @media screen and (max-width: 370px) {
-        padding: $spacer * 4 $spacer * 2 0;
+        padding: $spacer * 2 $spacer * 2 0;
       }
 
       @media screen and (max-width: 340px) {
         padding: 0 $spacer * 2 0;
-        margin-top: -$spacer * 2;
+        margin-top: -$spacer * 4;
       }
     }
   }
