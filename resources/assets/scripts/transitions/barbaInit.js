@@ -1,12 +1,12 @@
 import Barba from 'barba.js/dist/barba.min';
-// import BarbaOnEveryPage from './onEveryPage'; // TODO
+import BarbaOnEveryPage from './onEveryPage';
 import setting from './barbasettings';
 import baseAnimation from './baseAnimation';
 
 export default function (views) {
   setting();
 
-  // Barba.Dispatcher.on('newPageReady', BarbaOnEveryPage);
+  Barba.Dispatcher.on('newPageReady', BarbaOnEveryPage);
 
   // Barba Google Tagmaneger
   Barba.Dispatcher.on('initStateChange', function () {
@@ -25,5 +25,5 @@ export default function (views) {
     // wait for very first loading
     Barba.Pjax.start();
     Barba.Prefetch.init();
-  }, 2000);
+  }, 1000);
 }

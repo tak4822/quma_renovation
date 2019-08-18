@@ -34,12 +34,12 @@ class App extends Controller
 
     public function current_template() {
         if (is_front_page()) return 'frontpage';
-        if (is_category()) return 'category';
-        if (is_tag() || is_page( 'new') || is_page( 'popular')) return 'tags';
+        if (is_page('contact')) return 'contact';
+        if (is_page('events')) return 'events';
         if (is_single()) return 'posts';
         if (is_404()) return '404';
 
-        return 'else';
+        return 'others';
     }
 
     function works_posts_picked() {

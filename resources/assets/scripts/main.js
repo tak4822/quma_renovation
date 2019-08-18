@@ -1,23 +1,3 @@
-// import local dependencies
-// import Router from './util/Router';
-// import common from './routes/common';
-// import home from './routes/home';
-// import aboutUs from './routes/about';
-
-// /** Populate Router instance with DOM routes */
-// const routes = new Router({
-//   // All pages
-//   common,
-//   // Home page
-//   home,
-//   // About Us page, note the change from about-us to aboutUs.
-//   aboutUs,
-// });
-
-// // Load Events
-// jQuery(document).ready(() => routes.loadEvents());
-
-// import external dependencies
 import 'jquery';
 
 import firstTransition from './transitions/firstTransition';
@@ -32,11 +12,12 @@ jQuery(document).ready(() => {
 // import local dependencies
 import barbaInit from './transitions/barbaInit';
 import frontpage from './routes/frontpage';
-// import articles from './views/articles';
-// import posts from './views/posts';
-// import others from './views/others';
+import contact from './routes/contact';
+import events from './routes/events';
+import posts from './routes/posts';
+import others from './routes/others';
 
-const routes = [frontpage];
+const routes = [frontpage, contact, events, posts, others];
 
 
 // 最初のページローディングのスピードはこっちで調節

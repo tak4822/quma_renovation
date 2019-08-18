@@ -1,6 +1,6 @@
 @php($data_arr = App\Controllers\FrontPage::get_front_top())
 <section class="front-top">
-  <div class="vision">
+  <div id="fronttopVision" class="vision">
     <div class="vision-wraper">
       <div class="illustration">
         <img src="@asset('images/vision.jpg')" alt="">
@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <div class="slider-container">
+  <div id="fronttopSlider" class="slider-container inactive">
     <div class="slider-wrapper">
       <a id="fronttopSlider-link" href="{{ $data_arr[0]['link'] }}" class="fronttop-slider">
         @foreach ($data_arr as $key => $slide)

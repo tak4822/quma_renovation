@@ -1,4 +1,4 @@
-<header class="global-nav">
+<header id="header" class="global-nav">
   <div class="container">
     <nav class="nav-primary">
       @if (has_nav_menu('primary_navigation'))
@@ -6,9 +6,9 @@
       @endif
     </nav>
 
-    <a class="logo" href="{{ home_url('/') }}"></a>
+    <a id="headerLogo" class="logo" href="{{ home_url('/') }}"></a>
 
-    <div class="nav-action">
+    <div id="headerActions" class="nav-action">
       {{-- <div class="line btn">
         <img src="@asset('images/ico_line.svg')" alt="" class="ico">
         <p>LINE@相談</p>
@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <div class="hamburger-wrapper">
+    <div id="headerHamburder" class="hamburger-wrapper">
       <div class="hamburger">
         　　<span></span>
         　　<span></span>

@@ -7,6 +7,7 @@
 
   @include mq-down("mobile") {
     margin-bottom: $spacer * 10;
+    margin-top: $spacer * 6;
   }
 
   .content-container {

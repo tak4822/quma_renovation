@@ -8,7 +8,7 @@ export default function () {
   const $slideBGs = $(".slide__bg");
   const numOfSlides = $(".slide").length - 1;
   const animTime = 1000;
-  const autoSlideDelay = 4000;
+  const autoSlideDelay = 5000;
 
   // eslint-disable-next-line no-unused-vars
   let animating = false;
