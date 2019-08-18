@@ -329,6 +329,7 @@
 
         @include mq-down("mobile") {
           width: 191rem;
+          padding-top: $spacer * 2;
         }
 
         @include mq-down("sm") {

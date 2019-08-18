@@ -23,11 +23,19 @@
     margin-bottom: $spacer * 4;
   }
 
+  &:hover {
+    .pictures {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
   .contents {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding-right: $spacer;
+    padding-right: $spacer * 2;
 
     @media screen and (max-width: 800px) {
       order: 2;
@@ -116,6 +124,7 @@
   .pictures {
     width: 68rem;
     height: 100%;
+    overflow: hidden;
 
     @include mq-down("sns") {
       width: 58rem;
@@ -142,6 +151,8 @@
     img {
       height: 100%;
       object-fit: cover;
+      transition: transform 1.6s ease;
+      will-change: transform;
     }
   }
 }

@@ -138,3 +138,46 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+function pagination($post_length, $pages = '', $range = 4){
+     global $paged; //現在のページの値
+     if( empty($paged) ){  //デフォルトのページ
+         $paged = 1;
+     }
+ 
+     $posts_per_page = get_option('posts_per_page');
+     $page_number_max = ceil($post_length / $posts_per_page);
+ 
+     if( $pages == '' ){
+         $pages = $page_number_max;  //全ページ数を取得
+         if( !$pages ){ //全ページ数が空の場合は、1にする
+             $pages = 1;
+         }
+     }
+ 
+ 
+ 
+     if( 1 != $pages ){  //全ページ数が1以外の場合は以下を出力する
+ //        echo "<div class=\"pagination\"><span>Page ".$paged." of ".$pages."</span>";
+ //        if( $paged > 2 && $paged > $range+1 && $showItems < $pages ){
+ //            echo "<a href='".get_pagenum_link(1)."'>&laquo; First</a>";
+ //        }
+ //        if( $paged > 1 && $showItems < $pages ){
+ //            echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo; Previous</a>";
+ //        }
+         for ($i=1; $i <= $pages; $i++){
+ //            if ( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showItems ){
+ //                echo ($paged == $i)? "<span class=\"pagination-item current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"pagination-item inactive\">" . $i . "</a>";
+ //            }
+             echo ($paged == $i) ? "<span class=\"pagination-item current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"pagination-item inactive\">" . $i . "</a>";
+         }
+ 
+ //        if ( $paged < $pages && $showItems < $pages ){
+ //            echo "<a class='pagination-item' href=\"".get_pagenum_link($paged + 1)."\">&rsaquo;</a>";
+ //        }
+ //        if ( $paged < $pages-1 &&  $paged+$range-1 < $pages && $showItems < $pages ){
+ //            echo "<a class='pagination-item' href='".get_pagenum_link($pages)."'>&raquo;</a>";
+ //        }
+ //        echo "</div>\n";
+     }
+ }

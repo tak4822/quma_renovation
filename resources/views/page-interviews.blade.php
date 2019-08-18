@@ -18,33 +18,26 @@
     @endcomponent
 
     <div class="interviews-list regular-container">
-
+      @while($interviews_posts->have_posts()) @php($interviews_posts->the_post())
       @component('components.interview-list')
-      @slot('number')002 @endslot
-      @slot('subtitle')アウトドア好きでアクティブな人の部屋って？@endslot
-      @slot('title')ひろびろ収納と無垢フローリングの落ち着く部屋づくり@endslot
-      @slot('name')F様邸 @endslot
-      @slot('family')SINGLE @endslot
-      @slot('address')吉祥寺 @endslot
+      @slot('link'){{ get_permalink() }} @endslot
+      @slot('number'){{ the_field('number') }} @endslot
+      @slot('subtitle'){{ the_field('subtitle') }}@endslot
+      @slot('title'){{ get_the_title() }}@endslot
+      @slot('name'){{ the_field('place_name') }} @endslot
+      @slot('family'){{ the_field('family') }} @endslot
+      @slot('address'){{ the_field('address') }} @endslot
       @slot('img')
-      <img src="@asset('images/top_fake.jpg')" alt="">
+      <img src="{{ get_the_post_thumbnail_url() }}" alt="">
       @endslot
       @endcomponent
-
-      @component('components.interview-list')
-      @slot('number')001 @endslot
-      @slot('subtitle')アウトドア好きでアクティブな人の部屋って？@endslot
-      @slot('title')ひろびろ収納と無垢フローリングの落ち着く部屋づくり@endslot
-      @slot('name')F様邸 @endslot
-      @slot('family')SINGLE @endslot
-      @slot('address')吉祥寺 @endslot
-      @slot('img')
-      <img src="@asset('images/top_fake.jpg')" alt="">
-      @endslot
-      @endcomponent
+      @endwhile
     </div>
 
-    @component('components.pagenation')@endcomponent
+    <div class="pagenation-container">
+      @php($count = $works_posts_not_picked->found_posts)
+      @php(App\pagination($count))
+    </div>
   </section>
 
 </div>

@@ -1,3 +1,5 @@
+{{-- @php($works_posts) --}}
+
 @extends('layouts.app')
 
 @section('content')
@@ -17,89 +19,38 @@
 
     <div class="works-list-container regular-container">
       <div class="picked-container">
+        @while($works_posts_picked->have_posts()) @php($works_posts_picked->the_post())
         @component('components.work-card')
-        @slot('thumb')<img src="@asset('images/interview_fake.jpg')" alt="">@endslot
-        @slot('title')ずっと自然体で。楽に過ごせる新婚生活ずっと自然体で。@endslot
-        @slot('area')70 @endslot
-        @slot('budget')1200 @endslot
-        @slot('type')中古マンション@endslot
-        @slot('place')恵比寿@endslot
+        @slot('thumb')<img src="{{ get_the_post_thumbnail_url() }}" alt="">@endslot
+        @slot('link'){{ get_permalink() }}@endslot
+        @slot('title'){{ get_the_title() }}@endslot
+        @slot('area'){{ the_field('area') }} @endslot
+        @slot('budget'){{ the_field('budget') }} @endslot
+        @slot('type'){{ the_field('type') }} @endslot
+        @slot('place'){{ the_field('place') }} @endslot
         @endcomponent
-
-        @component('components.work-card')
-        @slot('thumb')<img src="@asset('images/interview_fake.jpg')" alt="">@endslot
-        @slot('title')ずっと自然体で。楽に過ごせる新婚生活ずっと自然体で。@endslot
-        @slot('area')70 @endslot
-        @slot('budget')1200 @endslot
-        @slot('type')中古マンション@endslot
-        @slot('place')恵比寿@endslot
-        @endcomponent
+        @endwhile
       </div>
 
       <div class="new-container">
-        @php
-        $works= array (
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        );
-        @endphp
 
-
-        @foreach ($works as $work)
+        @while($works_posts_not_picked->have_posts()) @php($works_posts_not_picked->the_post())
         @component('components.work-card')
-        @slot('thumb')<img src="@asset('images/interview_fake.jpg')" alt="">@endslot
-        @slot('title'){{ $work['title'] }}@endslot
-        @slot('area'){{ $work['area'] }}@endslot
-        @slot('budget'){{ $work['budget'] }}@endslot
-        @slot('type'){{ $work['type'] }}@endslot
-        @slot('place'){{ $work['place'] }}@endslot
+        @slot('thumb')<img src="{{ get_the_post_thumbnail_url() }}" alt="">@endslot
+        @slot('link'){{ get_permalink() }}@endslot
+        @slot('title'){{ get_the_title() }}@endslot
+        @slot('area'){{ the_field('area') }} @endslot
+        @slot('budget'){{ the_field('budget') }} @endslot
+        @slot('type'){{ the_field('type') }} @endslot
+        @slot('place'){{ the_field('place') }} @endslot
         @endcomponent
-        @endforeach
+        @endwhile
       </div>
     </div>
-    @component('components.pagenation')@endcomponent
+    <div class="pagenation-container">
+      @php($count = $works_posts_not_picked->found_posts)
+      @php(App\pagination($count))
+    </div>
   </section>
-
-
 </div>
 @endsection

@@ -1,4 +1,4 @@
-<div class="work-card">
+<a href="{{ $link }}" class="work-card">
   <div class="thumb">{{ $thumb }}</div>
   <div class="contents">
     <h5 class="title">{{ $title }}</h5>
@@ -13,4 +13,4 @@
       </div>
     </div>
   </div>
-</div>
+</a>

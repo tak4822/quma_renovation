@@ -48,11 +48,11 @@ export default function () {
     if (direction === 'prev') {
       $('.interview-cards').animate({
         left: `+=${slideAnimation}`,
-      }, 100);
+      }, 100, 'linear');
     } else if (direction === 'next') {
       $('.interview-cards').animate({
         left: `-=${slideAnimation}`,
-      }, 100);
+      }, 100, 'linear');
     }
     getShadow()
     setTimeout(function () {

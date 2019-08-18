@@ -19,13 +19,13 @@
         <div class="paging">
           <div id="interviewsSliderNextButton" class="arrows right">
             <div class="arrows-inner">
-              <img src="@asset('images/arrow-right.png')" alt="">
+              <img src="@asset('images/arrow_right.svg')" alt="">
             </div>
           </div>
           <div class="border"></div>
           <div id="interviewsSliderPrevButton" class="arrows left">
             <div class="arrows-inner">
-              <img src="@asset('images/arrow-left.png')" alt="">
+              <img src="@asset('images/arrow_left.svg')" alt="">
             </div>
           </div>
         </div>

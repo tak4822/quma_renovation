@@ -3,13 +3,24 @@
   height: 100%;
   margin-right: $spacer * 2;
 
+  &:hover {
+    .thumb {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
   .thumb {
     width: 100%;
     height: 18rem;
+    overflow: hidden;
 
     img {
       object-fit: cover;
       height: 100%;
+      transition: transform 1.6s ease;
+      will-change: transform;
     }
   }
 

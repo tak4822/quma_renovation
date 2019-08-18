@@ -6,110 +6,53 @@
   @endcomponent
 
   <div class="picks">
-    <div class="pick-container first">
+    @php($count_works_posts_picked = 0)
+    @while($works_posts_picked->have_posts()) @php($works_posts_picked->the_post())
+    <a href="{{ get_permalink() }}" class="pick-container {{ $count_works_posts_picked === 0 ? "first" : "second"}}">
       <div class="circle"></div>
       <div class="thumb">
-        <img src="@asset('images/interview_fake.jpg')" alt="">
+        <img src="{{ get_the_post_thumbnail_url() }}" alt="">
       </div>
       <div class="contents">
-        <h4 class="title">無理のない暮らし方。いつの時代も美しい空間</h4>
+        <h4 class="title">{{ get_the_title() }}</h4>
         <div class="outline">
-          <p class="area">100㎡</p>
+          <p class="area">{{ the_field('area') }}㎡</p>
           <div class="divider"></div>
-          <p class="budget">1200万円</p>
+          <p class="budget">{{ the_field('budget') }}万円</p>
           <div class="divider"></div>
-          <p class="type">戸建</p>
+          <p class="type">{{ the_field('type') }}</p>
           <p class="in">in</p>
-          <p class="place">自由が丘</p>
+          <p class="place">{{ the_field('place') }}</p>
         </div>
       </div>
-    </div>
-    <div class="pick-container second">
-      <div class="circle"></div>
-      <div class="thumb">
-        <img src="@asset('images/interview_fake.jpg')" alt="">
-      </div>
-      <div class="contents">
-        <h4 class="title">無理のない暮らし方。いつの時代も美しい空間</h4>
-        <div class="outline">
-          <p class="area">100㎡</p>
-          <div class="divider"></div>
-          <p class="budget">1200万円</p>
-          <div class="divider"></div>
-          <p class="type">戸建</p>
-          <p class="in">in</p>
-          <p class="place">自由が丘</p>
-        </div>
-      </div>
-    </div>
+    </a>
+    @php($count_works_posts_picked++)
+    @endwhile
 
-    <div class="slider">
-      <div class="slider-wrapper">
-        @php
-        $works= array (
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        array (
-        'title' => '毎日がクリエイティブになれますように',
-        "area" => '100',
-        "budget" => '1200',
-        "type" => '戸建',
-        "place" => '自由が丘',
-        ),
-        );
-        @endphp
+  </div>
 
-
-        @foreach ($works as $work)
+  <div class="slider">
+    <div class="slider-wrapper">
+      @php($count_works_posts_not_picked = 0)
+      @while($works_posts_not_picked->have_posts() && $count_works_posts_not_picked < 6) @php($works_posts_not_picked->
+        the_post())
         @component('components.work-card')
-        @slot('thumb')<img src="@asset('images/interview_fake.jpg')" alt="">@endslot
-        @slot('title'){{ $work['title'] }}@endslot
-        @slot('area'){{ $work['area'] }}@endslot
-        @slot('budget'){{ $work['budget'] }}@endslot
-        @slot('type'){{ $work['type'] }}@endslot
-        @slot('place'){{ $work['place'] }}@endslot
+        @slot('thumb')<img src="{{ get_the_post_thumbnail_url() }}" alt="">@endslot
+        @slot('link'){{ get_permalink() }}@endslot
+        @slot('title'){{ get_the_title() }}@endslot
+        @slot('area'){{ the_field('area') }} @endslot
+        @slot('budget'){{ the_field('budget') }} @endslot
+        @slot('type'){{ the_field('type') }} @endslot
+        @slot('place'){{ the_field('place') }} @endslot
         @endcomponent
-        @endforeach
-      </div>
+        @php($count_works_posts_not_picked++)
+        @endwhile
     </div>
-    <div class="action-container">
-      @component('components.button')
-      @slot('text')施工事例ー記事一覧を見る@endslot
-      @slot('url')works @endslot
-      @endcomponent
-    </div>
+  </div>
+  <div class="action-container">
+    @component('components.button')
+    @slot('text')施工事例ー記事一覧を見る@endslot
+    @slot('url')works @endslot
+    @endcomponent
   </div>
 </section>

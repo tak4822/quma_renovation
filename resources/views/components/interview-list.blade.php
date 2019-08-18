@@ -1,4 +1,4 @@
-<div class="inteview-list">
+<a href="{{ $link }}" class="inteview-list">
   <div class="contents">
     <div class="number">{{ $number }}</div>
     <div class="text-wrapper">
@@ -16,4 +16,4 @@
   <div class="pictures">
     {{ $img }}
   </div>
-</div>
+</a>

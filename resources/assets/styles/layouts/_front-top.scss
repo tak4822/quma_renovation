@@ -216,8 +216,8 @@
       }
 
       @include mq-down("sm") {
-        bottom: -$spacer * 25;
-        height: 25rem;
+        bottom: -$spacer * 23;
+        height: 24rem;
       }
     }
 
@@ -246,8 +246,8 @@
       }
 
       @include mq-down("sm") {
-        bottom: -$spacer * 24;
-        height: 25rem;
+        bottom: -$spacer * 22;
+        height: 24rem;
       }
 
       p {

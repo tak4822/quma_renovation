@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
+use WP_Query;
 
 class App extends Controller
 {
@@ -40,4 +41,47 @@ class App extends Controller
 
         return 'else';
     }
+
+    function works_posts_picked() {
+        
+        $args = array(
+            'post_type' => 'works',
+            'meta_key' => 'is-picked',
+            'meta_value' => 'picked!'
+        );
+
+        return new WP_Query( $args );
+    }    
+
+    function works_posts_not_picked() {
+        
+        $args = array(
+            'post_type' => 'works',
+            'meta_key' => 'is-picked',
+            'meta_value' => 'no'
+        );
+        return new WP_Query( $args );
+    }    
+
+    function interviews_posts() {
+        $args = array(
+            'post_type' => 'interviews',
+        );
+        return new WP_Query( $args );
+    }
 }
+
+// if ( $the_query->have_posts() ) {
+//     $count = 0;
+//     while ( $the_query->have_posts() && $count < 5 ) {
+//         $output = array(
+//             'title' => get_post_meta($the_query->post->ID, 'title', true),
+//             'image' =>get_the_post_thumbnail_url($the_query->post->ID, 'full'),
+//             'area' => get_post_meta($the_query->post->ID, 'area', true),
+//             'budget' => get_post_meta($the_query->post->ID, 'budget', true),
+//             'type' => get_post_meta($the_query->post->ID, 'type', true),
+//             'place' => get_post_meta($the_query->post->ID, 'place', true),
+//         );
+//         $count++;
+//     }
+// }

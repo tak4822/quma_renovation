@@ -10,7 +10,7 @@ class FrontPage extends Controller
 
   static function get_interviews_data() {
     $descLength = 260;
-    $size='medium';
+    $size='large';
 
     $args = array(
       'post_type' => 'interviews',
@@ -87,10 +87,6 @@ class FrontPage extends Controller
 
       wp_reset_postdata();
     }
-
-    // echo '<pre>';
-    // print_r($data_arr);
-    // echo '</pre>';
 
     return $data_arr;
   }
