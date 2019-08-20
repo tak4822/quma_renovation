@@ -1,4 +1,5 @@
 import modal from '../modules/modal';
+import form from '../modules/form';
 
 export default {
   namespace: 'events',
@@ -6,13 +7,14 @@ export default {
     // このページのcontainerが読み込みを開始した時。
   },
   onEnterCompleted: function () {
+    console.log('evenst')
+    form();
     $('.btn').on('click', modal.open)
     $('.overlay').on('click', modal.close);
     $('.close-button').on('click', modal.close);
 
-    $('.submit-btn').on('click', function () {
-      // modal.send();
-    })
+    // when form sent
+    document.addEventListener('wpcf7mailsent', modal.close, false);
 
   },
   onLeave: function () {

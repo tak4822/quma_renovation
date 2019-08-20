@@ -1,8 +1,8 @@
 .form-container {
-  padding: $spacer * 4;
+  padding: $spacer * 4 $spacer * 4 $spacer * 6;
 
   @include mq-down("mobile") {
-    padding: $spacer * 2;
+    padding: $spacer * 2 $spacer * 2 $spacer * 4;
   }
 
   &.popup {
@@ -27,6 +27,10 @@
     color: $red;
   }
 
+  .wpcf7-not-valid-tip {
+    font-size: 1.2rem;
+  }
+
   label.input-wrapper {
     display: block;
     width: 100%;
@@ -41,6 +45,12 @@
       top: 0.8rem;
       font-family: ("midashi");
       font-weight: 600;
+      transition: all 0.3s ease-out;
+
+      &.focused {
+        top: -2rem;
+        font-size: 0.8rem;
+      }
     }
 
     .wpcf7-form-control-wrap {
@@ -56,7 +66,7 @@
       border: 0;
       width: 100%;
       height: 100%;
-      padding-left: $spacer * 2;
+      padding-left: $spacer;
       font-size: 1.4rem;
     }
   }
@@ -157,6 +167,11 @@
     .schedule-wrapper {
       display: flex;
       flex-direction: column;
+      font-size: 1.2rem;
+
+      select {
+        font-size: 1.6rem;
+      }
 
       .first-schedule {
         margin-bottom: $spacer * 2;
@@ -184,12 +199,12 @@
 
         .wpcf7-form-control-wrap {
           &::before {
-            width: 1rem;
-            height: 1rem;
+            width: 0.8rem;
+            height: 0.8rem;
             z-index: 1;
             position: absolute;
             right: 1rem;
-            top: 0.3rem;
+            top: 0.4rem;
             content: "";
             pointer-events: none;
 
@@ -223,9 +238,14 @@
 
     .participants-wrapper {
       display: flex;
+      font-size: 1.2rem;
 
       @media screen and (max-width: 390px) {
         flex-direction: column;
+      }
+
+      select {
+        font-size: 1.6rem;
       }
 
       .adult-wrapper {
@@ -246,12 +266,12 @@
 
         .wpcf7-form-control-wrap {
           &::before {
-            width: 1rem;
-            height: 1rem;
+            width: 0.8rem;
+            height: 0.8rem;
             z-index: 1;
             position: absolute;
             right: 1rem;
-            top: 0.3rem;
+            top: 0.4rem;
             content: "";
             pointer-events: none;
 
