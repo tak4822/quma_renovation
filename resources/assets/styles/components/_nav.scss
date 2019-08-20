@@ -52,6 +52,13 @@
       list-style-type: none;
       padding: $spacer*2;
 
+      &.current_page_item,
+      &:hover {
+        .hover-el {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
       @include mq-down("lg") {
         opacity: 0;
         transform: translateY(40px);
@@ -60,6 +67,41 @@
         &.active {
           opacity: 1;
           transform: translateY(0);
+        }
+      }
+    }
+
+    .nav-contents-wrapper {
+      display: block;
+      position: relative;
+
+      .nav-contents {
+        .nav-title {
+          margin: 0;
+          font-family: ("madawaska");
+          font-size: 1.6rem;
+        }
+      }
+
+      .hover-el {
+        position: absolute;
+        bottom: -2rem;
+        right: calc(50% - 3.5rem);
+        width: 7rem;
+        height: 10rem;
+        background: $pink;
+        z-index: z("below");
+
+        @include bg-img('nav_deco.svg', contain);
+
+        background-size: 71.5px;
+        background-position: center 63px;
+        transform: translate3d(0, -150%, 0);
+        transition: transform 0.8s cubic-bezier(0.43, 0.24, 0.57, 1.29);
+        will-change: transform;
+
+        @include mq-down("lg") {
+          display: none;
         }
       }
     }

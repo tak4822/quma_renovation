@@ -33,9 +33,11 @@ export default function (
   //   });
   // }
 
+
+
   window.scrollTo(0, 0); // page goes to top
 
-  // jquery-pjaxから借りた
+  // change head contents
   const $newPageHead = $('<head />').html(
     $.parseHTML(
       newPageRawHTML.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0],
@@ -57,6 +59,19 @@ export default function (
     .find(headTags)
     .remove(); // タグを削除する
   $newPageHead.find(headTags).appendTo('head'); // タグを追加する
+
+  // change header class
+  const link = currentStatus.url.split(window.location.origin)[1].substring(1); // get path of current page
+
+  const navigation = document.querySelector('.nav-primary');
+  const navigationLinks = navigation.querySelectorAll('.menu-item');
+  const navigationLinkIsActive = navigation.querySelector(`[href="${link}"]`);
+
+  Array.prototype.forEach.call(navigationLinks, (navigationLink) => navigationLink.classList.remove('current_page_item')); // remove CSS class 'is-active' from all .navigation__links
+
+  navigationLinkIsActive.parentNode.classList.add('current_page_item'); // add CSS class to current .navigation__link
+
+
 
   const script = barbaContainer.querySelector('script');
   if (script !== null) {

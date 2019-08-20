@@ -2,7 +2,20 @@
   <div class="container">
     <nav class="nav-primary">
       @if (has_nav_menu('primary_navigation'))
-      {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
+      {!!
+      wp_nav_menu(
+      array (
+      'menu' => 'main-menu',
+      'theme_location' => 'primary_navigation',
+      'container' => FALSE,
+      'container_id' => FALSE,
+      'menu_class' => 'nav',
+      'menu_id' => FALSE,
+      'depth' => 1,
+      'walker' => new Description_Walker
+      )
+      );
+      !!}
       @endif
     </nav>
 
