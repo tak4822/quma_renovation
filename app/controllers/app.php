@@ -33,9 +33,10 @@ class App extends Controller
     }
 
     public function current_template() {
+        global $post;  
         if (is_front_page()) return 'frontpage';
         if (is_page('contact')) return 'contact';
-        if (is_page('events')) return 'events';
+        if (32 === $post->post_parent) return 'events'; // single page under eents page
         if (is_single()) return 'posts';
         if (is_404()) return '404';
 
@@ -70,18 +71,3 @@ class App extends Controller
         return new WP_Query( $args );
     }
 }
-
-// if ( $the_query->have_posts() ) {
-//     $count = 0;
-//     while ( $the_query->have_posts() && $count < 5 ) {
-//         $output = array(
-//             'title' => get_post_meta($the_query->post->ID, 'title', true),
-//             'image' =>get_the_post_thumbnail_url($the_query->post->ID, 'full'),
-//             'area' => get_post_meta($the_query->post->ID, 'area', true),
-//             'budget' => get_post_meta($the_query->post->ID, 'budget', true),
-//             'type' => get_post_meta($the_query->post->ID, 'type', true),
-//             'place' => get_post_meta($the_query->post->ID, 'place', true),
-//         );
-//         $count++;
-//     }
-// }

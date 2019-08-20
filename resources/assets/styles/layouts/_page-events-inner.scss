@@ -1,30 +1,3 @@
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: $black;
-  opacity: 0.6;
-  z-index: z("overlay");
-}
-
-.modal {
-  position: fixed;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
-  background: white;
-  z-index: z("modal");
-  overflow-y: scroll;
-
-  @include mq-down("md") {
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-  }
-}
-
 .events-inner-page {
   .events-inner-contents {
     display: flex;

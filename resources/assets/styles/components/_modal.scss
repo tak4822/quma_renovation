@@ -1,0 +1,52 @@
+.modal-container {
+  display: none;
+
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: $black;
+    opacity: 0;
+    z-index: z("overlay");
+    transition: opacity 0.2s ease;
+  }
+
+  .modal {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: white;
+    z-index: z("modal");
+    overflow-y: scroll;
+    transition: all 0.4s ease-out;
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+
+    @include mq-down("md") {
+      top: 5%;
+      left: 5%;
+      width: 90%;
+      height: 90%;
+    }
+
+    &.active {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+
+      &.sent {
+        transform: translate3d(0, -20px, 0);
+      }
+    }
+
+    .close-button {
+      position: absolute;
+      top: $spacer * 2;
+      right: $spacer * 2;
+      width: 3rem;
+      height: 3rem;
+      z-index: z('above');
+    }
+  }
+}

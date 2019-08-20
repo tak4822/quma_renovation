@@ -1,14 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="overlay"></div>
-<div class="modal">
-  <div class="form-container popup">
-    @while(have_posts()) @php(the_post())
-    @php(the_content())
-    @endwhile
-  </div>
+@component('components.modal')
+@slot('contents')
+<div class="form-container popup">
+  @while(have_posts()) @php(the_post())
+  @php(the_content())
+  @endwhile
 </div>
+@endslot
+@endcomponent
 <div class="events-inner-page pages-container">
 
   @component('components.breadcrums')
@@ -56,7 +57,7 @@
         <div class="action-container">
           @component('components.button')
           @slot('text')申し込む @endslot
-          @slot('url')apply @endslot
+          @slot('url')@endslot
           @endcomponent
           <div class="comments">
             <p class="red-text">上記ボタンをクリックしても画面が立ち上がらない方はお手数ですがメールよりお申し込みください。</p>
