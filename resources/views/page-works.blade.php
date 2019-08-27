@@ -33,7 +33,6 @@
       </div>
 
       <div class="new-container">
-
         @while($works_posts_not_picked->have_posts()) @php($works_posts_not_picked->the_post())
         @component('components.work-card')
         @slot('thumb')<img src="{{ get_the_post_thumbnail_url() }}" alt="">@endslot

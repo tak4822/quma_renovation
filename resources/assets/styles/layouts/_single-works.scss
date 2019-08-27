@@ -213,6 +213,10 @@
 
           @include mq-down("sm") {
             padding-left: 14rem;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            height: 6rem;
+            margin-top: 0.5rem;
           }
         }
 
@@ -235,6 +239,10 @@
           .left,
           .right {
             width: 50%;
+
+            @media screen and (max-width: 800px) {
+              width: 100%;
+            }
           }
 
           .left {
@@ -286,10 +294,9 @@
         }
 
         .img-wrapper {
-          margin-bottom: $spacer * 4;
-
           .caption {
             font-size: 1.2rem;
+            margin-bottom: $spacer * 4;
           }
         }
       }

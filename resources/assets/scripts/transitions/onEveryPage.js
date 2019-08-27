@@ -65,12 +65,13 @@ export default function (
 
   const navigation = document.querySelector('.nav-primary');
   const navigationLinks = navigation.querySelectorAll('.menu-item');
-  const navigationLinkIsActive = navigation.querySelector(`[href="${link}"]`);
+  const navigationLinkIsActive = navigation.querySelector(`[href="/${link}"]`);
 
   Array.prototype.forEach.call(navigationLinks, (navigationLink) => navigationLink.classList.remove('current_page_item')); // remove CSS class 'is-active' from all .navigation__links
 
-  navigationLinkIsActive.parentNode.classList.add('current_page_item'); // add CSS class to current .navigation__link
-
+  if (navigationLinkIsActive) {
+    navigationLinkIsActive.parentNode.classList.add('current_page_item'); // add CSS class to current .navigation__link
+  }
 
 
   const script = barbaContainer.querySelector('script');

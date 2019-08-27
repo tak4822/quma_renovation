@@ -18,9 +18,8 @@ class AboutPage extends Controller
 
     if ( $the_query->have_posts() ) {
       $data_arr = array();
-      $count = 0;
 
-      while ( $the_query->have_posts() && $count < 5) {
+      while ( $the_query->have_posts()) {
         $the_query->the_post();
 
         $name = get_the_title();
@@ -38,7 +37,6 @@ class AboutPage extends Controller
         );
 
         array_push($data_arr, $output);
-        $count ++;
       }
       wp_reset_postdata();
     }

@@ -90,15 +90,22 @@
     </article>
   </section>
   <section class="next regular-container">
+    @php
+    $next_post = get_next_post();
+    if( empty( $next_post ) ) {
+    $next_post = get_previous_post();
+    }
+    @endphp
     @component('components.interview-list')
-    @slot('number')002 @endslot
-    @slot('subtitle')アウトドア好きでアクティブな人の部屋って？@endslot
-    @slot('title')ひろびろ収納と無垢フローリングの落ち着く部屋づくり@endslot
-    @slot('name')F様邸 @endslot
-    @slot('family')SINGLE @endslot
-    @slot('address')吉祥寺 @endslot
+    @slot('number') @endslot
+    @slot('link'){{ get_permalink($next_post->ID) }} @endslot
+    @slot('subtitle'){{ get_post_meta($next_post->ID, 'text', true) }}@endslot
+    @slot('title'){{ get_the_title($next_post->ID) }}@endslot
+    @slot('name'){{ get_post_meta($next_post->ID, 'place_name', true) }}@endslot
+    @slot('family'){{ get_post_meta($next_post->ID, 'family', true) }} @endslot
+    @slot('address'){{ get_post_meta($next_post->ID, 'address', true) }} @endslot
     @slot('img')
-    <img src="@asset('images/top_fake.jpg')" alt="">
+    <img src="{{ get_the_post_thumbnail_url($next_post->ID) }}" alt="">
     @endslot
     @endcomponent
 

@@ -7,7 +7,6 @@ export default {
     // このページのcontainerが読み込みを開始した時。
   },
   onEnterCompleted: function () {
-    console.log('evenst')
     form();
     $('.btn').on('click', modal.open)
     $('.overlay').on('click', modal.close);

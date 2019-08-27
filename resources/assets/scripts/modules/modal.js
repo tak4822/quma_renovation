@@ -1,6 +1,5 @@
 export default {
   open() {
-    console.log('opne');
     $('.modal-container')
       .css('display', 'block')
       .delay(300)

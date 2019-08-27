@@ -5,18 +5,26 @@ export default function () {
   const img = $('<img />')
     .attr('src', require('../../images/first_loading.gif'))
     .css({
-      width: '100px',
+      width: '80px',
       position: 'fixed',
-      top: h / 2 - 50 + 'px',
-      left: w / 2 - 50 + 'px',
+      top: h / 2 - 40 + 'px',
+      left: w / 2 - 40 + 'px',
+    });
+
+  const comment = $('<p>随時情報追加中！</p>')
+    .css({
+      position: 'fixed',
+      top: h / 2 + 60 + 'px',
+      left: w / 2 - 60 + 'px',
     });
 
   $('.transition-overlay')
     .append(img)
+    .append(comment)
     .height(h)
     .width(w)
     .css({
-      top: 0,
+      "top": 0,
     })
     .fadeIn(100);
 

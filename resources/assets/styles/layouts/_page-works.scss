@@ -89,6 +89,16 @@
           margin: 0 $spacer;
         }
 
+        &::after {
+          content: "";
+          display: block;
+          width: 32%;
+
+          @include mq-down("mobile") {
+            display: none;
+          }
+        }
+
         .work-card {
           width: 32%;
           margin-bottom: $spacer * 2;

@@ -28,11 +28,7 @@
             </div>
             <div class="list-wrapper">
               <p class="title">広さ</p>
-              <p class="text">{{ the_field('area') }}㎡</p>
-            </div>
-            <div class="list-wrapper">
-              <p class="title">場所</p>
-              <p class="text">{{ the_field('place') }}</p>
+              <p class="text">{{ the_field('area') }}{{ !empty(get_field('area')) ? '㎡' : '-' }}</p>
             </div>
             <div class="list-wrapper">
               <p class="title">家族構成</p>
@@ -41,22 +37,26 @@
           </div>
           <div class="right">
             <div class="list-wrapper">
-              <p class="title">築年数</p>
-              <p class="text">{{ the_field('years') }}年</p>
+              <p class="title">場所</p>
+              <p class="text">{{ the_field('place') }}</p>
             </div>
             <div class="list-wrapper">
+              <p class="title">築年数</p>
+              <p class="text">{{ the_field('years') }}{{ !empty(get_field('years')) ? '年' : '-' }}</p>
+            </div>
+            {{-- <div class="list-wrapper">
               <p class="title">工事費用</p>
               <p class="text">{{ the_field('budget') }}万</p>
-            </div>
-            <div class="list-wrapper">
-              <p class="title">間取り</p>
-              <p class="text">{{ the_field('structure') }}</p>
-            </div>
+          </div> --}}
+          <div class="list-wrapper">
+            <p class="title">間取り</p>
+            <p class="text">{{ the_field('structure') }}</p>
           </div>
         </div>
       </div>
     </article>
 
+    @if( !empty(get_field('highlight_1_title')) )
     <article class="highlight">
       <div class="title-container">
         <div class="title-wrapper">
@@ -81,7 +81,9 @@
         <img src="{{ the_field('highlight_1_img_2') }}" alt="">
       </div>
     </article>
+    @endif
 
+    @if( !empty(get_field('highlight_2_title')) )
     <article class="highlight">
       <div class="title-container">
         <div class="title-wrapper">
@@ -106,6 +108,7 @@
         <img src="{{ the_field('highlight_2_img_2') }}" alt="">
       </div>
     </article>
+    @endif
 
     <article class="pictures">
       <div class="title-container">
@@ -152,23 +155,17 @@
         </div>
       </div>
       <div class="regular-container">
+        @while($works_posts_picked->have_posts()) @php($works_posts_picked->the_post())
         @component('components.work-card')
-        @slot('thumb')<img src="@asset('images/interview_fake.jpg')" alt="">@endslot
-        @slot('title')ずっと自然体で。楽に過ごせる新婚生活ずっと自然体で。@endslot
-        @slot('area')70 @endslot
-        @slot('budget')1200 @endslot
-        @slot('type')中古マンション@endslot
-        @slot('place')恵比寿@endslot
+        @slot('thumb')<img src="{{ get_the_post_thumbnail_url() }}" alt="">@endslot
+        @slot('link'){{ get_permalink() }}@endslot
+        @slot('title'){{ get_the_title() }}@endslot
+        @slot('area'){{ the_field('area') }} @endslot
+        @slot('budget'){{ the_field('budget') }} @endslot
+        @slot('type'){{ the_field('type') }} @endslot
+        @slot('place'){{ the_field('place') }} @endslot
         @endcomponent
-
-        @component('components.work-card')
-        @slot('thumb')<img src="@asset('images/interview_fake.jpg')" alt="">@endslot
-        @slot('title')ずっと自然体で。楽に過ごせる新婚生活ずっと自然体で。@endslot
-        @slot('area')70 @endslot
-        @slot('budget')1200 @endslot
-        @slot('type')中古マンション@endslot
-        @slot('place')恵比寿@endslot
-        @endcomponent
+        @endwhile
       </div>
     </article>
 

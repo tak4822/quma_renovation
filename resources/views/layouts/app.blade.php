@@ -4,7 +4,8 @@
 
   <body @php(body_class())>
     @php(do_action('get_header'))
-    <div class="transition-overlay"></div>
+    <div class="transition-overlay">
+    </div>
     <div id="site-wrap" style="opacity: 0;">
       @include('partials.header')
       <div id="barba-wrapper" class="wrap container" role="document">

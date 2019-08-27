@@ -12,12 +12,16 @@
         <div class="contact-info">
           <ul class="info-list">
             <li class="info tel">
-              <img class="icon" src="@asset('images/footer_tel.svg')" alt="">
-              <p class="text">03-6805-0696</p>
+              <a href="tel:0368050696">
+                <img class="icon" src="@asset('images/footer_tel.svg')" alt="">
+                <p class="text">03-6805-0696</p>
+              </a>
             </li>
             <li class="info mail">
-              <img class="icon" src="@asset('images/footer_mail.svg')" alt="">
-              <p class="text">info@quma.co.jp</p>
+              <a href="mail:info@quma.co.jp">
+                <img class="icon" src="@asset('images/footer_mail.svg')" alt="">
+                <p class="text">info@quma.co.jp</p>
+              </a>
             </li>
             <li class="info address">
               <img class="icon" src="@asset('images/footer_address.svg')" alt="">

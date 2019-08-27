@@ -7,7 +7,7 @@
     @endcomponent
   </div>
   <div class="contents">
-    <div class="vision regular-container">
+    <div class="vision">
       <div class="illust">
         <img src="@asset('images/vision.jpg')" alt="">
       </div>
@@ -19,9 +19,7 @@
         <p>あなたの暮らしにずっと寄り添え会えるパートナーを目指しています。</p>
       </div>
     </div>
-    <div class="pic">
-      <img src="@asset('images/all_members.jpg')" alt="">
-    </div>
+    <div class="pic"></div>
   </div>
   <div class="action-container regular-container">
     @component('components.button')

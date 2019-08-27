@@ -16,10 +16,10 @@
       <div class="contents">
         <h4 class="title">{{ get_the_title() }}</h4>
         <div class="outline">
-          <p class="area">{{ the_field('area') }}㎡</p>
+          {{-- <p class="area">{{ the_field('area') }}㎡</p>
           <div class="divider"></div>
           <p class="budget">{{ the_field('budget') }}万円</p>
-          <div class="divider"></div>
+          <div class="divider"></div> --}}
           <p class="type">{{ the_field('type') }}</p>
           <p class="in">in</p>
           <p class="place">{{ the_field('place') }}</p>
