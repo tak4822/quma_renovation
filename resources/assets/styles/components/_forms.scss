@@ -19,16 +19,16 @@
     }
   }
 
-  p {
-    margin-bottom: $spacer * 4;
-  }
-
   .red {
     color: $red;
   }
 
   .wpcf7-not-valid-tip {
     font-size: 1.2rem;
+  }
+
+  label {
+    margin-bottom: $spacer * 4;
   }
 
   label.input-wrapper {
