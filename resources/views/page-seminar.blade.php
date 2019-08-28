@@ -55,10 +55,14 @@
           </div>
         </div>
         <div class="action-container">
-          @component('components.button')
-          @slot('text')申し込む @endslot
-          @slot('url')@endslot
-          @endcomponent
+          <div class="btn">
+            <div class="border-wrapper">
+              <div class="border">
+                <img class="arrow-edge" src="@asset('images/button_arrow_edge.svg')" alt="">
+              </div>
+            </div>
+            <p class="text">申し込む</p>
+          </div>
           <div class="comments">
             <p class="red-text">上記ボタンをクリックしても画面が立ち上がらない方はお手数ですがメールよりお申し込みください。</p>
             <p class="text">タイトルにご希望のイベント名、本文に以下の情報を明記の上、下記のメールアドレスにお送りください。①お名前②ご希望の日程③電話番号④物件を持っているかどうか</p>
