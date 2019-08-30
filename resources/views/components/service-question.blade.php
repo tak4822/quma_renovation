@@ -5,7 +5,7 @@
       <span class="text">Question!</span>
       <span class="border right"></span>
     </div>
-    <div class="question-text wow rubberBand">物件から探す？</div>
+    <div class="question-text wow pulse">物件から探す？</div>
   </div>
   <div class="desktop-if-then wow late fadeInDown">
     <div class="top">
@@ -22,7 +22,7 @@
   </div>
   <div class="answer">
     <div class="house">
-      <div class="answer-circle-mobile wow rubberBand">
+      <div class="answer-circle-mobile wow pulse">
         <p class="text">YES</p>
       </div>
       <div class="inner-wrapper wow a-lot-late fadeInUp">
@@ -38,7 +38,7 @@
       </div>
     </div>
     <div class="plan">
-      <div class="answer-circle-mobile wow rubberBand">
+      <div class="answer-circle-mobile wow pulse">
         <p class="text">NO</p>
       </div>
       <div class="inner-wrapper wow a-lot-late fadeInUp">

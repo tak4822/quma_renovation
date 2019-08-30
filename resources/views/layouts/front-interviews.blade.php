@@ -34,7 +34,7 @@
         </div>
       </div>
       <div id="interviewsSliderTouch" class="slider">
-        <div class="slider-warpper wow bit-late-visibly slideInRight" data-wow-duration="2s">
+        <div class="slider-warpper wow slideInRight" data-wow-duration="2s">
           @foreach( $interviews_arr as $key => $interview)
           @component('components.interview-card')
           @slot('link'){{ $interview['link'] }}@endslot

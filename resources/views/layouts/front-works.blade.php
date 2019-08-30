@@ -29,11 +29,10 @@
     </a>
     @php($count_works_posts_picked++)
     @endwhile
-
   </div>
 
   <div class="slider">
-    <div class="slider-wrapper wow bit-late-visibly slideInRight" data-wow-duration="2s">
+    <div class="slider-wrapper wow slideInRight" data-wow-duration="2s">
       @php($count_works_posts_not_picked = 0)
       @while($works_posts_not_picked->have_posts() && $count_works_posts_not_picked < 6) @php($works_posts_not_picked->
         the_post())
