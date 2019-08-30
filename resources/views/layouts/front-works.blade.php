@@ -11,9 +11,10 @@
     <a href="{{ get_permalink() }}" class="pick-container {{ $count_works_posts_picked === 0 ? "first" : "second"}}">
       <div class="circle"></div>
       <div class="thumb">
-        <img src="{{ get_the_post_thumbnail_url() }}" alt="">
+        <img class="wow {{ $count_works_posts_picked === 0 ? "slideInRight" : "slideInLeft"}}"" src="
+          {{ get_the_post_thumbnail_url() }}" alt="">
       </div>
-      <div class="contents">
+      <div class="contents wow late fadeIn">
         <h4 class="title">{{ get_the_title() }}</h4>
         <div class="outline">
           {{-- <p class="area">{{ the_field('area') }}㎡</p>
@@ -32,7 +33,7 @@
   </div>
 
   <div class="slider">
-    <div class="slider-wrapper">
+    <div class="slider-wrapper wow bit-late-visibly slideInRight" data-wow-duration="2s">
       @php($count_works_posts_not_picked = 0)
       @while($works_posts_not_picked->have_posts() && $count_works_posts_not_picked < 6) @php($works_posts_not_picked->
         the_post())

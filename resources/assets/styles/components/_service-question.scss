@@ -146,6 +146,14 @@
       margin-top: $spacer * 8;
     }
 
+    .inner-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     .house {
       width: 35rem;
       height: 50rem;

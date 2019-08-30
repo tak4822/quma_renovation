@@ -1,5 +1,5 @@
 @php( $link = $url == '' ? '' : get_site_url() . '/' . $url)
-<a class="btn" href="{{ $link }}">
+<a class="btn wow fadeIn" href="{{ $link }}">
   <div class="border-wrapper">
     <div class="border">
       <img class="arrow-edge" src="@asset('images/button_arrow_edge.svg')" alt="">
