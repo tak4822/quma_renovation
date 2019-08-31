@@ -10,6 +10,7 @@
 
   <section class="question">
     @component('components.page-section-header')
+    @slot('type')@endslot
     @slot('title')リノベーションの進め方@endslot
     @slot('sub')リノベーションの始まり、物件からなのか、プランからなのか、お金からなのか、悩みはつきませんが、QUMAはどこからでもご相談させて頂きます。@endslot
     @slot('img')@endslot

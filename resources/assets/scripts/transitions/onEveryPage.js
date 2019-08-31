@@ -1,3 +1,7 @@
+import {
+  WOW,
+} from 'wowjs';
+
 export default function (
   currentStatus,
   oldStatus,
@@ -84,4 +88,18 @@ export default function (
   //   window.instgrm.Embeds.process(); // execute instagram script
   //   // instEmbed.style.margin = '0 auto';
   // }
+
+  let offset;
+  if (window.matchMedia('(max-width:1024px)').matches) {
+    offset = 150;
+  } else {
+    offset = 300;
+  }
+
+  const wow = new WOW({
+    offset,
+  })
+  wow.init();
+
+  window.scrollTo(0, 1); // scroll for firing wowjs
 }

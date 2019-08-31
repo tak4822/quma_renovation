@@ -15,6 +15,7 @@
 
 /** Import theme styles */
 @import "common/global";
+@import "common/scroll-animation";
 @import "components/buttons";
 @import "components/nav";
 @import "components/forms";
@@ -31,7 +32,7 @@
 @import "components/service-flow-exp";
 @import "components/interview-list";
 @import "components/pagenation";
-@import "components/scroll-animation";
+@import "components/event-card";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
@@ -50,7 +51,6 @@
 @import "layouts/single-interviews";
 @import "layouts/page-works";
 @import "layouts/single-works";
-@import "layouts/event-cards";
 @import "layouts/page-events";
 @import "layouts/page-events-inner";
 @import "layouts/page-contact";

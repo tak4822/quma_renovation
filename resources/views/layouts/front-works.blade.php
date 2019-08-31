@@ -11,7 +11,7 @@
     <a href="{{ get_permalink() }}" class="pick-container {{ $count_works_posts_picked === 0 ? "first" : "second"}}">
       <div class="circle"></div>
       <div class="thumb">
-        <img class="wow {{ $count_works_posts_picked === 0 ? "slideInRight" : "slideInLeft"}}"" src="
+        <img class="wow {{ $count_works_posts_picked === 0 ? "slideInRight" : "slideInLeft"}}" src="
           {{ get_the_post_thumbnail_url() }}" alt="">
       </div>
       <div class="contents wow late fadeIn">

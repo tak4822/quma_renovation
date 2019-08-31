@@ -12,16 +12,17 @@
 
   <section class="vision">
     @component('components.page-section-header')
+    @slot('type')@endslot
     @slot('title')大切にしていること@endslot
     @slot('sub')「あなたらしい暮らし」ってなんだろう。<br />そんなことを一緒に考える会社です。@endslot
     @slot('img')@endslot
     @endcomponent
 
     <div class="contents regular-container">
-      <div class="illust">
+      <div class="illust wow fadeIn" data-wow-duration="2s">
         <img src="@asset('images/vision.jpg')" alt="">
       </div>
-      <div class="text">
+      <div class="text wow fadeInUp">
         <p>QUMAはあなたの暮らしを一緒に考えるパートナーです。</p>
         <p>何をしている時に楽しいと感じて、何をしている時に物足りなさを感じるのか。どんな時に感動して、誰と一緒にいる時間を幸せを感じるのか。あなたのことを知って、それを空間に落とし込む。</p>
         <p>家族構成も、働き方も、大切にしていることも人によって様々。私たちでもあの人でもない、あなたにぴったりな住まいがある。自分の毎日の暮らしがさらに好きになるように。</p>
@@ -33,6 +34,7 @@
 
   <section class="strength">
     @component('components.page-section-header')
+    @slot('type')@endslot
     @slot('title')QUMAリノベーション3ヶ条@endslot
     @slot('sub')数あるリノベーション会社の中でなぜQUMAを選ぶのか。<br />QUMAが提供したい価値を3つご紹介します！@endslot
     @slot('img')@endslot
@@ -86,11 +88,12 @@
 
   <section class="members">
     @component('components.page-section-header')
+    @slot('type')@endslot
     @slot('title')こんな人達とリノベーション@endslot
     @slot('sub')個性豊かなQUMAのメンバーをご紹介します。<br />誠実に、そして楽しく働いています！@endslot
     @slot('img')@endslot
     @endcomponent
-    <img src="@asset('images/quma.jpg')" alt="">
+    <img class="wow fadeIn" src="@asset('images/quma.jpg')" alt="quma" data-wow-duration="2s">
     <div class="member-container">
       @foreach($members as $member)
       @component('components.about-member')
@@ -106,12 +109,13 @@
 
   <section class="company-info">
     @component('components.page-section-header')
+    @slot('type')@endslot
     @slot('title')会社概要@endslot
     @slot('sub')会社の基本情報です。<br />詳しく知りたい方はお気軽にご連絡ください:)@endslot
     @slot('img')@endslot
     @endcomponent
 
-    <div class="info-list">
+    <div class="info-list wow fadeInUp">
       <div class="left">
         <div class="info">
           <div class="header">会社名</div>

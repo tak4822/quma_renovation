@@ -12,6 +12,7 @@
 
   <section class="works-container">
     @component('components.page-section-header')
+    @slot('type')horizontal @endslot
     @slot('title')今までの施工事例@endslot
     @slot('sub')十人十色の暮らしを作らせて頂いているリノベーション。QUMAが一緒に作らせて頂いた空間を紹介させてください。@endslot
     @slot('img')<img class="horizontal" src="@asset('images/works.jpg')" alt="">@endslot

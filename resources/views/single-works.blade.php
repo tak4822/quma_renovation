@@ -8,11 +8,11 @@
   @endcomponent
 
   <section class="work-container">
-    <div class="top">
+    <div class="top wow fadeIn" data-wow-duration="2s">
       <img src="{{ the_post_thumbnail_url( 'full' ) }}" alt="">
     </div>
     <article class="outline">
-      <div class="title-container">
+      <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
           <div class="circle"></div>
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="regular-container work-contents">
-        <div class="outline-list">
+        <div class="outline-list wow fadeInUp">
           <div class="left">
             <div class="list-wrapper">
               <p class="title">タイプ</p>
@@ -58,7 +58,7 @@
 
     @if( !empty(get_field('highlight_1_title')) )
     <article class="highlight">
-      <div class="title-container">
+      <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
           <div class="circle"></div>
@@ -66,8 +66,8 @@
         </div>
       </div>
       <div class="regular-container work-contents">
-        <h3 class="title">{{ the_field('highlight_1_title') }}</h3>
-        <div class="exp-container">
+        <h3 class="title wow bit-late fadeInUp">{{ the_field('highlight_1_title') }}</h3>
+        <div class="exp-container wow late fadeInUp">
           <div class="left">
             <p>{{ the_field('highlight_1_text_left') }}</p>
           </div>
@@ -77,15 +77,15 @@
         </div>
       </div>
       <div class="pics regular-container">
-        <img src="{{ the_field('highlight_1_img_1') }}" alt="">
-        <img src="{{ the_field('highlight_1_img_2') }}" alt="">
+        <img class="wow fadeInUp" src="{{ the_field('highlight_1_img_1') }}" alt="">
+        <img class="wow fadeInUp" src="{{ the_field('highlight_1_img_2') }}" alt="">
       </div>
     </article>
     @endif
 
     @if( !empty(get_field('highlight_2_title')) )
     <article class="highlight">
-      <div class="title-container">
+      <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
           <div class="circle"></div>
@@ -93,8 +93,8 @@
         </div>
       </div>
       <div class="regular-container work-contents">
-        <h3 class="title">{{ the_field('highlight_2_title') }}</h3>
-        <div class="exp-container">
+        <h3 class="title wow bit-late fadeInUp">{{ the_field('highlight_2_title') }}</h3>
+        <div class="exp-container wow late fadeInUp">
           <div class="left">
             <p>{{ the_field('highlight_2_text_left') }}</p>
           </div>
@@ -104,14 +104,14 @@
         </div>
       </div>
       <div class="pics regular-container">
-        <img src="{{ the_field('highlight_2_img_1') }}" alt="">
-        <img src="{{ the_field('highlight_2_img_2') }}" alt="">
+        <img class="wow fadeInUp" src="{{ the_field('highlight_2_img_1') }}" alt="">
+        <img class="wow fadeInUp" src="{{ the_field('highlight_2_img_2') }}" alt="">
       </div>
     </article>
     @endif
 
     <article class="pictures">
-      <div class="title-container">
+      <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
           <div class="circle"></div>
@@ -119,27 +119,27 @@
         </div>
       </div>
       <div class="regular-container pictures-wrapper">
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_1')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_1')['caption'] }}</p>
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_2')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_2')['caption'] }}</p>
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_3')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_3')['caption'] }}</p>
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_4')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_4')['caption'] }}</p>
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_5')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_5')['caption'] }}</p>
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_6')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_6')['caption'] }}</p>
         </div>
@@ -147,7 +147,7 @@
     </article>
 
     <article class="recommend">
-      <div class="title-container">
+      <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
           <div class="circle"></div>

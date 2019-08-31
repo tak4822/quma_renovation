@@ -10,6 +10,7 @@
 
   <section class="service-plan">
     @component('components.page-section-header')
+    @slot('type')vertical @endslot
     @slot('title')プラン計画からのプロセス@endslot
     @slot('sub')物件が決まっている方のリノベーションプロセスをご紹介。<br />一緒にたくさん悩んでお気に入りの空間をつくりましょう！@endslot
     @slot('img')
@@ -24,7 +25,7 @@
         @slot('number')01 @endslot
         @slot('title')個別相談@endslot
         @endcomponent
-        <div class="left flow-exp">
+        <div class="left flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_hearing.jpg')" alt=""> @endslot
           @slot('title')
@@ -45,7 +46,7 @@
         @slot('number')02 @endslot
         @slot('title')プランニング@endslot
         @endcomponent
-        <div class="right flow-exp">
+        <div class="right flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_plan_1.jpg')" alt=""> @endslot
           @slot('title')
@@ -76,7 +77,7 @@
         @slot('number')03 @endslot
         @slot('title')リノベーション工事@endslot
         @endcomponent
-        <div class="left flow-exp">
+        <div class="left flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_const.jpg')" alt=""> @endslot
           @slot('title')
@@ -94,7 +95,7 @@
         @slot('number')04 @endslot
         @slot('title')お引き渡し@endslot
         @endcomponent
-        <div class="right flow-exp">
+        <div class="right flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_key.jpg')" alt=""> @endslot
           @slot('title')
@@ -112,7 +113,7 @@
         @slot('number')05 @endslot
         @slot('title')アフターサービス@endslot
         @endcomponent
-        <div class="left flow-exp">
+        <div class="left flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_after.jpg')" alt=""> @endslot
           @slot('title')

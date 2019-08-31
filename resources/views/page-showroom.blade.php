@@ -19,10 +19,10 @@
 
   <section class="events-inner">
     <div class="events-inner-contents regular-container">
-      <div class="left">
+      <div class="left wow fadeIn" data-wow-duration="2s">
         <img src="@asset('images/events_showroom.jpg')" alt="">
       </div>
-      <div class="right">
+      <div class="right wow fadeInUp">
         <p class="title">リノベーションって何？</p>
         <div class="text-container">
           <p>家を買うなら新築だよね、と思っていたけど。最近流行っているリノベーションって何なの？というあなたへ。</p>

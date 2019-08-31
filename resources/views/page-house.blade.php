@@ -10,6 +10,7 @@
 
   <section class="service-house">
     @component('components.page-section-header')
+    @slot('type')vertical @endslot
     @slot('title')街探し・物件探しからの進め方@endslot
     @slot('sub')ご予算の中で、どんな街でどんな暮らしがしたいのかを考えて、「自分と暮らす」ためのベースとなる街と物件を一緒に探しましょう！@endslot
     @slot('img')
@@ -24,7 +25,7 @@
         @slot('number')01 @endslot
         @slot('title')個別相談@endslot
         @endcomponent
-        <div class="left flow-exp">
+        <div class="left flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_hearing.jpg')" alt=""> @endslot
           @slot('title')
@@ -53,7 +54,7 @@
         @slot('number')02 @endslot
         @slot('title')物件探し@endslot
         @endcomponent
-        <div class="right flow-exp">
+        <div class="right flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_house_1.jpg')" alt=""> @endslot
           @slot('title')
@@ -83,7 +84,7 @@
         @slot('number')03 @endslot
         @slot('title')物件検討・契約@endslot
         @endcomponent
-        <div class="left flow-exp">
+        <div class="left flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_contract_1.jpg')" alt=""> @endslot
           @slot('title')
@@ -111,7 +112,7 @@
         @slot('number')04 @endslot
         @slot('title')プランニング@endslot
         @endcomponent
-        <div class="right flow-exp">
+        <div class="right flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_plan_1.jpg')" alt=""> @endslot
           @slot('title')
@@ -142,7 +143,7 @@
         @slot('number')05 @endslot
         @slot('title')リノベーション工事@endslot
         @endcomponent
-        <div class="left flow-exp">
+        <div class="left flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_const.jpg')" alt=""> @endslot
           @slot('title')
@@ -160,7 +161,7 @@
         @slot('number')06 @endslot
         @slot('title')お引き渡し@endslot
         @endcomponent
-        <div class="right flow-exp">
+        <div class="right flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_key.jpg')" alt=""> @endslot
           @slot('title')
@@ -178,7 +179,7 @@
         @slot('number')07 @endslot
         @slot('title')アフターサービス@endslot
         @endcomponent
-        <div class="left flow-exp">
+        <div class="left flow-exp wow fadeInUp">
           @component('components.service-flow-exp')
           @slot('img')<img src="@asset('images/service_after.jpg')" alt=""> @endslot
           @slot('title')

@@ -19,10 +19,10 @@
 
   <section class="events-inner">
     <div class="events-inner-contents regular-container">
-      <div class="left">
+      <div class="left wow fadeIn" data-wow-duration="2s">
         <img src="@asset('images/events_seminar.jpg')" alt="">
       </div>
-      <div class="right">
+      <div class="right wow fadeInUp">
         <p class="title">あなたはリノベーションをするべき？</p>
         <div class="text-container">
           <p>新しい住まいをお考えのあなたのために、まずはリノベーションという選択肢のメリット・デメリットをご紹介します！

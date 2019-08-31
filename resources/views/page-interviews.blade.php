@@ -10,6 +10,7 @@
 
   <section class="interviews-container">
     @component('components.page-section-header')
+    @slot('type')horizontal @endslot
     @slot('title')リノベ体験インタビュー@endslot
     @slot('sub')QUMAで住まいつくりのお手伝いをさせて頂いた方々に、QUMAとのリノベーションの感想を包み隠さずお話しして頂きました。参考になる話があるかも！？@endslot
     @slot('img')

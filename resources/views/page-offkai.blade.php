@@ -19,10 +19,10 @@
 
   <section class="events-inner">
     <div class="events-inner-contents regular-container">
-      <div class="left">
+      <div class="left wow fadeIn" data-wow-duration="2s">
         <img src="@asset('images/events_meetup.jpg')" alt="">
       </div>
-      <div class="right">
+      <div class="right wow fadeInUp">
         <p class="title">QUMAと一緒に楽しみましょう！</p>
         <div class="text-container">
           <p>QUMAが不定期で開催するオフ会。</p>

@@ -1,7 +1,4 @@
 import 'jquery';
-import {
-  WOW,
-} from 'wowjs';
 
 import firstTransition from './transitions/firstTransition';
 firstTransition();
@@ -10,10 +7,6 @@ import common from './common';
 // Load Events
 jQuery(document).ready(() => {
   common();
-  const wow = new WOW({
-    offset: 250,
-  })
-  wow.init();
 });
 
 // import local dependencies

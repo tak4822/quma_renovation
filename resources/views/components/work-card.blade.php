@@ -1,4 +1,4 @@
-<a href="{{ $link }}" class="work-card">
+<a href="{{ $link }}" class="work-card wow fadeInUp">
   <div class="thumb">{{ $thumb }}</div>
   <div class="contents">
     <h5 class="title">{{ $title }}</h5>

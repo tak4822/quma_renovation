@@ -15,5 +15,20 @@
         display: none;
       }
     }
+
+    .event-cards {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      @include mq-down("md") {
+        flex-direction: column;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 }
