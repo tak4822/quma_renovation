@@ -89,7 +89,7 @@
         right: calc(50% - 3.5rem);
         width: 7rem;
         height: 10rem;
-        background: $pink;
+        background: $gold;
         z-index: z("below");
 
         @include bg-img('nav_deco.svg', contain);

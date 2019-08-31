@@ -2,10 +2,10 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding-bottom: $spacer * 6;
+  padding-bottom: $spacer * 4;
 
   @include mq-down("mobile") {
-    padding-bottom: $spacer * 4;
+    padding-bottom: $spacer * 2;
   }
 
   &.horizontal {

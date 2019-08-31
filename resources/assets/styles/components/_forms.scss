@@ -44,7 +44,7 @@
       position: absolute;
       z-index: z("above");
       top: 0.8rem;
-      font-family: ("midashi");
+      font-family: font("midashi");
       font-weight: 600;
       transition: all 0.3s ease-out;
 
@@ -81,7 +81,7 @@
 
     .button-head {
       width: 18rem;
-      font-family: ("midashi");
+      font-family: font("midashi");
       font-weight: 600;
 
       @include mq-down("mobile") {
