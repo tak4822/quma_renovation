@@ -6,6 +6,7 @@
   @component('components.breadcrums')
   @slot('page')Contact @endslot
   @slot('text')暮らしの相談室@endslot
+  @slot('url')@endslot
   @endcomponent
 
   <section class="contact-container">

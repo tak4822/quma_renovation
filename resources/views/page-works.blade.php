@@ -8,6 +8,7 @@
   @component('components.breadcrums')
   @slot('page')Works @endslot
   @slot('text')どんなものをつくれるの？@endslot
+  @slot('url')@endslot
   @endcomponent
 
   <section class="works-container">

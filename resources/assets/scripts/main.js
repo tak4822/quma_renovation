@@ -14,10 +14,10 @@ import barbaInit from './transitions/barbaInit';
 import frontpage from './routes/frontpage';
 import contact from './routes/contact';
 import events from './routes/events';
-import posts from './routes/posts';
+import singles from './routes/singles';
 import others from './routes/others';
 
-const routes = [frontpage, contact, events, posts, others];
+const routes = [frontpage, contact, events, singles, others];
 
 
 // 最初のページローディングのスピードはこっちで調節

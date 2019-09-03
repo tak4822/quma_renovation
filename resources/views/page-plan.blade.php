@@ -6,6 +6,7 @@
   @component('components.breadcrums')
   @slot('page')Service @endslot
   @slot('text')どんな感じに進めるの？@endslot
+  @slot('url')/service @endslot
   @endcomponent
 
   <section class="service-plan">

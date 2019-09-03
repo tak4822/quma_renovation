@@ -8,6 +8,7 @@
   @component('components.breadcrums')
   @slot('page')About @endslot
   @slot('text')わたしたちについて@endslot
+  @slot('url')@endslot
   @endcomponent
 
   <section class="vision">

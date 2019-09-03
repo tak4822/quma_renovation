@@ -15,6 +15,7 @@
   @component('components.breadcrums')
   @slot('page')Events @endslot
   @slot('text')個別相談セミナー@endslot
+  @slot('url')/events @endslot
   @endcomponent
 
   <section class="events-inner">

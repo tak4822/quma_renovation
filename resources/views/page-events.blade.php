@@ -6,6 +6,7 @@
   @component('components.breadcrums')
   @slot('page')Events @endslot
   @slot('text')見て、聞いて、楽しもう！@endslot
+  @slot('url')@endslot
   @endcomponent
 
   <section class="events-container">
@@ -39,7 +40,7 @@
         </div>
         <div class="wrapper wow late fadeInUp">
           @component('components.event-card')
-          @slot('link')/events/offkai　@endslot
+          @slot('link')/events/offkai @endslot
           @slot('img')
           <img src="@asset('images/event_card_offkai.jpg')" alt="">
           @endslot

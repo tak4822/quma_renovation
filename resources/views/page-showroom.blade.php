@@ -15,6 +15,7 @@
   @component('components.breadcrums')
   @slot('page')Events @endslot
   @slot('text')ショールーム見学会 @endslot
+  @slot('url')/events @endslot
   @endcomponent
 
   <section class="events-inner">

@@ -1,7 +1,13 @@
+import Barba from 'barba.js/dist/barba.min';
+
 export default {
-  namespace: 'contact',
+  namespace: 'singles',
   onEnter: function () {
     // このページのcontainerが読み込みを開始した時。
+    const prevStatus = Barba.HistoryManager.prevStatus();
+    if (prevStatus !== null) {
+      $("#breadBackButton").attr('href', prevStatus.url);
+    }
   },
   onEnterCompleted: function () {
 

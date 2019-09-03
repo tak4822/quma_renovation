@@ -15,6 +15,7 @@
   @component('components.breadcrums')
   @slot('page')Events @endslot
   @slot('text')QUMAオフ会 @endslot
+  @slot('url')/events @endslot
   @endcomponent
 
   <section class="events-inner">

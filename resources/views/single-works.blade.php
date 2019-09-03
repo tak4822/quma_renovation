@@ -5,6 +5,7 @@
   @component('components.breadcrums')
   @slot('page')Works @endslot
   @slot('text'){{ the_title() }}@endslot
+  @slot('url')/works @endslot
   @endcomponent
 
   <section class="work-container">

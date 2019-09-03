@@ -37,7 +37,7 @@ class App extends Controller
         if (is_front_page()) return 'frontpage';
         if (is_page('contact')) return 'contact';
         if (32 === $post->post_parent) return 'events'; // single page under eents page
-        if (is_single()) return 'posts';
+        if (is_single()) return 'singles';
         if (is_404()) return '404';
 
         return 'others';

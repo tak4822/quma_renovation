@@ -5,6 +5,7 @@
   @component('components.breadcrums')
   @slot('page')Interviews @endslot
   @slot('text'){{ the_field('subtitle') }}@endslot
+  @slot('url')/interviews @endslot
   @endcomponent
 
   <section class="interview-head">

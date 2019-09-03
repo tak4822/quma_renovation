@@ -6,6 +6,7 @@
   @component('components.breadcrums')
   @slot('page')Interviews @endslot
   @slot('text')リノベ、どうでした？@endslot
+  @slot('url')@endslot
   @endcomponent
 
   <section class="interviews-container">
