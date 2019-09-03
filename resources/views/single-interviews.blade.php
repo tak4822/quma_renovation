@@ -32,6 +32,12 @@
     </div>
   </section>
   <section class="interview-contents">
+    <article class="article intro">
+      <div class="illust-area"></div>
+      <div class="contents">
+        {{ the_field('intro') }}
+      </div>
+    </article>
     <article class="article section-1">
       <div class="illust-area">
         <img src="@asset('images/interview_article_1.jpg')" alt="">
@@ -103,7 +109,7 @@
     @slot('title'){{ get_the_title($next_post->ID) }}@endslot
     @slot('name'){{ get_post_meta($next_post->ID, 'place_name', true) }}@endslot
     @slot('family'){{ get_post_meta($next_post->ID, 'family', true) }} @endslot
-    @slot('address'){{ get_post_meta($next_post->ID, 'address', true) }} @endslot
+    @slot('address'){{ get_post_meta($next_post->ID, 'place', true) }} @endslot
     @slot('img')
     <img src="{{ get_the_post_thumbnail_url($next_post->ID) }}" alt="">
     @endslot

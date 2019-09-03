@@ -27,7 +27,7 @@
       @slot('title'){{ get_the_title() }}@endslot
       @slot('name'){{ the_field('place_name') }} @endslot
       @slot('family'){{ the_field('family') }} @endslot
-      @slot('address'){{ the_field('address') }} @endslot
+      @slot('address'){{ the_field('place') }} @endslot
       @slot('img')
       <img src="{{ get_the_post_thumbnail_url() }}" alt="">
       @endslot
