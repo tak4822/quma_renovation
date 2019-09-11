@@ -36,8 +36,8 @@ class App extends Controller
         global $post;  
         if (is_front_page()) return 'frontpage';
         if (is_page('contact')) return 'contact';
-        if (32 === $post->post_parent) return 'events'; // single page under eents page
-        if (is_single()) return 'posts';
+        if ($post->ID === 1304 || $post->ID === 35 || $post->ID === 41 ) return 'events'; // single page under eents page
+        if (is_single()) return 'singles';
         if (is_404()) return '404';
 
         return 'others';
@@ -70,4 +70,37 @@ class App extends Controller
         );
         return new WP_Query( $args );
     }
+
+    static function getTitle() {
+        // $post = get_queried_object();
+        // if ( is_front_page() ) {
+        //     return 'Canarie';
+        // } else if ( is_single() ) {
+        //     return $post->post_title . '｜Canarie';
+        // } else if (is_author()) {
+        //     return 'Canarie メンバー | ' . get_the_author();
+        // } else if (is_category()) {
+        //     return 'Canarie カテゴリー | '. get_the_archive_title();
+        // } else if (is_tag()) {
+        //     return 'Canarie タグ | ' . get_the_archive_title();
+        // } else if (is_search()) {
+        //     return sprintf(__('Canarie 検索結果：%s', 'sage'), get_search_query());
+        // } else if (is_archive()) {
+        //     return get_the_archive_title();
+        // } else {
+        //     return get_the_title();
+        // }
+        return "QUMA";
+    }
+
+    static function getDescription() {
+        // if ( is_single() ) {
+        //     return get_post_meta(get_the_ID(), 'short_description', true);
+        // } else {
+        //     return 'カナダのリアルを伝えるメディアサイト';
+        // }
+
+        return "東京で暮らしをつくるリノベーション。QUMAはあなたらしい暮らしをつくるためのリノベーションを提供します。街選びから物件探し、設計・施工までじっくりと、とことんお付き合いさせてください。";
+    }
+
 }

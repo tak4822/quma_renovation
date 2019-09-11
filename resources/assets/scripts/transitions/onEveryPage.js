@@ -1,3 +1,7 @@
+import {
+  WOW,
+} from 'wowjs';
+
 export default function (
   currentStatus,
   oldStatus,
@@ -8,30 +12,30 @@ export default function (
   //   return; // この時に更新は必要ありません
   // }
 
-  // if (
-  //   document.location.hostname !== 'localhost' &&
-  //   document.location.hostname !== 'xcrap.local'
-  // ) {
-  //   (function (w, d, s, l, i) {
-  //     w[l] = w[l] || [];
-  //     w[l].push({
-  //       'gtm.start': new Date().getTime(),
-  //       event: 'gtm.js',
-  //     });
-  //     var f = d.getElementsByTagName(s)[0],
-  //       j = d.createElement(s),
-  //       dl = l != 'dataLayer' ? '&l=' + l : '';
-  //     j.async = true;
-  //     j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-  //     f.parentNode.insertBefore(j, f);
-  //   })(window, document, 'script', 'dataLayer', 'GTM-KNCLD8M')
+  if (
+    document.location.hostname !== 'localhost' &&
+    document.location.hostname !== 'xcrap.local'
+  ) {
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js',
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NN942RH')
 
-  //   // Googleアナリティクスへ送信
-  //   dataLayer.push({ // eslint-disable-line no-undef
-  //     'newPageUrl': location.pathname,
-  //     event: 'pageLoaded',
-  //   });
-  // }
+    // Googleアナリティクスへ送信
+    dataLayer.push({ // eslint-disable-line no-undef
+      'newPageUrl': location.pathname,
+      event: 'pageLoaded',
+    });
+  }
 
 
 
@@ -65,12 +69,13 @@ export default function (
 
   const navigation = document.querySelector('.nav-primary');
   const navigationLinks = navigation.querySelectorAll('.menu-item');
-  const navigationLinkIsActive = navigation.querySelector(`[href="${link}"]`);
+  const navigationLinkIsActive = navigation.querySelector(`[href="/${link}"]`);
 
   Array.prototype.forEach.call(navigationLinks, (navigationLink) => navigationLink.classList.remove('current_page_item')); // remove CSS class 'is-active' from all .navigation__links
 
-  navigationLinkIsActive.parentNode.classList.add('current_page_item'); // add CSS class to current .navigation__link
-
+  if (navigationLinkIsActive) {
+    navigationLinkIsActive.parentNode.classList.add('current_page_item'); // add CSS class to current .navigation__link
+  }
 
 
   const script = barbaContainer.querySelector('script');
@@ -83,4 +88,19 @@ export default function (
   //   window.instgrm.Embeds.process(); // execute instagram script
   //   // instEmbed.style.margin = '0 auto';
   // }
+
+  let offset;
+  if (window.matchMedia('(max-width:1024px)').matches) {
+    offset = 150;
+  } else {
+    offset = 300;
+  }
+
+  const wow = new WOW({
+    offset,
+    live: false,
+  })
+  wow.init();
+
+  window.scrollTo(0, 1); // scroll for firing wowjs
 }

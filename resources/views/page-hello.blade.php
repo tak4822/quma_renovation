@@ -1,46 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-@component('components.modal')
-@slot('id')eventForm @endslot
-@slot('contents')
-<div class="form-container popup">
-  @while(have_posts()) @php(the_post())
-  @php(the_content())
-  @endwhile
-</div>
-@endslot
-@endcomponent
-
-@component('components.modal')
-@slot('id')formSent @endslot
-@slot('contents')
-<div class="text-wrapper">
-  <p clas="text">お問い合わせありがとうございます！<br />内容を確認した後、こちらからご連絡致します。</p>
-</div>
-@endslot
-@endcomponent
 <div class="events-inner-page pages-container">
 
   @component('components.breadcrums')
   @slot('page')Events @endslot
-  @slot('text')個別相談セミナー@endslot
+  @slot('text')QUMAオフ会 @endslot
   @slot('url')/events @endslot
   @endcomponent
 
   <section class="events-inner">
     <div class="events-inner-contents regular-container">
       <div class="left wow fadeIn" data-wow-duration="2s">
-        <img src="@asset('images/events_seminar.jpg')" alt="">
+        <img src="@asset('images/events_meetup.jpg')" alt="">
       </div>
       <div class="right wow fadeInUp">
-        <p class="title">あなたはリノベーションをするべき？</p>
+        <p class="title">QUMAと一緒に楽しみましょう！</p>
         <div class="text-container">
-          <p>新しい住まいをお考えのあなたのために、まずはリノベーションという選択肢のメリット・デメリットをご紹介します！
-            どのようにリノベーションが進むのか、リノベーションの費用感から資金計画まで、リノベーションをする前に知っておいてもらいたいリノベーションの基礎知識をご紹介させていただきます。</p>
-
-          <p>リノベーションについて何も知らな方にも、『リノベーションのことがなんとなく分かった気がする』と思ってもらえるようにご説明します。
-            どうぞお気軽にお越しください。</p>
+          <p>QUMAが不定期で開催するオフ会。</p>
+          <p>楽しくご飯を食べながらリノベについて話したり、もしかしたらQUMAでリノベーションをした人たちの話も聞けるかも！？<br />
+            『こんなイベントをやりたい！』などのご意見も大大大歓迎！肩肘貼らずに気軽に楽しみましょう！
+          </p>
         </div>
         <div class="outline-container">
           <div class="deco">
@@ -49,11 +29,11 @@
           <div class="contents">
             <div class="text-wrapper">
               <p class="item-head">日程</p>
-              <p class="item-text">ご希望の日程をお選びください</p>
+              <p class="item-text">決まり次第お知らせ致します</p>
             </div>
             <div class="text-wrapper">
               <p class="item-head">時間</p>
-              <p class="item-text">ご希望の日程をお選びください</p>
+              <p class="item-text">決まり次第お知らせ致します</p>
             </div>
             <div class="text-wrapper">
               <p class="item-head">場所</p>
@@ -83,6 +63,8 @@
       </div>
     </div>
   </section>
+
+
 
 </div>
 @endsection

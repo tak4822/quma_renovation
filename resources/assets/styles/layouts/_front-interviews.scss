@@ -1,13 +1,16 @@
 .front-interviews {
-  margin-left: $con-big-side;
+  padding-left: $con-big-side;
   position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
 
   @include mq-down("sns") {
-    margin-left: $con-mid-side;
+    padding-left: $con-mid-side;
   }
 
   @include mq-down("lg") {
-    margin-left: 0;
+    padding-left: 0;
   }
 
   .front-section-title {
@@ -20,7 +23,7 @@
     width: calc(50vw + 548px);
     // ( 100vw - 1000px ) / 2 + 1000 / 2 + 1000 / 2 + 48
     // = 50 vw + 500 + 48 = 50vw + 548px
-    height: 48rem;
+    height: 52rem;
     background: $gray-bg;
     position: absolute;
     top: -$spacer * 5;
@@ -29,34 +32,33 @@
 
     @include mq-down("xl") {
       width: calc(50vw + 524px);
-      height: 44rem;
+      height: 50rem;
       top: -$spacer * 2;
       left: -$spacer * 3;
     }
 
     @include mq-down("sns") {
       width: calc(50vw + 474px);
-      height: 42rem;
+      height: 48rem;
     }
 
     @include mq-down("lg") {
       width: 90vw;
-      height: 86rem;
+      height: 98rem;
       top: -$spacer * 4;
       left: -$spacer * 2;
     }
 
     @include mq-down("md") {
-      height: 106rem;
+      height: 86rem;
     }
 
     @include mq-down("mobile") {
-      height: 78rem;
+      height: 62rem;
     }
 
     @include mq-down("sm") {
       width: 95vw;
-      height: 72rem;
     }
   }
 
@@ -98,7 +100,7 @@
       display: flex;
 
       @include mq-down("xl") {
-        height: 52rem;
+        height: 56rem;
       }
 
       @include mq-down("md") {
@@ -147,6 +149,7 @@
           width: 100%;
           height: 16rem;
           position: relative;
+          margin-top: 2rem;
 
           @include mq-down("lg") {
             margin-left: $spacer * 4;
@@ -181,13 +184,17 @@
           }
 
           .border {
-            height: 120%;
+            height: 85%;
             transform: rotate(45deg);
             position: absolute;
             top: 0;
-            left: 5rem;
+            left: 6rem;
 
             @include dotted-border;
+
+            @include mq-down("mobile") {
+              height: 115%;
+            }
           }
 
           .subtitle {

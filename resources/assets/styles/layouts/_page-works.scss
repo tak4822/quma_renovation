@@ -3,10 +3,10 @@
     margin-bottom: $spacer * 10;
 
     .works-list-container {
-      padding-top: $spacer * 6;
+      padding-top: $spacer * 3;
 
       @include mq-down("lg") {
-        padding-top: $spacer * 15;
+        padding-top: $spacer * 5;
         margin: 0 $spacer * 4;
       }
 
@@ -87,6 +87,16 @@
 
         @include mq-down("mobile") {
           margin: 0 $spacer;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: 32%;
+
+          @include mq-down("mobile") {
+            display: none;
+          }
         }
 
         .work-card {

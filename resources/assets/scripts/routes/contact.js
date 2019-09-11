@@ -1,4 +1,5 @@
 import form from '../modules/form';
+import formSent from '../modules/formSent';
 
 export default {
   namespace: 'contact',
@@ -7,6 +8,11 @@ export default {
   },
   onEnterCompleted: function () {
     form();
+
+    // when form sent
+    document.addEventListener('wpcf7mailsent', function () {
+      formSent.open();
+    }, false);
   },
   onLeave: function () {
     // // 次のページへのトランジションが始まった時。

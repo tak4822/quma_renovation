@@ -315,6 +315,7 @@
 
           @include mq-down("mobile") {
             width: calc(100% - 13rem);
+            height: 4rem;
           }
 
           @include mq-down("sm") {

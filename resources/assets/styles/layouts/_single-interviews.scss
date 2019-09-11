@@ -191,10 +191,12 @@
         @include mq-down("lg") {
           width: 17rem;
           margin-right: 0;
+          padding-right: $spacer;
         }
 
         @include mq-down("mobile") {
           width: 80%;
+          padding: 2rem 4rem;
         }
 
         img {

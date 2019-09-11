@@ -13,7 +13,7 @@
 
       .illust {
         width: 40%;
-        padding: $spacer;
+        padding: $spacer * 3;
 
         @include mq-down("mobile") {
           width: 60%;
@@ -43,6 +43,10 @@
 
   .strength {
     margin-bottom: $spacer * 10;
+  }
+
+  .all-members {
+    margin-top: $spacer * 4;
   }
 
   .members {

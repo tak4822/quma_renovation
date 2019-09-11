@@ -6,7 +6,11 @@
       padding-top: $spacer * 8;
 
       @include mq-down("lg") {
-        padding-top: $spacer * 15;
+        padding-top: $spacer * 4;
+      }
+
+      @include mq-down("mobile") {
+        padding-top: $spacer * 2;
       }
     }
   }

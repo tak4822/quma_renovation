@@ -26,13 +26,13 @@
         <img src="@asset('images/ico_line.svg')" alt="" class="ico">
         <p>LINE@相談</p>
       </div> --}}
-      <div class="tel btn">
+      <a href="tel:0368050696" class="tel btn">
         <img src="@asset('images/ico_tel.svg')" alt="" class="ico">
         <p>03-6805-0696</p>
-      </div>
-      <div class="mail btn">
+      </a>
+      <a href="mail:info@quma.co.jp" class="mail btn">
         <img src="@asset('images/ico_mail.svg')" alt="" class="ico">
-      </div>
+      </a>
     </div>
 
     <div id="headerHamburder" class="hamburger-wrapper">

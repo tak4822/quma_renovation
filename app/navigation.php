@@ -44,7 +44,7 @@ class Description_Walker extends Walker_Nav_Menu
             ! empty( $item->xfn )
             and $attributes .= ' rel="'    . esc_attr( $item->xfn        ) .'"';
             ! empty( $item->url )
-            and $attributes .= ' href="'   . esc_attr( explode('/', $item->url)[3] ) .'"';
+            and $attributes .= ' href="/'   . esc_attr( explode('/', $item->url)[3] ) .'"';
 
             // insert description for top level elements only
             // you may change this

@@ -1,7 +1,7 @@
 @php($interviews_arr = App\Controllers\FrontPage::get_interviews_data())
 
 <section class="front-interviews">
-  <div class="bg-gray"></div>
+  <div class="bg-gray wow slideInLeft"></div>
   @component('components.front-section-title')
   @slot('title')リノベーションしてみて<br />どうだった？@endslot
   @slot('sub')先輩に聞くリノベインタビュー@endslot
@@ -10,7 +10,7 @@
 
   <div class="interviews-wrapper">
     <div class="slider-container">
-      <div class="controller">
+      <div class="controller wow fadeIn a-lot-late">
         <div class="exp">
           <p id="interviewsSlider-number" class="number">#{{ $interviews_arr[0]['number'] }}</p>
           <div class="border"></div>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div id="interviewsSliderTouch" class="slider">
-        <div class="slider-warpper">
+        <div class="slider-warpper wow slideInRight" data-wow-duration="2s">
           @foreach( $interviews_arr as $key => $interview)
           @component('components.interview-card')
           @slot('link'){{ $interview['link'] }}@endslot
