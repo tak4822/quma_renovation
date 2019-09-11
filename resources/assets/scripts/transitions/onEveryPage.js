@@ -98,7 +98,10 @@ export default function (
 
   const wow = new WOW({
     offset,
+<<<<<<< HEAD
     live: false,
+=======
+>>>>>>> 7e960193e63466fe748aa70a5c837990fb0e6723
   })
   wow.init();
 
