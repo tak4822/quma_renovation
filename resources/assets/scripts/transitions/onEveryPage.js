@@ -91,25 +91,14 @@ export default function (
 
   let offset;
   if (window.matchMedia('(max-width:1024px)').matches) {
-<<<<<<< HEAD
     offset = 120;
-=======
-    offset = 150;
->>>>>>> baf87d17d6c2222631eb0049d6fe7a20c3e6427d
   } else {
     offset = 300;
   }
 
   const wow = new WOW({
     offset,
-<<<<<<< HEAD
     live: false,
-=======
-<<<<<<< HEAD
-    live: false,
-=======
->>>>>>> 7e960193e63466fe748aa70a5c837990fb0e6723
->>>>>>> baf87d17d6c2222631eb0049d6fe7a20c3e6427d
   })
   wow.init();
 
