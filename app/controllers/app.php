@@ -48,7 +48,7 @@ class App extends Controller
         $args = array(
             'post_type' => 'works',
             'meta_key' => 'is-picked',
-            'meta_value' => 'picked!'
+            'meta_value' => 'picked!',
         );
 
         return new WP_Query( $args );
@@ -59,7 +59,8 @@ class App extends Controller
         $args = array(
             'post_type' => 'works',
             'meta_key' => 'is-picked',
-            'meta_value' => 'no'
+            'meta_value' => 'no',
+            'paged' => get_query_var('paged'),
         );
         return new WP_Query( $args );
     }    
@@ -67,6 +68,7 @@ class App extends Controller
     function interviews_posts() {
         $args = array(
             'post_type' => 'interviews',
+            'paged' => get_query_var('paged'),
         );
         return new WP_Query( $args );
     }
