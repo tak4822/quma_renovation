@@ -37,7 +37,7 @@
     </div>
 
     <div class="pagenation-container">
-      @php($count = $works_posts_not_picked->found_posts)
+      @php($count = $interviews_posts->found_posts)
       @php(App\pagination($count))
     </div>
   </section>
