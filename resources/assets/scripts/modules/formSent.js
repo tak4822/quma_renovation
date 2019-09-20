@@ -20,7 +20,11 @@ export default {
       .css('opacity', 0)
       .delay(500)
       .queue(function (next) {
+<<<<<<< HEAD
         $('#formSent')
+=======
+        $('#eventForm')
+>>>>>>> baf87d17d6c2222631eb0049d6fe7a20c3e6427d
           .css('display', 'none');
         next();
       })

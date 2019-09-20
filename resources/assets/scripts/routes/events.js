@@ -9,7 +9,10 @@ export default {
   },
   onEnterCompleted: function () {
     form();
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf87d17d6c2222631eb0049d6fe7a20c3e6427d
     $('.btn').on('click', eventForm.open)
     $("#eventForm").find('.overlay').on('click', eventForm.close);
     $("#eventForm").find('.close-button').on('click', eventForm.close);
@@ -18,6 +21,7 @@ export default {
 
     // when form sent
     document.addEventListener('wpcf7mailsent', function () {
+<<<<<<< HEAD
       eventForm.send();
 
       window.dataLayer = window.dataLayer || [];
@@ -28,6 +32,10 @@ export default {
       setTimeout(function () {
         formSent.open();
       }, 500);
+=======
+      eventForm.close();
+      formSent.open();
+>>>>>>> baf87d17d6c2222631eb0049d6fe7a20c3e6427d
     }, false);
 
   },

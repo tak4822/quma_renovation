@@ -33,6 +33,10 @@
       left: calc(50% - 25rem);
       width: 50rem;
       height: 30rem;
+<<<<<<< HEAD
+=======
+      transform: translate3d(0, 20px, 0);
+>>>>>>> baf87d17d6c2222631eb0049d6fe7a20c3e6427d
       padding: $spacer * 4;
 
       @include flex-center;
