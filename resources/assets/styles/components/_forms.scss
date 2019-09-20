@@ -83,6 +83,7 @@
       width: 18rem;
       font-family: font("midashi");
       font-weight: 600;
+      font-size: 1.4rem;
 
       @include mq-down("mobile") {
         margin-bottom: $spacer / 2;
