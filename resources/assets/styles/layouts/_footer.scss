@@ -63,21 +63,32 @@
             border: 2px solid $black;
           }
 
+          &:hover {
+            .triangle {
+              transform: rotateX(120deg);
+            }
+
+            .text {
+              transform: translateY(-2.5rem);
+            }
+          }
+
           .triangle {
             position: absolute;
             top: 0;
             width: 105%;
             object-position: 50% -3px;
-
-            // @include mq-down("md") {
-            //   width: 100%;
-            // }
+            transition: transform 0.6s ease-in-out;
+            will-change: transform;
+            transform-origin: top center;
           }
 
           .text {
             margin-top: 8rem;
             font-family: font("midashi");
             font-size: 1.8rem;
+            transition: transform 0.6s ease-in-out;
+            will-change: transform;
           }
         }
 
@@ -92,6 +103,10 @@
             .info {
               display: flex;
               margin-bottom: $spacer * 2;
+
+              a {
+                display: flex;
+              }
 
               img {
                 width: 1.6rem;

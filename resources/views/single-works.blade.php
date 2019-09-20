@@ -5,14 +5,15 @@
   @component('components.breadcrums')
   @slot('page')Works @endslot
   @slot('text'){{ the_title() }}@endslot
+  @slot('url')/works @endslot
   @endcomponent
 
   <section class="work-container">
-    <div class="top">
+    <div class="top wow fadeIn" data-wow-duration="2s">
       <img src="{{ the_post_thumbnail_url( 'full' ) }}" alt="">
     </div>
     <article class="outline">
-      <div class="title-container">
+      <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
           <div class="circle"></div>
@@ -20,7 +21,7 @@
         </div>
       </div>
       <div class="regular-container work-contents">
-        <div class="outline-list">
+        <div class="outline-list wow fadeInUp">
           <div class="left">
             <div class="list-wrapper">
               <p class="title">タイプ</p>
@@ -28,11 +29,7 @@
             </div>
             <div class="list-wrapper">
               <p class="title">広さ</p>
-              <p class="text">{{ the_field('area') }}㎡</p>
-            </div>
-            <div class="list-wrapper">
-              <p class="title">場所</p>
-              <p class="text">{{ the_field('place') }}</p>
+              <p class="text">{{ the_field('area') }}{{ !empty(get_field('area')) ? '㎡' : '-' }}</p>
             </div>
             <div class="list-wrapper">
               <p class="title">家族構成</p>
@@ -41,24 +38,28 @@
           </div>
           <div class="right">
             <div class="list-wrapper">
-              <p class="title">築年数</p>
-              <p class="text">{{ the_field('years') }}年</p>
+              <p class="title">場所</p>
+              <p class="text">{{ the_field('place') }}</p>
             </div>
             <div class="list-wrapper">
+              <p class="title">築年数</p>
+              <p class="text">{{ the_field('years') }}{{ !empty(get_field('years')) ? '年' : '-' }}</p>
+            </div>
+            {{-- <div class="list-wrapper">
               <p class="title">工事費用</p>
               <p class="text">{{ the_field('budget') }}万</p>
-            </div>
-            <div class="list-wrapper">
-              <p class="title">間取り</p>
-              <p class="text">{{ the_field('structure') }}</p>
-            </div>
+          </div> --}}
+          <div class="list-wrapper">
+            <p class="title">間取り</p>
+            <p class="text">{{ the_field('structure') }}</p>
           </div>
         </div>
       </div>
     </article>
 
+    @if( !empty(get_field('highlight_1_title')) )
     <article class="highlight">
-      <div class="title-container">
+      <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
           <div class="circle"></div>
@@ -66,8 +67,8 @@
         </div>
       </div>
       <div class="regular-container work-contents">
-        <h3 class="title">{{ the_field('highlight_1_title') }}</h3>
-        <div class="exp-container">
+        <h3 class="title wow bit-late fadeInUp">{{ the_field('highlight_1_title') }}</h3>
+        <div class="exp-container wow late fadeInUp">
           <div class="left">
             <p>{{ the_field('highlight_1_text_left') }}</p>
           </div>
@@ -77,13 +78,15 @@
         </div>
       </div>
       <div class="pics regular-container">
-        <img src="{{ the_field('highlight_1_img_1') }}" alt="">
-        <img src="{{ the_field('highlight_1_img_2') }}" alt="">
+        <img class="wow fadeInUp" src="{{ the_field('highlight_1_img_1') }}" alt="">
+        <img class="wow fadeInUp" src="{{ the_field('highlight_1_img_2') }}" alt="">
       </div>
     </article>
+    @endif
 
+    @if( !empty(get_field('highlight_2_title')) )
     <article class="highlight">
-      <div class="title-container">
+      <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
           <div class="circle"></div>
@@ -91,8 +94,8 @@
         </div>
       </div>
       <div class="regular-container work-contents">
-        <h3 class="title">{{ the_field('highlight_2_title') }}</h3>
-        <div class="exp-container">
+        <h3 class="title wow bit-late fadeInUp">{{ the_field('highlight_2_title') }}</h3>
+        <div class="exp-container wow late fadeInUp">
           <div class="left">
             <p>{{ the_field('highlight_2_text_left') }}</p>
           </div>
@@ -102,13 +105,14 @@
         </div>
       </div>
       <div class="pics regular-container">
-        <img src="{{ the_field('highlight_2_img_1') }}" alt="">
-        <img src="{{ the_field('highlight_2_img_2') }}" alt="">
+        <img class="wow fadeInUp" src="{{ the_field('highlight_2_img_1') }}" alt="">
+        <img class="wow fadeInUp" src="{{ the_field('highlight_2_img_2') }}" alt="">
       </div>
     </article>
+    @endif
 
     <article class="pictures">
-      <div class="title-container">
+      <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
           <div class="circle"></div>
@@ -116,27 +120,27 @@
         </div>
       </div>
       <div class="regular-container pictures-wrapper">
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_1')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_1')['caption'] }}</p>
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_2')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_2')['caption'] }}</p>
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_3')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_3')['caption'] }}</p>
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_4')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_4')['caption'] }}</p>
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_5')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_5')['caption'] }}</p>
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper wow fadeInUp">
           <img src="{{ get_field('other_img_6')['url'] }}" alt="">
           <p class="caption">{{ get_field('other_img_6')['caption'] }}</p>
         </div>
@@ -144,7 +148,7 @@
     </article>
 
     <article class="recommend">
-      <div class="title-container">
+      <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
           <div class="circle"></div>
@@ -152,23 +156,17 @@
         </div>
       </div>
       <div class="regular-container">
+        @while($works_posts_picked->have_posts()) @php($works_posts_picked->the_post())
         @component('components.work-card')
-        @slot('thumb')<img src="@asset('images/interview_fake.jpg')" alt="">@endslot
-        @slot('title')ずっと自然体で。楽に過ごせる新婚生活ずっと自然体で。@endslot
-        @slot('area')70 @endslot
-        @slot('budget')1200 @endslot
-        @slot('type')中古マンション@endslot
-        @slot('place')恵比寿@endslot
+        @slot('thumb')<img src="{{ get_the_post_thumbnail_url() }}" alt="">@endslot
+        @slot('link'){{ get_permalink() }}@endslot
+        @slot('title'){{ get_the_title() }}@endslot
+        @slot('area'){{ the_field('area') }} @endslot
+        @slot('budget'){{ the_field('budget') }} @endslot
+        @slot('type'){{ the_field('type') }} @endslot
+        @slot('place'){{ the_field('place') }} @endslot
         @endcomponent
-
-        @component('components.work-card')
-        @slot('thumb')<img src="@asset('images/interview_fake.jpg')" alt="">@endslot
-        @slot('title')ずっと自然体で。楽に過ごせる新婚生活ずっと自然体で。@endslot
-        @slot('area')70 @endslot
-        @slot('budget')1200 @endslot
-        @slot('type')中古マンション@endslot
-        @slot('place')恵比寿@endslot
-        @endcomponent
+        @endwhile
       </div>
     </article>
 

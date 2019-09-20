@@ -1,4 +1,4 @@
-<div class="member">
+<div class="member wow fadeInUp">
   <div class="bg"></div>
   <div class="member-wrapper regular-container">
     <div class="top">

@@ -3,6 +3,7 @@
   display: flex;
   align-items: flex-start;
   margin-left: $con-big-side;
+  position: relative;
 
   @include mq-down("sns") {
     margin-left: $con-mid-side;
@@ -22,12 +23,37 @@
     margin-left: $spacer;
   }
 
+  .back-container {
+    position: absolute;
+    top: 0.8rem;
+    left: -$spacer * 10;
+    width: 2rem;
+    height: 2rem;
+
+    @include mq-down("xl") {
+      left: -$spacer * 6;
+    }
+
+    @include mq-down("lg") {
+      position: static;
+      margin-top: 0.8rem;
+      margin-right: $spacer * 4;
+    }
+
+    @include mq-down("mobile") {
+      margin-top: 0.4rem;
+      margin-right: $spacer * 2;
+    }
+  }
+
   .page-name {
     font-family: font("madawaska");
     font-size: 2rem;
+    line-height: 3.6rem;
 
     @include mq-down("mobile") {
       font-size: 1.8rem;
+      line-height: 2.8rem;
     }
   }
 
@@ -38,7 +64,7 @@
     margin: 1.8rem $spacer * 2;
 
     @include mq-down("mobile") {
-      margin: 1.3rem $spacer * 2;
+      margin: 1.4rem $spacer * 2;
     }
   }
 
@@ -46,13 +72,13 @@
     font-family: font("midashi");
     font-size: 1.4rem;
     margin: 0.7rem 0;
+    flex: 1;
 
     @include mq-down("mobile") {
       font-size: 1.2rem;
-    }
-
-    @include mq-down("mobile") {
       margin: 0.1rem 0;
+      line-height: 2rem;
+      margin-top: 0.6rem;
     }
   }
 }

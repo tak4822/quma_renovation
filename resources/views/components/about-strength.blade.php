@@ -1,4 +1,4 @@
-<div class="strength-wrapper regular-container">
+<div class="strength-wrapper regular-container wow fadeInUp">
   <div class="number">
     <p class="number-text">{{ $number }}</p>
   </div>

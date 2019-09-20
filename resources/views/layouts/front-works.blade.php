@@ -11,15 +11,16 @@
     <a href="{{ get_permalink() }}" class="pick-container {{ $count_works_posts_picked === 0 ? "first" : "second"}}">
       <div class="circle"></div>
       <div class="thumb">
-        <img src="{{ get_the_post_thumbnail_url() }}" alt="">
+        <img class="thumb-img wow {{ $count_works_posts_picked === 0 ? "slideInRight" : "slideInLeft"}}" src="
+          {{ get_the_post_thumbnail_url() }}" alt="{{ get_the_title() }}">
       </div>
-      <div class="contents">
+      <div class="contents wow late fadeIn">
         <h4 class="title">{{ get_the_title() }}</h4>
         <div class="outline">
-          <p class="area">{{ the_field('area') }}㎡</p>
+          {{-- <p class="area">{{ the_field('area') }}㎡</p>
           <div class="divider"></div>
           <p class="budget">{{ the_field('budget') }}万円</p>
-          <div class="divider"></div>
+          <div class="divider"></div> --}}
           <p class="type">{{ the_field('type') }}</p>
           <p class="in">in</p>
           <p class="place">{{ the_field('place') }}</p>
@@ -28,11 +29,10 @@
     </a>
     @php($count_works_posts_picked++)
     @endwhile
-
   </div>
 
   <div class="slider">
-    <div class="slider-wrapper">
+    <div class="slider-wrapper wow slideInRight" data-wow-duration="1.6s">
       @php($count_works_posts_not_picked = 0)
       @while($works_posts_not_picked->have_posts() && $count_works_posts_not_picked < 6) @php($works_posts_not_picked->
         the_post())

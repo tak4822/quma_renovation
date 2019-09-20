@@ -6,10 +6,12 @@
   @component('components.breadcrums')
   @slot('page')Interviews @endslot
   @slot('text')リノベ、どうでした？@endslot
+  @slot('url')@endslot
   @endcomponent
 
   <section class="interviews-container">
     @component('components.page-section-header')
+    @slot('type')horizontal @endslot
     @slot('title')リノベ体験インタビュー@endslot
     @slot('sub')QUMAで住まいつくりのお手伝いをさせて頂いた方々に、QUMAとのリノベーションの感想を包み隠さずお話しして頂きました。参考になる話があるかも！？@endslot
     @slot('img')
@@ -26,7 +28,7 @@
       @slot('title'){{ get_the_title() }}@endslot
       @slot('name'){{ the_field('place_name') }} @endslot
       @slot('family'){{ the_field('family') }} @endslot
-      @slot('address'){{ the_field('address') }} @endslot
+      @slot('address'){{ the_field('place') }} @endslot
       @slot('img')
       <img src="{{ get_the_post_thumbnail_url() }}" alt="">
       @endslot

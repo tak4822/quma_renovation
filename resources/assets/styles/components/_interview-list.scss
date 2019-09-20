@@ -58,11 +58,15 @@
       font-size: 8.6rem;
       line-height: 8.6rem;
       margin-bottom: $spacer * 4;
+      margin-top: -$spacer;
+      margin-left: -$spacer;
 
       @media screen and (max-width: 800px) {
         margin-bottom: 0;
         font-size: 3.2rem;
         line-height: 3.2rem;
+        margin-top: 0;
+        margin-left: 0;
       }
 
       @include mq-down("sm") {
@@ -90,8 +94,8 @@
 
       .title {
         font-weight: 600;
-        font-size: 2.4rem;
-        line-height: 3.2rem;
+        font-size: 2rem;
+        line-height: 2.8rem;
         margin-bottom: $spacer * 3;
 
         @include mq-down("sm") {

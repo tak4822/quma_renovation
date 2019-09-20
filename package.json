@@ -11,10 +11,12 @@
   "bugs": {
     "url": "https://github.com/roots/sage/issues"
   },
-  "licenses": [{
-    "type": "MIT",
-    "url": "http://opensource.org/licenses/MIT"
-  }],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
   "browserslist": [
     "last 2 versions",
     "android 4",
@@ -106,6 +108,7 @@
     "barba.js": "^1.0.0",
     "bootstrap": "v4.0.0",
     "jquery": "^3.3.1",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "wowjs": "^1.1.3"
   }
 }

@@ -8,6 +8,34 @@
   </div>
   <div class="contents regular-container">
     <div class="bg-gray"></div>
-    @component('layouts.event-cards')@endcomponent
+    <div class="event-cards">
+      <div class="wrapper wow fadeInUp">
+        @component('components.event-card')
+        @slot('link')/showroom @endslot
+        @slot('img')
+        <img src="@asset('images/event_card_showroom.jpg')" alt="">
+        @endslot
+        @slot('text')見る@endslot
+        @endcomponent
+      </div>
+      <div class="wrapper wow bit-late fadeInUp">
+        @component('components.event-card')
+        @slot('link')/seminar @endslot
+        @slot('img')
+        <img src="@asset('images/event_card_seminar.jpg')" alt="">
+        @endslot
+        @slot('text')話す@endslot
+        @endcomponent
+      </div>
+      <div class="wrapper wow late fadeInUp">
+        @component('components.event-card')
+        @slot('link')/offkai　@endslot
+        @slot('img')
+        <img src="@asset('images/event_card_offkai.jpg')" alt="">
+        @endslot
+        @slot('text')楽しむ@endslot
+        @endcomponent
+      </div>
+    </div>
   </div>
 </section>

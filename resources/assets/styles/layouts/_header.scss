@@ -88,6 +88,10 @@
       font-family: font("midashi");
       margin-right: $spacer*2;
 
+      @include mq-up("xl") {
+        margin-right: $spacer*8;
+      }
+
       @include mq-down("lg") {
         position: absolute;
         top: 1.4rem;
@@ -145,6 +149,8 @@
 
         p {
           margin: 0;
+          font-weight: 600;
+          margin-top: 0.1rem;
 
           @include mq-down("lg") {
             display: none;

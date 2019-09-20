@@ -19,16 +19,17 @@
     }
   }
 
-  p {
-    margin-bottom: $spacer * 4;
-  }
-
   .red {
     color: $red;
   }
 
   .wpcf7-not-valid-tip {
     font-size: 1.2rem;
+  }
+
+  .input-wrapper,
+  .button-wrapper {
+    margin-bottom: $spacer * 4;
   }
 
   label.input-wrapper {
@@ -43,7 +44,7 @@
       position: absolute;
       z-index: z("above");
       top: 0.8rem;
-      font-family: ("midashi");
+      font-family: font("midashi");
       font-weight: 600;
       transition: all 0.3s ease-out;
 
@@ -80,7 +81,7 @@
 
     .button-head {
       width: 18rem;
-      font-family: ("midashi");
+      font-family: font("midashi");
       font-weight: 600;
 
       @include mq-down("mobile") {

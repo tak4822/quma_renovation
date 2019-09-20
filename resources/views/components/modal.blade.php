@@ -1,4 +1,4 @@
-<div class="modal-container">
+<div id="{{ $id }}" class="modal-container">
   <div class="overlay"></div>
   <div class="modal">
     <div class="close-button">

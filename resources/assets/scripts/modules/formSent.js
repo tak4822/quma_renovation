@@ -1,7 +1,6 @@
 export default {
   open() {
-    console.log('opne');
-    $('.modal-container')
+    $('#formSent')
       .css('display', 'block')
       .delay(300)
       .queue(function (next) {
@@ -12,27 +11,16 @@ export default {
         next();
       })
   },
+
   close() {
-    $('.modal')
+    $('#formSent')
+      .find('.modal')
       .removeClass('active')
       .siblings('.overlay')
       .css('opacity', 0)
       .delay(500)
       .queue(function (next) {
-        $('.modal-container')
-          .css('display', 'none');
-        next();
-      })
-  },
-
-  send() {
-    $('.modal')
-      .addClass('send')
-      .siblings('.overlay')
-      .css('opacity', 0)
-      .delay(500)
-      .queue(function (next) {
-        $('.modal-container')
+        $('#formSent')
           .css('display', 'none');
         next();
       })

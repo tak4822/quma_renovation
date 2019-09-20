@@ -1,12 +1,12 @@
 .front-intro {
-  margin-top: $spacer * 10;
+  margin-top: $spacer * 5;
 
   @include mq-down("md") {
-    margin-bottom: $spacer * 15;
+    margin-bottom: $spacer * 10;
   }
 
   @include mq-down("mobile") {
-    margin-bottom: $spacer * 10;
+    margin-bottom: $spacer * 5;
     margin-top: $spacer * 6;
   }
 
@@ -57,7 +57,7 @@
     }
 
     .illust {
-      width: 50%;
+      width: 38rem;
       transform: translate(10rem, -10rem);
       padding: $spacer;
 

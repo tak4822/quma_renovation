@@ -1,8 +1,8 @@
 <section class="front-service regular-container">
   <div class="section-title-wrapper">
     @component('components.front-section-title')
-    @slot('title')何から始めれば良いの？@endslot
-    @slot('sub')QUMAのリノベーションのタイプ@endslot
+    @slot('title')何から始めればいいの？@endslot
+    @slot('sub')リノベーションのタイプ@endslot
     @slot('exp')@endslot
     @endcomponent
 
