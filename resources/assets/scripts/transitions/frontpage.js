@@ -37,7 +37,7 @@ export default {
         'width': sliderWidth,
         'transform': 'translate3d(0,0,0)',
       })
-      .delay(800)
+      .delay(1200)
       .queue(function (next) {
         $(this).removeClass('inactive');
         $('#header').css('opacity', 1);
