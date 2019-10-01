@@ -19,6 +19,35 @@
     }
   }
 
+  .pprivacy {
+    flex: 1;
+  }
+
+  .privacy-exp {
+    margin-left: $spacer * 3;
+
+    @include mq-down("mobile") {
+      margin-left: 0;
+    }
+
+    a {
+      text-decoration: underline;
+      color: $blue;
+    }
+  }
+
+  .wpcf7-list-item {
+    margin-bottom: $spacer / 2;
+  }
+
+  .wpcf7-list-item-label {
+    font-size: 1.4rem;
+
+    @include mq-down("sm") {
+      font-size: 1.2rem;
+    }
+  }
+
   .red {
     color: $red;
   }

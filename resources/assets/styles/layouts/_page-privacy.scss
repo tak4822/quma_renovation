@@ -1,0 +1,48 @@
+.privacy-page {
+  .privacy-inner {
+    @include mq-down("lg") {
+      margin: 0 $spacer * 4;
+    }
+
+    @include mq-down("mobile") {
+      margin: 0 $spacer * 2;
+    }
+
+    @include mq-down("sm") {
+      margin: 0 $spacer;
+    }
+
+    article {
+      margin-bottom: $spacer * 6;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+
+    ol {
+      list-style-type: decimal;
+      margin-left: 4rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 4rem;
+    }
+
+    li {
+      font-size: 1.4rem;
+      margin-bottom: $spacer;
+    }
+
+    .contact {
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
