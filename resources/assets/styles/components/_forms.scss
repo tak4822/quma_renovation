@@ -19,7 +19,7 @@
     }
   }
 
-  .pprivacy {
+  .privacy {
     flex: 1;
   }
 
@@ -76,6 +76,7 @@
       font-family: font("midashi");
       font-weight: 600;
       transition: all 0.3s ease-out;
+      font-size: 1.4rem;
 
       &.focused {
         top: -2rem;

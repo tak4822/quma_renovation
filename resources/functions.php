@@ -58,7 +58,7 @@ array_map(function ($file) use ($sage_error) {
     if (!locate_template($file, true, true)) {
         $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
     }
-}, ['helpers', 'setup', 'filters', 'navigation', 'admin']);
+}, ['helpers', 'setup', 'filters', 'navigation', 'admin', 'shortcode']);
 
 /**
  * Here's what's happening with these hooks:
@@ -90,3 +90,16 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+if (!function_exists('add_quicktags_to_text_editor')):
+    function add_quicktags_to_text_editor()
+    {
+      if (wp_script_is('quicktags')) { ?>
+          <script>
+            QTags.addButton('qt-color-text','color-text','[colorText color="gold"]','[/colorText]');
+          </script>
+        <?php }
+    }
+  endif;
+  add_action('admin_print_footer_scripts', 'add_quicktags_to_text_editor');
+  
