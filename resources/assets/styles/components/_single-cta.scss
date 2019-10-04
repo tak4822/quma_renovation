@@ -1,0 +1,149 @@
+.single-cta-container {
+  .single-cta-color-button {
+    width: 100%;
+    margin-top: $spacer * 10;
+    padding: $spacer * 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq-down("md") {
+      padding: $spacer * 5 $spacer * 2;
+    }
+
+    @include mq-down("mobile") {
+      margin-top: $spacer * 5;
+    }
+
+    &.yellow {
+      background: $yellow;
+    }
+
+    &.red {
+      background: $red;
+    }
+
+    &:hover {
+      &.yellow {
+        .cta-wrapper {
+          .single-btn {
+            background: white;
+
+            .btn-text {
+              color: $yellow;
+            }
+
+            .single-btn-arrow {
+              stroke: $yellow;
+            }
+          }
+        }
+      }
+    }
+
+    .header {
+      border-bottom: 3px white solid;
+      margin-bottom: $spacer * 4;
+
+      .head-text {
+        font-family: font('midashi');
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin-bottom: $spacer;
+        color: white;
+
+        @include mq-down("sm") {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .text {
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: $spacer * 4;
+      color: white;
+
+      @include mq-down("md") {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      @include mq-down("sm") {
+        font-size: 1.6rem;
+        margin-bottom: $spacer * 2;
+      }
+    }
+
+    .icon-wrapper {
+      width: 6rem;
+      height: 6rem;
+      margin-bottom: $spacer * 4;
+
+      @include mq-down("sm") {
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: $spacer * 2;
+      }
+
+      .icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        fill: white;
+      }
+    }
+
+    .cta-wrapper {
+      .single-btn {
+        width: 30rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid white;
+        transition: background-color ease-out 0.3s;
+
+        .btn-text {
+          font-family: font('midashi');
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin: 0;
+          margin-left: $spacer * 5;
+          color: white;
+          transition: color ease-out 0.3s;
+        }
+
+        .single-btn-arrow {
+          width: 1rem;
+          margin-left: $spacer * 5;
+          fill: none;
+          stroke: white;
+          transition: stroke ease-out 0.3s;
+        }
+      }
+
+      .tel-text {
+        font-family: font('midashi');
+        font-size: 3.8rem;
+        font-weight: 600;
+        color: white;
+
+        @include mq-down("md") {
+          font-size: 3.2rem;
+        }
+      }
+    }
+  }
+
+  .sigle-event {
+    margin: $spacer * 5 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    @include mq-down("md") {
+      display: none;
+    }
+  }
+}
