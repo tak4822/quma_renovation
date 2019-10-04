@@ -35,6 +35,8 @@ export default function (
       'newPageUrl': location.pathname,
       event: 'pageLoaded',
     });
+
+    fbq('track', 'ViewContent'); // eslint-disable-line no-undef
   }
 
 

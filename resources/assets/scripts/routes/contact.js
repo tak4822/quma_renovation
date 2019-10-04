@@ -20,6 +20,9 @@ export default {
         'event': 'contact',
       });
 
+      // facebook pixel code
+      fbq('track', 'Contact'); // eslint-disable-line no-undef
+
       setTimeout(function () {
         formSent.open();
       }, 1000);
