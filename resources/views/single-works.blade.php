@@ -190,7 +190,7 @@
         </div>
       </div> --}}
 
-      <a href="tel:0368050696" class="single-cta-color-button red wow fadeInUp">
+      <a href="tel:0368050696" class="single-cta-color-button red wow fadeInUp cv-tel cv-single-page">
         <div class="header">
           <p class="head-text">TELEPHONE</p>
         </div>
@@ -216,7 +216,7 @@
         </div>
       </a>
 
-      <a href="/contact" class="single-cta-color-button yellow wow fadeInUp">
+      <a href="/contact" class="single-cta-color-button yellow wow fadeInUp cv-single-page">
         <div class="header">
           <p class="head-text">MAIL FORM</p>
         </div>

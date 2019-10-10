@@ -133,7 +133,7 @@
         <div class="info">
           <div class="header">連絡先</div>
           <div class="text">
-            <a href="tel:03-6805-0696">TEL: 03-6805-0696</a><br />
+            <a href="tel:03-6805-0696" class="cv-tel">TEL: 03-6805-0696</a><br />
             FAX: 03-6805-0697
           </div>
         </div>

@@ -1,4 +1,4 @@
-<a href="{{ $link }}" class="event-card showroom">
+<a href="{{ $link }}" class="event-card showroom cv-event">
   <div class="shadow"></div>
   <div class="img-wrapper">
     {{ $img }}

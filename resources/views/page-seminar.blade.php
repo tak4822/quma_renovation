@@ -66,7 +66,7 @@
           </div>
         </div>
         <div class="action-container">
-          <div class="btn">
+          <div class="btn cv-open-form">
             <div class="border-wrapper">
               <div class="border">
                 <img class="arrow-edge" src="@asset('images/button_arrow_edge.svg')" alt="">
