@@ -5,11 +5,11 @@
 @section('content')
 <div class="interviews-page pages-container">
 
-  @component('components.breadcrums')
+  {{-- @component('components.breadcrums')
   @slot('page')Interviews @endslot
   @slot('text')リノベ、どうでした？@endslot
   @slot('url')@endslot
-  @endcomponent
+  @endcomponent --}}
 
   <section class="interviews-container">
     @component('components.page-section-header')

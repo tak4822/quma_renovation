@@ -4,12 +4,12 @@
 
 @section('content')
 <div class="about-page pages-container">
-
+  {{--
   @component('components.breadcrums')
   @slot('page')About @endslot
   @slot('text')わたしたちについて@endslot
   @slot('url')@endslot
-  @endcomponent
+  @endcomponent --}}
 
   <section class="vision">
     @component('components.page-section-header')

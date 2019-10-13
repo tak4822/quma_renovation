@@ -40,7 +40,7 @@ export default {
       .delay(1200)
       .queue(function (next) {
         $(this).removeClass('inactive');
-        $('#header').css('opacity', 1);
+        $('#header').removeClass("hidden");
         next();
       });
   },

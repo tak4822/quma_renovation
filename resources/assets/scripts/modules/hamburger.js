@@ -1,16 +1,16 @@
 function close() {
-  $('.nav-primary')
+  $('.nav-bottom-container ')
     .removeClass('active')
     .find("li")
     .removeClass('active');
-  $('.global-nav .container').removeClass("is-active");
+  $('.sns-icon').removeClass('active');
   $('.hamburger').removeClass('is-active');
 }
 
 function open() {
   $('.hamburger').addClass('is-active');
-  $('.global-nav .container').addClass("is-active");
-  $('.nav-primary')
+  $('.sns-icon').addClass('active');
+  $('.nav-bottom-container')
     .addClass("active")
     .delay(500)
     .find("li")

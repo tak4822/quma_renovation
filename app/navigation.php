@@ -65,6 +65,8 @@ class Description_Walker extends Walker_Nav_Menu
                     . $args->after
                 . "</div>"
                 . "<div class='hover-el'></div>"
+                . "<div class='hover-el-anim-square'></div>"
+                . "<div class='hover-el-anim-circle'></div>"
             . '</a> ';
 
             // Since $output is called by reference we don't need to return anything.

@@ -10,12 +10,12 @@
 @endslot
 @endcomponent
 <div class="contact-page pages-container">
-
+  {{--
   @component('components.breadcrums')
   @slot('page')Contact @endslot
   @slot('text')暮らしの相談室@endslot
   @slot('url')@endslot
-  @endcomponent
+  @endcomponent --}}
 
   <section class="contact-container">
     @component('components.page-section-header')

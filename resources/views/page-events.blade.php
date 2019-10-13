@@ -3,11 +3,11 @@
 @section('content')
 <div class="events-page pages-container">
 
-  @component('components.breadcrums')
+  {{-- @component('components.breadcrums')
   @slot('page')Events @endslot
   @slot('text')見て、聞いて、楽しもう！@endslot
   @slot('url')@endslot
-  @endcomponent
+  @endcomponent --}}
 
   <section class="events-container">
     @component('components.page-section-header')

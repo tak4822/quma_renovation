@@ -1,36 +1,9 @@
 .nav-primary {
-  position: absolute;
-  left: 25%;
-  font-family: font('madawaska');
-
-  @media screen and (min-width: 1700px) {
-    left: calc((100vw - 1000px) / 2 + 150px);
-  }
-
-  @include mq-down("lg") {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    // background: white;
-    transform: translateY(-50rem);
-    opacity: 0;
-    transition: opacity 0.3s ease-out, transform 1.2s ease;
-    padding-top: 7rem;
-
-    &.active {
-      opacity: 1;
-      transform: translateY(0%);
-      transition: opacity 0.3s ease-out;
-    }
-  }
-
   #menu-item-48 {
     padding-left: 0;
 
     @include mq-down("lg") {
-      padding: $spacer * 2;
+      padding: $spacer $spacer * 2;
     }
   }
 
@@ -40,33 +13,44 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 
     @include mq-down("lg") {
       width: 100%;
       flex-direction: column;
-      justify-content: space-around;
+      align-items: flex-start;
     }
 
     .menu-item {
       list-style-type: none;
-      padding: $spacer*2;
+      padding: $spacer $spacer*2;
 
       &.current_page_item,
       &:hover {
         .hover-el {
-          transform: translate3d(0, 0, 0);
+          opacity: 1;
+          transition: opacity ease-out 0.3s;
+        }
+
+        .hover-el-anim-circle {
+          animation: nav-hover 0.9s ease-in-out forwards;
+        }
+
+        .hover-el-anim-square {
+          width: 100%;
+          transition: width ease-in-out 0.6s;
+          transition-delay: 0.3s;
         }
       }
 
       @include mq-down("lg") {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translate3d(40px, 0, 0);
         transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
 
         &.active {
           opacity: 1;
-          transform: translateY(0);
+          transform: translate3d(0, 0, 0);
         }
       }
     }
@@ -78,31 +62,38 @@
       .nav-contents {
         .nav-title {
           margin: 0;
-          font-family: ("madawaska");
-          font-size: 1.6rem;
+          font-family: ("midashi");
+          font-size: 1.4rem;
+          font-weight: 600;
         }
       }
 
-      .hover-el {
-        position: absolute;
-        bottom: -2rem;
-        right: calc(50% - 3.5rem);
-        width: 7rem;
-        height: 10rem;
-        background: $gold;
+      .hover-el,
+      .hover-el-anim-circle {
         z-index: z("below");
+        position: absolute;
+        top: -0.8rem;
+        left: -2rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background: $gold;
+        opacity: 0;
+      }
 
-        @include bg-img('nav_deco.svg', contain);
+      .hover-el {
+        transition: none;
+      }
 
-        background-size: 71.5px;
-        background-position: center 63px;
-        transform: translate3d(0, -150%, 0);
-        transition: transform 0.8s cubic-bezier(0.43, 0.24, 0.57, 1.29);
-        will-change: transform;
-
-        @include mq-down("lg") {
-          display: none;
-        }
+      .hover-el-anim-square {
+        z-index: z("below");
+        position: absolute;
+        top: -0.8rem;
+        left: 0;
+        width: 0;
+        height: 4rem;
+        background: $gold;
+        transition: none;
       }
     }
   }
@@ -156,5 +147,22 @@
       -moz-transform: rotate(45deg);
       transform: rotate(45deg);
     }
+  }
+}
+
+@keyframes nav-hover {
+  0% {
+    left: -2rem;
+    opacity: 0;
+  }
+
+  33% {
+    left: -2rem;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    left: calc(100% - 2rem);
   }
 }
