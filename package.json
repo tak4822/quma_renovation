@@ -11,12 +11,10 @@
   "bugs": {
     "url": "https://github.com/roots/sage/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
-    }
-  ],
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  }],
   "browserslist": [
     "last 2 versions",
     "android 4",

@@ -24,7 +24,7 @@
           @component('components.event-card')
           @slot('link')/showroom @endslot
           @slot('img')
-          <img src="@asset('images/event_card_showroom.jpg')" alt="">
+          <img class="lazyload" src="@asset('images/event_card_showroom.jpg')" alt="">
           @endslot
           @slot('text')見る@endslot
           @endcomponent
@@ -33,7 +33,7 @@
           @component('components.event-card')
           @slot('link')/seminar @endslot
           @slot('img')
-          <img src="@asset('images/event_card_seminar.jpg')" alt="">
+          <img class="lazyload" src="@asset('images/event_card_seminar.jpg')" alt="">
           @endslot
           @slot('text')話す@endslot
           @endcomponent
@@ -42,7 +42,7 @@
           @component('components.event-card')
           @slot('link')/offkai @endslot
           @slot('img')
-          <img src="@asset('images/event_card_offkai.jpg')" alt="">
+          <img class="lazyload" src="@asset('images/event_card_offkai.jpg')" alt="">
           @endslot
           @slot('text')楽しむ@endslot
           @endcomponent

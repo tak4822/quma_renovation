@@ -1,4 +1,7 @@
 .color-text {
+  font-family: font("midashi");
+  font-weight: 600;
+
   &.yellow {
     color: $yellow;
   }

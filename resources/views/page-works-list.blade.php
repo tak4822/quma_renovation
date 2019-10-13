@@ -1,4 +1,4 @@
-{{-- @php($works_posts) --}}
+@php($size = App\Controllers\App::is_mobile() ? 'mobile' : 'large')
 
 @extends('layouts.app')
 
@@ -23,7 +23,7 @@
       <div class="picked-container">
         @while($works_posts_picked->have_posts()) @php($works_posts_picked->the_post())
         @component('components.work-card')
-        @slot('thumb')<img src="{{ get_the_post_thumbnail_url() }}" alt="">@endslot
+        @slot('thumb')<img class="lazyload" src="{{ get_the_post_thumbnail_url(get_the_ID(), $size) }}" alt="">@endslot
         @slot('link'){{ get_permalink() }}@endslot
         @slot('title'){{ get_the_title() }}@endslot
         @slot('area'){{ the_field('area') }} @endslot
@@ -37,7 +37,8 @@
       <div class="new-container">
         @while($works_posts_not_picked->have_posts()) @php($works_posts_not_picked->the_post())
         @component('components.work-card')
-        @slot('thumb')<img src="{{ get_the_post_thumbnail_url() }}" alt="">@endslot
+        @slot('thumb')<img class="lazyload" src="{{ get_the_post_thumbnail_url(get_the_ID(), 'small_thumb') }}"
+          alt="">@endslot
         @slot('link'){{ get_permalink() }}@endslot
         @slot('title'){{ get_the_title() }}@endslot
         @slot('area'){{ the_field('area') }} @endslot

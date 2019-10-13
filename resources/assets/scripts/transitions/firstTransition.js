@@ -34,7 +34,7 @@ export default function () {
     document.body.scrollIntoView();
 
     $('.transition-overlay')
-      .delay(1500)
+      .delay(500)
       .fadeOut(300);
     $('#site-wrap').css('opacity', 1);
   });

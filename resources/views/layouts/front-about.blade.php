@@ -8,8 +8,8 @@
   </div>
   <div class="contents">
     <div class="vision">
-      <div class="illust wow fadeInUp" data-wow-duration="2s">
-        <img src="@asset('images/vision.jpg')" alt="">
+      <div class="illust wow fadeInUp lazyload" data-wow-duration="1.2s">
+        <img class="lazyload" src="@asset('images/vision.jpg')" alt="">
       </div>
       <div class="text-container wow fadeIn">
         <p>QUMAはあなたの暮らしを一緒に考えるパートナーです。</p>

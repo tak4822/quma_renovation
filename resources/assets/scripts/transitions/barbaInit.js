@@ -21,9 +21,10 @@ export default function (views) {
 
   views.forEach(view => Barba.BaseView.extend(view).init());
 
+
   setTimeout(function () {
     // wait for very first loading
     Barba.Pjax.start();
     Barba.Prefetch.init();
-  }, 1000);
+  }, 300);
 }

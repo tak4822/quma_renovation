@@ -11,6 +11,9 @@ class FrontPage extends Controller
   static function get_interviews_data() {
     $descLength = 260;
     $size='large';
+    if (App::is_mobile()) {
+      $size='mobile';
+    }
 
     $args = array(
       'post_type' => 'interviews',
@@ -57,6 +60,11 @@ class FrontPage extends Controller
     );
     $the_query = new WP_Query( $args );
 
+    $size='full';
+    if (App::is_mobile()) {
+      $size='mobile';
+    }
+
     if ( $the_query->have_posts() ) {
       $data_arr = array();
       $count = 1;
@@ -69,7 +77,7 @@ class FrontPage extends Controller
         $page_subtitle = get_post_meta($the_query->post->ID, 'page-subtitle', true);
         $title = get_the_title();
         $subtitle = get_post_meta($the_query->post->ID, 'subtitle', true);
-        $image = get_the_post_thumbnail_url($the_query->post->ID, 'full');
+        $image = get_the_post_thumbnail_url($the_query->post->ID, $size);
 
         $output = array(
           'number' => $count,

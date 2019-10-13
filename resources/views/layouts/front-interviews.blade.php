@@ -19,18 +19,18 @@
         <div class="paging">
           <div id="interviewsSliderNextButton" class="arrows right">
             <div class="arrows-inner">
-              <img src="@asset('images/arrow_right.svg')" alt="">
+              <img class="lazyload" src="@asset('images/arrow_right.svg')" alt="">
             </div>
           </div>
           <div class="border"></div>
           <div id="interviewsSliderPrevButton" class="arrows left">
             <div class="arrows-inner">
-              <img src="@asset('images/arrow_left.svg')" alt="">
+              <img class="lazyload" src="@asset('images/arrow_left.svg')" alt="">
             </div>
           </div>
         </div>
         <div class="mic-wrapper">
-          <img src="@asset('images/mic.png')" alt="">
+          <img class="lazyload" src="@asset('images/mic.png')" alt="">
         </div>
       </div>
       <div id="interviewsSliderTouch" class="slider">
@@ -38,7 +38,7 @@
           @foreach( $interviews_arr as $key => $interview)
           @component('components.interview-card')
           @slot('link'){{ $interview['link'] }}@endslot
-          @slot('thumb')<img src="{{ $interview['image'] }}" alt="{{ $interview['title'] }}">@endslot
+          @slot('thumb')<img class="lazyload" src="{{ $interview['image'] }}" alt="{{ $interview['title'] }}">@endslot
           @slot('title'){{ $interview['title'] }}@endslot
           @slot('lead'){{ $interview['lead'] }}@endslot
           @endcomponent

@@ -13,7 +13,7 @@
       <p>リノベーションっていう選択肢が、もっと広がっていくといいな。</p>
     </div>
     <div class="illust wow fadeIn" data-wow-duration="2s">
-      <img src="@asset('images/intro.jpg')" alt="">
+      <img class="lazyload" src="@asset('images/intro.jpg')" alt="">
     </div>
   </div>
 </section>

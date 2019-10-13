@@ -29,7 +29,7 @@
         <p id="fronttopSlider-page-title" class="section">{{ $data_arr[0]['page-title'] }}</p>
         <div class="paging">
           <div id="fronttopSliderPrevButton" class="arrows left">
-            <img src="@asset('images/triangle-left.svg')" alt="">
+            <img class="lazyload" src="@asset('images/triangle-left.svg')" alt="">
           </div>
           <div class="numbers">
             <p id="fronttopSlider-number" class="now">{{ $data_arr[0]['number'] }}</p>
@@ -37,7 +37,7 @@
             <p class="total">{{ count($data_arr) }}</p>
           </div>
           <div id="fronttopSliderNextButton" class="arrows right">
-            <img src="@asset('images/triangle-right.svg')" alt="">
+            <img class="lazyload" src="@asset('images/triangle-right.svg')" alt="">
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+@php($size = App\Controllers\App::is_mobile() ? 'mobile' : 'large')
+
 @extends('layouts.app')
 
 @section('content')
@@ -30,7 +32,7 @@
       @slot('family'){{ the_field('family') }} @endslot
       @slot('address'){{ the_field('place') }} @endslot
       @slot('img')
-      <img src="{{ get_the_post_thumbnail_url() }}" alt="">
+      <img class="lazyload" src="{{ get_the_post_thumbnail_url(get_the_ID(), $size) }}" alt="">
       @endslot
       @endcomponent
       @endwhile

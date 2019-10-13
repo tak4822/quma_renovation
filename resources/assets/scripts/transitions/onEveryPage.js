@@ -2,6 +2,7 @@ import {
   WOW,
 } from 'wowjs';
 
+
 export default function (
   currentStatus,
   oldStatus,
@@ -95,7 +96,7 @@ export default function (
   if (window.matchMedia('(max-width:1024px)').matches) {
     offset = 120;
   } else {
-    offset = 300;
+    offset = 250;
   }
 
   const wow = new WOW({

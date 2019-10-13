@@ -28,7 +28,7 @@
       <div class="inner-wrapper wow a-lot-late fadeInUp">
         <div class="title"><span class="marker">街探し・物件探しからの</span><br /><span class="marker">リノベーション</span></div>
         <div class="illust">
-          <img src="@asset('images/service_houses.jpg')" alt="">
+          <img class="lazyload" src="@asset('images/service_houses.jpg')" alt="">
         </div>
         <div class="exp">ご予算の中で、どんな街でどんな暮らしがしたいのかを考えて、「自分と暮らす」ためのベースとなる街と物件を一緒に探しましょう！</div>
 
@@ -49,7 +49,7 @@
       <div class="inner-wrapper wow a-lot-late fadeInUp">
         <div class="title"><span class="marker">設計・プランニングからの</span><br /><span class="marker">リノベーション</span></div>
         <div class="illust">
-          <img src="@asset('images/service_plan.jpg')" alt="">
+          <img class="lazyload" src="@asset('images/service_plan.jpg')" alt="">
         </div>
         <div class="exp">物件がすでに決まっている方。もうあとはつくるだけ！あなたがどんな人なのかをたっぷりとお教えていただいて、“あなた”を空間に落とし込んでいきましょう！</div>
         <a class="btn wow fadeIn" href="/service/plan " data-wow-offset="0">

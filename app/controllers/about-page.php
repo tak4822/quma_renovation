@@ -10,6 +10,9 @@ class AboutPage extends Controller
 
   static function get_members_data() {
     $size='full';
+    if (App::is_mobile()) {
+      $size='mobile';
+    }
 
     $args = array(
       'post_type' => 'members',
