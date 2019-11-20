@@ -106,9 +106,9 @@
         @component('components.event-card')
         @slot('link')/showroom @endslot
         @slot('img')
-        <img class="lazyload" src="@asset('images/event_card_showroom.jpg')" alt="">
+        <img class="lazyload" src="@asset('images/event_card_cafe.jpg')" alt="">
         @endslot
-        @slot('text')見る@endslot
+        @slot('text')飲む@endslot
         @endcomponent
       </div>
       <div class="wrapper wow bit-late fadeInUp">
