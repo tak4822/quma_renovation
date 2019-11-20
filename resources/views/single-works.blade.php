@@ -12,7 +12,7 @@
     <p class="text">リノベカフェに遊びに行ってみる☕</p>
   </a>
 
-  <section class="work-container">
+  <section class="work-container single-contents">
     <div class="top wow fadeIn" data-wow-duration="2s">
       <img src="{{ the_post_thumbnail_url( 'full' ) }}" alt="">
     </div>
@@ -162,7 +162,8 @@
         @endif
       </div>
     </article>
-
+  </section>
+  <section>
     <div class="regular-container single-cta-container">
       <div class="sigle-event">
         <div class="wrapper wow fadeInUp">

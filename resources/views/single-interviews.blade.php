@@ -13,96 +13,96 @@
   <a href="/showroom" id="cafeButton" class="cafe-button">
     <p class="text">リノベカフェに遊びに行ってみる☕</p>
   </a>
+  <div class="single-contents">
+    <section class="interview-head">
+      <div class="head-texts">
+        <div class="head">
+          <div class="number">{{ the_field('number') }}</div>
+          <div class="text-wrapper">
+            <p class="title">{{ the_title() }}</p>
+            <div class="outline">
+              <p class="name">{{ the_field('place_name') }}</p>
+              <div class="slash"></div>
+              <p class="family">{{ the_field('family') }}</p>
+              <div class="slash"></div>
+              <p class="address">{{ the_field('place') }}</p>
+            </div>
+          </div>
+        </div>
 
-  <section class="interview-head">
-    <div class="head-texts">
-      <div class="head">
-        <div class="number">{{ the_field('number') }}</div>
-        <div class="text-wrapper">
-          <p class="title">{{ the_title() }}</p>
-          <div class="outline">
-            <p class="name">{{ the_field('place_name') }}</p>
-            <div class="slash"></div>
-            <p class="family">{{ the_field('family') }}</p>
-            <div class="slash"></div>
-            <p class="address">{{ the_field('place') }}</p>
-          </div>
+        <div class="lead-container">
+          <p>{{ the_field('lead') }}</p>
         </div>
       </div>
-
-      <div class="lead-container">
-        <p>{{ the_field('lead') }}</p>
+      <div class="pic">
+        <img class="lazyload" src="{{ the_post_thumbnail_url( get_the_ID(), $size ) }}" alt="">
       </div>
-    </div>
-    <div class="pic">
-      <img class="lazyload" src="{{ the_post_thumbnail_url( get_the_ID(), $size ) }}" alt="">
-    </div>
-  </section>
-  <section class="interview-contents">
-    <article class="article intro">
-      <div class="illust-area"></div>
-      <div class="contents">
-        {{ the_field('intro') }}
-      </div>
-    </article>
-    <article class="article section-1">
-      <div class="illust-area">
-        <img class="lazyload" src="@asset('images/interview_article_1.jpg')" alt="">
-      </div>
-      <div class="contents">
-        <div class="title-container">
-          <div class="number">1.</div>
-          <div class="title-wrapper">
-            <p class="title">{{ the_field('section_1_title') }}</p>
-          </div>
+    </section>
+    <section class="interview-contents">
+      <article class="article intro">
+        <div class="illust-area"></div>
+        <div class="contents">
+          {{ the_field('intro') }}
         </div>
-        {{ the_field('section_1_contents') }}
-      </div>
-    </article>
-    <article class="article section-2">
-      <div class="illust-area">
-        <img class="lazyload" src="@asset('images/interview_article_2.jpg')" alt="">
-      </div>
-      <div class="contents">
-        <div class="title-container">
-          <div class="number">2.</div>
-          <div class="title-wrapper">
-            <p class="title">{{ the_field('section_2_title') }}</p>
-          </div>
+      </article>
+      <article class="article section-1">
+        <div class="illust-area">
+          <img class="lazyload" src="@asset('images/interview_article_1.jpg')" alt="">
         </div>
-        {{ the_field('section_2_contents') }}
-      </div>
-    </article>
-    <article class="article section-3">
-      <div class="illust-area">
-        <img class="lazyload" src="@asset('images/interview_article_3.jpg')" alt="">
-      </div>
-      <div class="contents">
-        <div class="title-container">
-          <div class="number">3.</div>
-          <div class="title-wrapper">
-            <p class="title">{{ the_field('section_3_title') }}</p>
+        <div class="contents">
+          <div class="title-container">
+            <div class="number">1.</div>
+            <div class="title-wrapper">
+              <p class="title">{{ the_field('section_1_title') }}</p>
+            </div>
           </div>
+          {{ the_field('section_1_contents') }}
         </div>
-        {{ the_field('section_3_contents') }}
-      </div>
-    </article>
-    <article class="article section-4">
-      <div class="illust-area">
-        <img class="lazyload" src="@asset('images/interview_article_4.jpg')" alt="">
-      </div>
-      <div class="contents">
-        <div class="title-container">
-          <div class="number">4.</div>
-          <div class="title-wrapper">
-            <p class="title">{{ the_field('section_4_title') }}</p>
+      </article>
+      <article class="article section-2">
+        <div class="illust-area">
+          <img class="lazyload" src="@asset('images/interview_article_2.jpg')" alt="">
+        </div>
+        <div class="contents">
+          <div class="title-container">
+            <div class="number">2.</div>
+            <div class="title-wrapper">
+              <p class="title">{{ the_field('section_2_title') }}</p>
+            </div>
           </div>
+          {{ the_field('section_2_contents') }}
         </div>
-        {{ the_field('section_4_contents') }}
-      </div>
-    </article>
-  </section>
-
+      </article>
+      <article class="article section-3">
+        <div class="illust-area">
+          <img class="lazyload" src="@asset('images/interview_article_3.jpg')" alt="">
+        </div>
+        <div class="contents">
+          <div class="title-container">
+            <div class="number">3.</div>
+            <div class="title-wrapper">
+              <p class="title">{{ the_field('section_3_title') }}</p>
+            </div>
+          </div>
+          {{ the_field('section_3_contents') }}
+        </div>
+      </article>
+      <article class="article section-4">
+        <div class="illust-area">
+          <img class="lazyload" src="@asset('images/interview_article_4.jpg')" alt="">
+        </div>
+        <div class="contents">
+          <div class="title-container">
+            <div class="number">4.</div>
+            <div class="title-wrapper">
+              <p class="title">{{ the_field('section_4_title') }}</p>
+            </div>
+          </div>
+          {{ the_field('section_4_contents') }}
+        </div>
+      </article>
+    </section>
+  </div>
 
   <section class="regular-container single-cta-container">
     <div class="sigle-event">
@@ -134,6 +134,7 @@
         @endcomponent
       </div>
     </div>
+
 
     <a href="/contact" class="single-cta-color-button yellow wow fadeInUp cv-single-page">
       <div class="header">

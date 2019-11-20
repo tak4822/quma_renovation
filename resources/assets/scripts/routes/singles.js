@@ -8,11 +8,10 @@ export default {
     if (prevStatus !== null) {
       $("#breadBackButton").attr('href', prevStatus.url);
     }
-    console.log("hello");
-    showCafeButton.set();
+
   },
   onEnterCompleted: function () {
-
+    showCafeButton.set();
   },
   onLeave: function () {
     // // 次のページへのトランジションが始まった時。

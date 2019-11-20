@@ -1,36 +1,24 @@
-let body, html, scrollTop, percentage, pageHeight, windowHeight, height, showButton = 0;
+let scrollTop, percentage, contentsHeight, windowHeight, height, showButton = 0;
 
 function scroll() {
   scrollTop = document.documentElement.scrollTop;
   percentage = scrollTop / height * 100;
-  console.log(percentage);
-  if (!showButton && percentage > 60) {
+  if (!showButton && percentage > 90) {
     showButton = true;
-
     $('#cafeButton').addClass('show');
   }
 }
 
 export default {
   set() {
-    body = document.body;
-    html = document.documentElement;
-    scrollTop = 0;
     percentage = 0;
-
-
-    pageHeight = Math.max(body.scrollHeight, body.offsetHeight,
-      html.clientHeight, html.scrollHeight, html.offsetHeight);
+    contentsHeight = document.documentElement.querySelector(".single-contents").clientHeight;
     windowHeight = window.innerHeight;
-    height = pageHeight - windowHeight;
-
+    height = contentsHeight - windowHeight;
     showButton = false;
-
-    console.log('set');
     window.addEventListener("scroll", scroll);
   },
   remove() {
-    console.log('remove');
     window.removeEventListener("scroll", scroll);
     $('#cafeButton').removeClass('show');
   },
