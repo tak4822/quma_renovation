@@ -49,7 +49,7 @@
           <div class="contents">
             <div class="text-wrapper">
               <p class="item-head">日程</p>
-              <p class="item-text">ご希望の日程をお選びください</p>
+              <p class="item-text">毎月第２土曜日</p>
             </div>
             <div class="text-wrapper">
               <p class="item-head">時間</p>
@@ -57,7 +57,7 @@
             </div>
             <div class="text-wrapper">
               <p class="item-head">場所</p>
-              <p class="item-text">恵比寿</p>
+              <p class="item-text">恵比寿・大塚</p>
             </div>
             <div class="text-wrapper">
               <p class="item-head">参加費</p>
