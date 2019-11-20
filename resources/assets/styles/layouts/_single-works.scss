@@ -305,9 +305,7 @@
     }
 
     .recommend {
-      @include mq-down("mobile") {
-        margin-bottom: $spacer *2;
-      }
+      margin-bottom: $spacer *2;
 
       .regular-container {
         padding-top: 20rem;

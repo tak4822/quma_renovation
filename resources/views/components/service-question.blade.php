@@ -32,7 +32,7 @@
         </div>
         <div class="exp">ご予算の中で、どんな街でどんな暮らしがしたいのかを考えて、「自分と暮らす」ためのベースとなる街と物件を一緒に探しましょう！</div>
 
-        <a class="btn wow fadeIn" href="/service/house " data-wow-offset="0">
+        <a class="btn wow fadeIn" href="/service-house" data-wow-offset="0">
           <div class="border-wrapper">
             <div class="border">
               <img class="arrow-edge" src="@asset('images/button_arrow_edge.svg')" alt="">
@@ -52,7 +52,7 @@
           <img class="lazyload" src="@asset('images/service_plan.jpg')" alt="">
         </div>
         <div class="exp">物件がすでに決まっている方。もうあとはつくるだけ！あなたがどんな人なのかをたっぷりとお教えていただいて、“あなた”を空間に落とし込んでいきましょう！</div>
-        <a class="btn wow fadeIn" href="/service/plan " data-wow-offset="0">
+        <a class="btn wow fadeIn" href="/service-plan " data-wow-offset="0">
           <div class="border-wrapper">
             <div class="border">
               <img class="arrow-edge" src="@asset('images/button_arrow_edge.svg')" alt="">

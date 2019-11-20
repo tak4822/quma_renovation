@@ -2,9 +2,9 @@
   <div class="nav-top-container">
     <a id="headerLogo" class="logo" href="{{ home_url('/') }}"></a>
     <div class="right">
-      <div class="nav-secondary">
-        <a href="/busssiness">事業リノベーション</a>
-      </div>
+      {{-- <div class="nav-secondary">
+        <a href="/busssiness">事業者様用リノベーション</a>
+      </div> --}}
       <div id="headerActions" class="nav-action">
         {{-- <div class="line btn">
               <img src="@asset('images/ico_line.svg')" alt="" class="ico">
@@ -14,7 +14,7 @@
           <img src="@asset('images/ico_tel.svg')" alt="" class="ico">
           <p>03-6805-0696</p>
         </a>
-        <a href="mailto:info@quma.co.jp" class="mail btn cv-mail">
+        <a href="/contact" class="mail btn cv-mail">
           <img src="@asset('images/ico_mail.svg')" alt="" class="ico">
           <p>お問い合わせ</p>
         </a>

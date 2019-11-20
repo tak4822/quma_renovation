@@ -162,5 +162,35 @@
       </div>
     </div>
   </section>
+  <section class="regular-container single-cta-container">
+    <div class="sigle-event">
+      <div class="wrapper wow fadeInUp">
+        @component('components.event-card')
+        @slot('link')/showroom @endslot
+        @slot('img')
+        <img class="lazyload" src="@asset('images/event_card_showroom.jpg')" alt="">
+        @endslot
+        @slot('text')見る@endslot
+        @endcomponent
+      </div>
+      <div class="wrapper wow bit-late fadeInUp">
+        @component('components.event-card')
+        @slot('link')/seminar @endslot
+        @slot('img')
+        <img class="lazyload" src="@asset('images/event_card_seminar.jpg')" alt="">
+        @endslot
+        @slot('text')話す@endslot
+        @endcomponent
+      </div>
+      <div class="wrapper wow late fadeInUp">
+        @component('components.event-card')
+        @slot('link')/offkai @endslot
+        @slot('img')
+        <img class="lazyload" src="@asset('images/event_card_offkai.jpg')" alt="">
+        @endslot
+        @slot('text')楽しむ@endslot
+        @endcomponent
+      </div>
+    </div>
 </div>
 @endsection

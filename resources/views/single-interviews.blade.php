@@ -196,7 +196,7 @@
       @slot('family'){{ the_field('family') }} @endslot
       @slot('address'){{ the_field('place') }} @endslot
       @slot('img')
-      <img class="lazyload" src="{{ get_the_post_thumbnail_url( get_the_ID(), 'large_thumb' ) }}" alt="">
+      <img class="lazyload" src="{{ get_the_post_thumbnail_url( get_the_ID(), $size ) }}" alt="">
       @endslot
       @endcomponent
       @php($count++)

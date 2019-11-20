@@ -37,7 +37,7 @@
       <div class="new-container">
         @while($works_posts_not_picked->have_posts()) @php($works_posts_not_picked->the_post())
         @component('components.work-card')
-        @slot('thumb')<img class="lazyload" src="{{ get_the_post_thumbnail_url(get_the_ID(), 'small_thumb') }}"
+        @slot('thumb')<img class="lazyload" src="{{ get_the_post_thumbnail_url(get_the_ID(), 'mobile') }}"
           alt="">@endslot
         @slot('link'){{ get_permalink() }}@endslot
         @slot('title'){{ get_the_title() }}@endslot
