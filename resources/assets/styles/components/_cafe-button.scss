@@ -1,0 +1,123 @@
+.cafe-button {
+  @include flex-center;
+
+  position: fixed;
+  z-index: z("modal");
+  bottom: 0;
+  height: 7rem;
+  background: $yellow;
+  width: 32rem;
+  right: $spacer*2;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  transform: translate3d(0, 7rem, 0);
+
+  @include mq-up("xl") {
+    right: $spacer*8;
+  }
+
+  @include mq-down("lg") {
+    right: $spacer*4;
+  }
+
+  @include mq-down("mobile") {
+    width: 100vw;
+    right: 0;
+  }
+
+  &.show {
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp;
+  }
+
+  .text {
+    margin-bottom: 0;
+    font-family: font("midashi");
+    font-size: 1.6rem;
+  }
+}
+
+@-webkit-keyframes bounceInUp {
+
+  /* stylelint-disable-line rule-empty-line-before */
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInUp {
+
+  /* stylelint-disable-line rule-empty-line-before */
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}

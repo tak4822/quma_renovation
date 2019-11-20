@@ -8,6 +8,10 @@
   @slot('url')/works @endslot
   @endcomponent
 
+  <a href="/showroom" id="cafeButton" class="cafe-button">
+    <p class="text">リノベカフェに遊びに行ってみる☕</p>
+  </a>
+
   <section class="work-container">
     <div class="top wow fadeIn" data-wow-duration="2s">
       <img src="{{ the_post_thumbnail_url( 'full' ) }}" alt="">

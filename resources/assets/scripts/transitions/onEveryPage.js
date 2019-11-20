@@ -94,9 +94,9 @@ export default function (
 
   let offset;
   if (window.matchMedia('(max-width:1024px)').matches) {
-    offset = 120;
+    offset = 80;
   } else {
-    offset = 250;
+    offset = 200;
   }
 
   const wow = new WOW({

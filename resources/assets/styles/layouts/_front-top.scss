@@ -51,7 +51,7 @@
         }
 
         @include mq-down("sm") {
-          width: 60%;
+          width: 40%;
         }
       }
 
@@ -254,7 +254,7 @@
 
       @include mq-down("sm") {
         bottom: -$spacer * 23;
-        height: 24rem;
+        height: 22rem;
       }
     }
 
@@ -285,7 +285,7 @@
 
       @include mq-down("sm") {
         bottom: -$spacer * 22;
-        height: 24rem;
+        height: 22rem;
       }
 
       p {
@@ -463,8 +463,8 @@
           margin-top: $spacer * 2;
 
           @include mq-down("sm") {
-            font-size: 2rem;
-            line-height: 3.2rem;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
             margin-top: $spacer;
           }
 

@@ -10,6 +10,10 @@
   @slot('url')/interviews @endslot
   @endcomponent
 
+  <a href="/showroom" id="cafeButton" class="cafe-button">
+    <p class="text">リノベカフェに遊びに行ってみる☕</p>
+  </a>
+
   <section class="interview-head">
     <div class="head-texts">
       <div class="head">
