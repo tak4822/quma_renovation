@@ -13,10 +13,9 @@
   <section class="events-inner">
     <div class="events-inner-contents regular-container">
       <div class="left wow fadeIn" data-wow-duration="2s">
-        <img src="@asset('images/events_showroom.jpg')" alt="">
+        <img src="@asset('images/cafe.jpg')" alt="">
       </div>
       <div class="right wow fadeInUp">
-        <p class="title">コーヒーを飲みながら<br />リノベのプロと気軽に相談</p>
         <div class="text-container">
           @while(have_posts()) @php(the_post())
           @php(the_content())

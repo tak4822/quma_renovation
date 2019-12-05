@@ -38,6 +38,35 @@ export default function (
     });
 
     fbq('track', 'ViewContent'); // eslint-disable-line no-undef
+
+    // Yahoo 
+    ytag({ // eslint-disable-line no-undef
+      "type": "yjad_retargeting",
+      "config": {
+        "yahoo_retargeting_id": "04VZZ12E3Y",
+        "yahoo_retargeting_label": "",
+        "yahoo_retargeting_page_type": "",
+        "yahoo_retargeting_items": [{
+            item_id: 'i1',
+            category_id: '',
+            price: '',
+            quantity: '',
+          },
+          {
+            item_id: 'i2',
+            category_id: '',
+            price: '',
+            quantity: '',
+          },
+          {
+            item_id: 'i3',
+            category_id: '',
+            price: '',
+            quantity: '',
+          },
+        ],
+      },
+    });
   }
 
 

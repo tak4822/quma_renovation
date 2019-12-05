@@ -55,4 +55,12 @@
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=412851169231161&ev=PageView&noscript=1" /></noscript>
   <!-- End Facebook Pixel Code -->
+  <!-- YDN -->
+  <script async src="https://s.yimg.jp/images/listing/tool/cv/ytag.js"></script>
+  <script>
+    window.yjDataLayer = window.yjDataLayer || [];
+    function ytag() { yjDataLayer.push(arguments); }
+  </script>
+  <!-- END YDN -->
+
 </head>
