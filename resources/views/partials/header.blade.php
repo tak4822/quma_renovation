@@ -10,13 +10,17 @@
               <img src="@asset('images/ico_line.svg')" alt="" class="ico">
               <p>LINE@相談</p>
             </div> --}}
-        <a href="tel:0368050696" class="tel btn cv-tel">
+        <a href="tel:0368050696" class="tel btn cv-header">
           <img src="@asset('images/ico_tel.svg')" alt="" class="ico">
           <p>03-6805-0696</p>
         </a>
-        <a href="/contact" class="mail btn cv-mail">
+        <a href="/contact" class="mail btn cv-header">
           <img src="@asset('images/ico_mail.svg')" alt="" class="ico">
           <p>お問い合わせ</p>
+        </a>
+        <a href="/contact-documents" class="documents btn cv-header">
+          <img src="@asset('images/ico_documents.svg')" alt="" class="ico">
+          <p>資料を請求する</p>
         </a>
       </div>
       <div id="headerHamburder" class="hamburger-wrapper">

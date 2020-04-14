@@ -57,7 +57,7 @@ class App extends Controller
     public function current_template() {
         global $post;  
         if (is_front_page()) return 'frontpage';
-        if (is_page('contact')) return 'contact';
+        if ($post->ID === 1592 || $post->ID === 1594 || $post->ID === 1596 || $post->ID === 1598 ) return 'contact';
         if ($post->ID === 1304 || $post->ID === 35 || $post->ID === 41 ) return 'events'; // single page under eents page
         if (is_single()) return 'singles';
         if (is_404()) return '404';

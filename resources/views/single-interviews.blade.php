@@ -40,7 +40,7 @@
     </section>
     <section class="interview-contents">
       <article class="article intro">
-        <div class="illust-area"></div>
+        <div class="illust-area no-illust"></div>
         <div class="contents">
           {{ the_field('intro') }}
         </div>

@@ -173,6 +173,10 @@
       margin: 0 $spacer * 2 $spacer * 10;
     }
 
+    @include mq-down("sm") {
+      margin: 0 $spacer $spacer * 10;
+    }
+
     .article {
       display: flex;
 
@@ -197,6 +201,10 @@
         @include mq-down("mobile") {
           width: 80%;
           padding: 2rem 4rem;
+
+          &.no-illust {
+            padding: 0;
+          }
         }
 
         img {

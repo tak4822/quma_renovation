@@ -113,7 +113,8 @@
 
         .line,
         .tel,
-        .mail {
+        .mail,
+        .documents {
           &.btn {
             display: flex;
             align-items: center;
@@ -175,7 +176,11 @@
           }
 
           .ico {
-            margin-right: 0;
+            margin-right: 0.2rem;
+
+            @include mq-down("lg") {
+              margin-right: 0;
+            }
           }
         }
 
@@ -183,6 +188,25 @@
           &.btn {
             background: $yellow;
             border: none;
+
+            @include mq-down("lg") {
+              margin-right: $spacer * 2;
+            }
+          }
+        }
+
+        .documents {
+          &.btn {
+            background: $green;
+            border: none;
+
+            @include mq-down("lg") {
+              display: none;
+            }
+          }
+
+          .ico {
+            margin-right: 0.2rem;
           }
         }
       }
