@@ -20,7 +20,11 @@
     }
 
     &.red {
-      background: $red;
+      background: blue;
+    }
+
+    &.green {
+      background: $green;
     }
 
     &:hover {
@@ -35,6 +39,22 @@
 
             .single-btn-arrow {
               stroke: $yellow;
+            }
+          }
+        }
+      }
+
+      &.green {
+        .cta-wrapper {
+          .single-btn {
+            background: white;
+
+            .btn-text {
+              color: $green;
+            }
+
+            .single-btn-arrow {
+              stroke: $green;
             }
           }
         }

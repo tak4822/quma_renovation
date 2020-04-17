@@ -1,5 +1,5 @@
 import Barba from 'barba.js/dist/barba.min';
-import showCafeButton from '../modules/showCafeButton';
+// import showCafeButton from '../modules/showCafeButton';
 export default {
   namespace: 'singles',
   onEnter: function () {
@@ -11,11 +11,11 @@ export default {
 
   },
   onEnterCompleted: function () {
-    showCafeButton.set();
+    // showCafeButton.set();
   },
   onLeave: function () {
     // // 次のページへのトランジションが始まった時。
-    showCafeButton.remove();
+    // showCafeButton.remove();
   },
   onLeaveCompleted: function () {
     // このページのcontainerが完全に削除された時。

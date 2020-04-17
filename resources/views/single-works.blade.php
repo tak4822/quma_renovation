@@ -16,7 +16,7 @@
     <div class="top wow fadeIn" data-wow-duration="2s">
       <img src="{{ the_post_thumbnail_url( 'full' ) }}" alt="">
     </div>
-    <article class="outline">
+    <article class="outline title-container-wrapper">
       <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
@@ -62,7 +62,7 @@
     </article>
 
     @if( !empty(get_field('highlight_1_title')) )
-    <article class="highlight">
+    <article class="highlight title-container-wrapper">
       <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
@@ -89,7 +89,7 @@
     @endif
 
     @if( !empty(get_field('highlight_2_title')) )
-    <article class="highlight">
+    <article class="highlight title-container-wrapper">
       <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
@@ -115,7 +115,7 @@
     </article>
     @endif
 
-    <article class="pictures">
+    <article class="pictures title-container-wrapper">
       <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
@@ -165,7 +165,7 @@
   </section>
   <section>
     <div class="regular-container single-cta-container">
-      <div class="sigle-event">
+      {{-- <div class="sigle-event">
         <div class="wrapper wow fadeInUp">
           @component('components.event-card')
           @slot('link')/showroom @endslot
@@ -193,27 +193,37 @@
           @slot('text')楽しむ@endslot
           @endcomponent
         </div>
-      </div>
+      </div> --}}
 
-      <a href="/contact" class="single-cta-color-button yellow wow fadeInUp cv-single-page">
+      <a href="/contact-documents" class="single-cta-color-button green wow fadeInUp cv-single-page">
         <div class="header">
-          <p class="head-text">MAIL FORM</p>
+          <p class="head-text">資料請求</p>
         </div>
-        <p class="text">メールでリノベーションの情報が欲しいという方はコチラ</p>
+        <p class="text">リノベーション事例集やお得なキャンペーン情報を郵送します</p>
         <div class="icon-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.814 15.332" class="icon">
-            <g id="noun_Mail_2073672" transform="translate(0.25 0.25)">
-              <g id="グループ化_39" data-name="グループ化 39" transform="translate(0 0)">
-                <path id="パス_76" data-name="パス 76"
-                  d="M26.314,19.19a.5.5,0,0,0-.026-.16c0-.007-.007-.012-.01-.019a.5.5,0,0,0-.027-.051.507.507,0,0,0-.068-.1.5.5,0,0,0-.044-.043.718.718,0,0,0-.152-.094.5.5,0,0,0-.179-.036H5.507a.5.5,0,0,0-.179.036.471.471,0,0,0-.051.026.491.491,0,0,0-.1.068.474.474,0,0,0-.044.043.493.493,0,0,0-.068.1.467.467,0,0,0-.027.052c0,.007-.008.012-.01.019A.5.5,0,0,0,5,19.19V33.011a.506.506,0,0,0,.507.507h20.3a.507.507,0,0,0,.507-.507V19.19ZM6.013,32.5V20.217l9.336,7.134a.507.507,0,0,0,.615,0L25.3,20.217V32.505H6.013Zm9.644-6.194L7,19.7H24.31Z"
-                  transform="translate(-5 -18.686)" stroke-width="0.8px" stroke="#fff" ; />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.75 88.75">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #fff;
+                }
+
+              </style>
+            </defs>
+            <title>ico_documents</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <path class="cls-1"
+                  d="M25.19.38a2,2,0,0,0-1.1.43l-23,19a2,2,0,0,0-.71,1.57v65a2.08,2.08,0,0,0,2,2h68a2.09,2.09,0,0,0,2-2v-84a2.08,2.08,0,0,0-2-2Zm2.25,4H68.38v80h-64V23.19l29.4-5.88a2,2,0,0,0,1.54-1.47,2.07,2.07,0,0,0-.66-2C29.55,9.56,27.79,6.79,27.44,4.38ZM23.81,6.25c.75,2.51,2.47,5.06,5.35,7.91L9.47,18.09Z" />
+                <path class="cls-1"
+                  d="M70.38,88.75h-68A2.44,2.44,0,0,1,0,86.38v-65a2.42,2.42,0,0,1,.85-1.86l23-19A2.37,2.37,0,0,1,25.16,0H70.38a2.44,2.44,0,0,1,2.37,2.38v84A2.44,2.44,0,0,1,70.38,88.75ZM25.2.75a1.66,1.66,0,0,0-.87.35l-23,19a1.67,1.67,0,0,0-.58,1.27v65A1.71,1.71,0,0,0,2.38,88h68A1.71,1.71,0,0,0,72,86.38v-84A1.71,1.71,0,0,0,70.38.75Zm43.55,84H4V22.88l29.71-5.94A1.68,1.68,0,0,0,35,15.75a1.71,1.71,0,0,0-.54-1.65c-4.75-3.95-6.94-6.84-7.35-9.67L27,4H68.75ZM4.75,84H68V4.75H27.89c.54,2.48,2.73,5.21,7,8.77a2.43,2.43,0,0,1,.78,2.41,2.4,2.4,0,0,1-1.82,1.75L4.75,23.5ZM8.08,18.75,24,5.6l.16.54c.72,2.43,2.44,5,5.25,7.75l.5.5ZM23.63,6.89,10.86,17.43l17.54-3.5A19.84,19.84,0,0,1,23.63,6.89Z" />
               </g>
             </g>
           </svg>
         </div>
         <div class="cta-wrapper">
           <div class="single-btn">
-            <p class="btn-text">メールフォームへ</p>
+            <p class="btn-text">資料請求をする</p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.197 17.264" class="single-btn-arrow">
               <path id="パス_18193" data-name="パス 18193" d="M5227.041,23432.553l8.89,7.322-8.89,7.646"
                 transform="translate(-5226.063 -23431.395)" stroke-width="3" />
@@ -221,7 +231,7 @@
           </div>
         </div>
       </a>
-      <a href="tel:0368050696" class="single-cta-color-button red wow fadeInUp cv-tel cv-single-page">
+      {{-- <a href="tel:0368050696" class="single-cta-color-button red wow fadeInUp cv-tel cv-single-page">
         <div class="header">
           <p class="head-text">TELEPHONE</p>
         </div>
@@ -245,22 +255,23 @@
         <div class="cta-wrapper">
           <p class="tel-text">03-6805-0696</p>
         </div>
-      </a>
+      </a> --}}
     </div>
 
-    <article class="recommend">
+    <article class="recommend title-container-wrapper">
       <div class="title-container wow slideInLeft">
         <div class="title-wrapper">
           <div class="square"></div>
           <div class="circle"></div>
-          <p class="text">Others</p>
+          <p class="text">Pick Ups</p>
         </div>
       </div>
       <div class="regular-container others-wrapper">
-        @php($count=0)
-        @while($works_posts_not_picked->have_posts() && $count < 6) @php($works_posts_not_picked->the_post())
+        <div class="picked-container">
+          @while($works_posts_picked->have_posts()) @php($works_posts_picked->the_post())
           @component('components.work-card')
-          @slot('thumb')<img src="{{ get_the_post_thumbnail_url( get_the_ID(), $size ) }}" alt="">@endslot
+          @slot('thumb')<img class="lazyload" src="{{ get_the_post_thumbnail_url(get_the_ID(), $size) }}"
+            alt="">@endslot
           @slot('link'){{ get_permalink() }}@endslot
           @slot('title'){{ get_the_title() }}@endslot
           @slot('area'){{ the_field('area') }} @endslot
@@ -268,8 +279,8 @@
           @slot('type'){{ the_field('type') }} @endslot
           @slot('place'){{ the_field('place') }} @endslot
           @endcomponent
-          @php($count++)
           @endwhile
+        </div>
       </div>
     </article>
     <div class="button-wrapper">
@@ -278,6 +289,33 @@
       @slot('url')works @endslot
       @endcomponent
     </div>
+
+    <article class="recommend title-container-wrapper">
+      <div class="title-container wow slideInLeft">
+        <div class="title-wrapper">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <p class="text">Interviews</p>
+        </div>
+      </div>
+      <div class="regular-container others-wrapper">
+        @php($count=0)
+        @while($interviews_posts->have_posts() && $count < 2) @php($interviews_posts->the_post())
+          @component('components.interview-list')
+          @slot('link'){{ get_permalink() }} @endslot
+          @slot('number'){{ the_field('number') }} @endslot
+          @slot('subtitle'){{ the_field('subtitle') }}@endslot
+          @slot('title'){{ get_the_title() }}@endslot
+          @slot('name'){{ the_field('place_name') }} @endslot
+          @slot('family'){{ the_field('family') }} @endslot
+          @slot('address'){{ the_field('place') }} @endslot
+          @slot('img')
+          <img class="lazyload" src="{{ get_the_post_thumbnail_url( get_the_ID(), $size ) }}" alt="">
+          @endslot
+          @endcomponent
+          @php($count++)
+          @endwhile
+      </div>
   </section>
 </div>
 @endsection

@@ -105,7 +105,7 @@
   </div>
 
   <section class="regular-container single-cta-container">
-    <div class="sigle-event">
+    {{-- <div class="sigle-event">
       <div class="wrapper wow fadeInUp">
         @component('components.event-card')
         @slot('link')/showroom @endslot
@@ -133,10 +133,45 @@
         @slot('text')楽しむ@endslot
         @endcomponent
       </div>
-    </div>
+    </div> --}}
 
+    <a href="/contact-documents" class="single-cta-color-button green wow fadeInUp cv-single-page">
+      <div class="header">
+        <p class="head-text">資料請求</p>
+      </div>
+      <p class="text">リノベーション事例集やお得なキャンペーン情報を郵送します</p>
+      <div class="icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.75 88.75">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #fff;
+              }
 
-    <a href="/contact" class="single-cta-color-button yellow wow fadeInUp cv-single-page">
+            </style>
+          </defs>
+          <title>ico_documents</title>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+              <path class="cls-1"
+                d="M25.19.38a2,2,0,0,0-1.1.43l-23,19a2,2,0,0,0-.71,1.57v65a2.08,2.08,0,0,0,2,2h68a2.09,2.09,0,0,0,2-2v-84a2.08,2.08,0,0,0-2-2Zm2.25,4H68.38v80h-64V23.19l29.4-5.88a2,2,0,0,0,1.54-1.47,2.07,2.07,0,0,0-.66-2C29.55,9.56,27.79,6.79,27.44,4.38ZM23.81,6.25c.75,2.51,2.47,5.06,5.35,7.91L9.47,18.09Z" />
+              <path class="cls-1"
+                d="M70.38,88.75h-68A2.44,2.44,0,0,1,0,86.38v-65a2.42,2.42,0,0,1,.85-1.86l23-19A2.37,2.37,0,0,1,25.16,0H70.38a2.44,2.44,0,0,1,2.37,2.38v84A2.44,2.44,0,0,1,70.38,88.75ZM25.2.75a1.66,1.66,0,0,0-.87.35l-23,19a1.67,1.67,0,0,0-.58,1.27v65A1.71,1.71,0,0,0,2.38,88h68A1.71,1.71,0,0,0,72,86.38v-84A1.71,1.71,0,0,0,70.38.75Zm43.55,84H4V22.88l29.71-5.94A1.68,1.68,0,0,0,35,15.75a1.71,1.71,0,0,0-.54-1.65c-4.75-3.95-6.94-6.84-7.35-9.67L27,4H68.75ZM4.75,84H68V4.75H27.89c.54,2.48,2.73,5.21,7,8.77a2.43,2.43,0,0,1,.78,2.41,2.4,2.4,0,0,1-1.82,1.75L4.75,23.5ZM8.08,18.75,24,5.6l.16.54c.72,2.43,2.44,5,5.25,7.75l.5.5ZM23.63,6.89,10.86,17.43l17.54-3.5A19.84,19.84,0,0,1,23.63,6.89Z" />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="cta-wrapper">
+        <div class="single-btn">
+          <p class="btn-text">資料請求をする</p>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.197 17.264" class="single-btn-arrow">
+            <path id="パス_18193" data-name="パス 18193" d="M5227.041,23432.553l8.89,7.322-8.89,7.646"
+              transform="translate(-5226.063 -23431.395)" stroke-width="3" />
+          </svg>
+        </div>
+      </div>
+    </a>
+    {{-- <a href="/contact" class="single-cta-color-button yellow wow fadeInUp cv-single-page">
       <div class="header">
         <p class="head-text">MAIL FORM</p>
       </div>
@@ -187,7 +222,7 @@
       <div class="cta-wrapper">
         <p class="tel-text">03-6805-0696</p>
       </div>
-    </a>
+    </a> --}}
   </section>
   <section class="next regular-container">
     @php($count=0)
