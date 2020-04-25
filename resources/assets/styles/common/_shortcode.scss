@@ -26,3 +26,34 @@
     color: $gold;
   }
 }
+
+.komidashi {
+  font-family: font('midashi');
+  font-weight: 600;
+  line-height: 2em;
+  font-size: 1.2em;
+
+  // &.yellow {
+  //   background: linear-gradient(transparent 60%, $yellow 0%);
+  // }
+
+  // &.red {
+  //   background: linear-gradient(transparent 60%, $red 0%);
+  // }
+
+  // &.blue {
+  //   background: linear-gradient(transparent 60%, $blue 0%);
+  // }
+
+  // &.green {
+  //   background: linear-gradient(transparent 60%, $green 0%);
+  // }
+
+  // &.pink {
+  //   background: linear-gradient(transparent 60%, $pink 0%);
+  // }
+
+  // &.gold {
+  //   background: linear-gradient(transparent 60%, $gold 0%);
+  // }
+}

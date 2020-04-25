@@ -97,6 +97,7 @@ if (!function_exists('add_quicktags_to_text_editor')):
       if (wp_script_is('quicktags')) { ?>
           <script>
             QTags.addButton('qt-color-text','color-text','[colorText color="gold"]','[/colorText]');
+            QTags.addButton('qt-komidashi','komidashi','[komidashi]','[/komidashi]');
           </script>
         <?php }
     }
