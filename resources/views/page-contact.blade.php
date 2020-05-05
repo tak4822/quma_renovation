@@ -59,7 +59,7 @@
             <div class="sm-crcle yellow"></div>
             <div class="sm-crcle yellow"></div>
           </div>
-          <h3 class="title yellow">資料を請求したい</h3>
+          <h3 class="title yellow">リノベーション資料を取り寄せる</h3>
           <p class="text">QUMAがこれまでに施工した事例集などをお届けします。<br />
             お得なキャンペーン情報もございます。
           </p>

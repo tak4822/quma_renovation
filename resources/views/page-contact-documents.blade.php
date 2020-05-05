@@ -20,7 +20,7 @@
   <section class="contact-container">
     @component('components.page-section-header')
     @slot('type') @endslot
-    @slot('title')資料請求のお問い合わせ @endslot
+    @slot('title')リノベーション資料のお取り寄せ @endslot
     @slot('sub')QUMAがこれまでに施工した事例集などをお届けします。<br />
     今だけのお得なキャンペーン情報もございます。@endslot
     @slot('img')@endslot

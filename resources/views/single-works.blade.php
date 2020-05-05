@@ -223,7 +223,7 @@
         </div>
         <div class="cta-wrapper">
           <div class="single-btn">
-            <p class="btn-text">資料請求をする</p>
+            <p class="btn-text">資料請求する</p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.197 17.264" class="single-btn-arrow">
               <path id="パス_18193" data-name="パス 18193" d="M5227.041,23432.553l8.89,7.322-8.89,7.646"
                 transform="translate(-5226.063 -23431.395)" stroke-width="3" />

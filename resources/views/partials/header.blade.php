@@ -20,7 +20,7 @@
         </a>
         <a href="/contact-documents" class="documents btn cv-header">
           <img src="@asset('images/ico_documents.svg')" alt="" class="ico">
-          <p>資料を請求する</p>
+          <p>資料請求する</p>
         </a>
       </div>
       <div id="headerHamburder" class="hamburger-wrapper">
