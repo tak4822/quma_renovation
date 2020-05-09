@@ -230,3 +230,29 @@
     }
   }
 }
+
+.document-banner-container {
+  width: 100%;
+  padding: $spacer * 4;
+
+  @include mq-down("mobile") {
+    padding: $spacer * 2;
+  }
+
+  .desktop {
+    width: 100%;
+
+    @include mq-down("mobile") {
+      display: none;
+    }
+  }
+
+  .mobile {
+    width: 100%;
+    display: none;
+
+    @include mq-down("mobile") {
+      display: block;
+    }
+  }
+}

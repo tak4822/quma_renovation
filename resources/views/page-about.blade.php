@@ -94,7 +94,7 @@
     @slot('sub')個性豊かなQUMAのメンバーをご紹介します。<br />誠実に、そして楽しく働いています！@endslot
     @slot('img')@endslot
     @endcomponent
-    <img class="all-members wow fadeIn" src="@asset('images/quma.jpg')" alt="quma" data-wow-duration="2s">
+    <img class="all-members wow fadeIn" src="@asset('images/all_members.jpg')" alt="quma" data-wow-duration="2s">
     <div class="member-container">
       @foreach($members as $member)
       @component('components.about-member')

@@ -29,6 +29,15 @@
 
     {{-- いくらぐらいかかるの？あの写真みたいにリノベできるの？<br />どんな質問でもお答えします。 --}}
     <div class="contents regular-container">
+      <div class="document-banner-container">
+        <div class="desktop">
+          <img src="@asset('images/document_exp_d.jpg')" alt="">
+        </div>
+
+        <div class="mobile">
+          <img src="@asset('images/document_exp_m.jpg')" alt="">
+        </div>
+      </div>
       <div class="form-container wow fadeInUp">
         @while(have_posts()) @php(the_post())
         @php(the_content())
