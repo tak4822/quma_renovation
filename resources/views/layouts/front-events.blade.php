@@ -20,9 +20,9 @@
       </div>
       <div class="wrapper wow bit-late fadeInUp">
         @component('components.event-card')
-        @slot('link')/seminar @endslot
+        @slot('link')/online-seminar @endslot
         @slot('img')
-        <img class="lazyload" src="@asset('images/event_card_seminar.jpg')" alt="">
+        <img class="lazyload" src="@asset('images/event_card-online.jpg')" alt="">
         @endslot
         @slot('text')話す@endslot
         @endcomponent

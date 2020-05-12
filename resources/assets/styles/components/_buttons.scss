@@ -2,6 +2,7 @@
   border: 2px solid $black;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 
   &:hover,
   &.animated {
